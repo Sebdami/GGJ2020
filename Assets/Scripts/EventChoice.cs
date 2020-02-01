@@ -9,6 +9,7 @@ public class EventChoice
     public ChoiceCost costs;
     public List<string> possibleChainedEvents;
     public float probaChainedEvent = 0.5f;
+    public string recapChoice;
 
     public bool IsChoiceEnabled()
     {
@@ -60,25 +61,58 @@ public class EventChoice
         public List<string> namedCharacters;
         public List<string> namedTools;
 
-        public void ResolveCosts()
-        {
-            PlayerData.timeLeft -= timeCost;
-            CheckRessources(namedCharacters, true);
-            CheckRessources(namedTools, false);
+        // Variables feedback
+        [Header("Variables feedback")]
+        public bool showTimeCostOnRecap = true;
+        public bool showCharacterCostOnRecap = true;
+        public bool showToolsCostOnRecap = true;
+        public bool showSpecificCharactersRecap = true;
+        public bool showSpecificToolsRecap = true;
 
-            NotNamedCosts(PlayerData.characters, true);
-            NotNamedCosts(PlayerData.tools, false);
+        public string overrideRecapCharacter = "";
+        public string overrideRecapTool = "";
+        public string overrideRecapCharacterDeath = "";
+        public string overrideRecapToolBroken = "";
+
+
+        public string ResolveCosts()
+        {
+            string feedback = "";
+            PlayerData.timeLeft -= timeCost;
+            if (showTimeCostOnRecap)
+                feedback += "Cette action vous a pris " + timeCost + " unités de temps. ";
+
+            CheckRessources(namedCharacters, true, feedback);
+            CheckRessources(namedTools, false, feedback);
+
+            NotNamedCosts(PlayerData.characters, true, feedback);
+            NotNamedCosts(PlayerData.tools, false, feedback);
+
+            return feedback;
         }
 
-        void CheckRessources(List<string> _ids, bool _isCharacter)
+        void CheckRessources(List<string> _ids, bool _isCharacter, string _feedback)
         {
             foreach (var id in _ids)
             {
-                PlayerData.DamageRessource(id, _isCharacter, lethalForRessources);
+                if (_isCharacter)
+                {
+                    if (showSpecificCharactersRecap)
+                        _feedback = PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, _feedback, overrideRecapCharacter, overrideRecapCharacterDeath);
+                    else
+                        PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, null, "", "");
+                }
+                else
+                {
+                    if (showSpecificToolsRecap)
+                        _feedback = PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, _feedback, overrideRecapTool, overrideRecapToolBroken);
+                    else
+                        PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, null, "", "");
+                }
             }
         }
 
-        void NotNamedCosts(List<GameplayRessource> _playerData, bool _isCharacter)
+        void NotNamedCosts(List<GameplayRessource> _playerData, bool _isCharacter, string _feedback)
         {
             List<GameplayRessource> gameplayRessourcesNotNamed = _playerData.FindAll(x => string.IsNullOrEmpty(x.ressourceName));
             int diff = gameplayRessourcesNotNamed.Count - ((_isCharacter) ? charactersCost : toolsCost);
@@ -87,13 +121,32 @@ public class EventChoice
                 _playerData.Remove(gameplayRessourcesNotNamed[i]);
             }
 
+            if (_isCharacter && showCharacterCostOnRecap)
+                _feedback += "Vous avez perdu " + ((diff > 0) ? charactersCost : charactersCost + diff) + " unités. ";
+
+            if (!_isCharacter && showToolsCostOnRecap)
+                _feedback += "Vous avez perdu " + ((diff > 0) ? toolsCost : toolsCost + diff) + " outils. ";
+
             if (diff < 0)
             {
                 PlayerData.ShuffleRessources();
                 List<GameplayRessource> gameplayRessourcesNamed = _playerData.FindAll(x => !string.IsNullOrEmpty(x.ressourceName));
                 for (int i = 0; i < diff && i < gameplayRessourcesNamed.Count; i++)
                 {
-                    PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources);
+                    if (_isCharacter)
+                    {
+                        if (showSpecificCharactersRecap)
+                            _feedback = PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, _feedback, overrideRecapCharacter, overrideRecapCharacterDeath);
+                        else
+                            PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, null, "", "");
+                    }
+                    else
+                    {
+                        if (showSpecificToolsRecap)
+                            _feedback = PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, _feedback, overrideRecapTool, overrideRecapToolBroken);
+                        else
+                            PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, null, "", "");
+                    }
                 }
             }
         }

@@ -13,7 +13,7 @@ public class GameplayEventManager : MonoBehaviour
     }
     
     public GameplayEvent currentEvent = null;
-    public bool nextEventReady = false;
+    [HideInInspector] public bool nextEventReady = false;
 
     public void TriggerEvent()
     {

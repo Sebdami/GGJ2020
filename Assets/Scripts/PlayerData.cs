@@ -10,7 +10,7 @@ public class PlayerData
     public static List<GameplayEvent> eventsDone;
     public static List<GameplayRessource> charactersLost;
 
-    public static void DamageRessource(string _ressourceName, bool _isCharacter, bool _destroy)
+    public static string DamageRessource(string _ressourceName, bool _isCharacter, bool _destroy, string _feedback, string _overrideFeedback, string _overrideFeedbackDeath)
     {
         GameplayRessource ressource;
         if (_isCharacter)
@@ -27,13 +27,41 @@ public class PlayerData
                 {
                     charactersLost.Add(ressource);
                     characters.Remove(ressource);
+                    if (_feedback != null)
+                    {
+                        if (string.IsNullOrEmpty(_overrideFeedback))
+                            _feedback += "\n" + ressource.ressourceName + " est mort. "; // :'(
+                        else
+                            _feedback += "\n" + _overrideFeedbackDeath;
+                    }
                 }
                 else
+                {
                     tools.Remove(ressource);
+                    if (_feedback != null)
+                    {
+                        if (string.IsNullOrEmpty(_overrideFeedback))
+                            _feedback += "\n" + ressource.ressourceName + " s'est cassé. "; // :'(
+                        else
+                            _feedback += "\n" + _overrideFeedbackDeath;
+                    }
+                }
+            }
+            else
+            {
+                if (_feedback != null)
+                {
+                    if (string.IsNullOrEmpty(_overrideFeedback))
+                        _feedback += "\n" + ressource.ressourceName + ((_isCharacter) ? " s'est blessé. " : " s'est usé. "); // :'(
+                    else
+                        _feedback += "\n" + _overrideFeedback;
+                }
             }
 
             ressource.damaged = true;
         }
+
+        return _feedback;
     }
 
     public static void ShuffleRessources()
