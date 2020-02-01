@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Condition
+public abstract class InversableCondition : Condition
 {
-    public abstract bool Check();
+    public bool Invert;
 }

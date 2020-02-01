@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventPassedCondition : Condition
+public class EventPassedCondition : InversableCondition
 {
     public GameplayEvent Event;
     public override bool Check()
