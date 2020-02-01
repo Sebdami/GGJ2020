@@ -10,7 +10,6 @@ public class GameplayEvent : ScriptableObject
     public bool isEpic;
     public string eventTitle;
     public string eventDescription;
-    public GameObject mapPrefab;
 
     public float timeToResolveEvent; // if < 0.0f, the event is not timed
 
