@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class TimeCondition : InvertibleCondition
 {
     public int time;
@@ -9,21 +10,7 @@ public class TimeCondition : InvertibleCondition
 
     public override bool Check()
     {
-        bool result = false;
-        switch (comparison)
-        {
-            case Comparison.Equal:
-                result = time == PlayerData.timeLeft;
-                break;
-            case Comparison.GreaterThan:
-                result = time > PlayerData.timeLeft;
-                break;
-            case Comparison.LowerThan:
-                result = time < PlayerData.timeLeft;
-                break;
-            default:
-                break;
-        }
+        bool result = ComparisonOperation.CheckComparison(comparison, time, PlayerData.timeLeft);
         return Invert ? !result : result;
     }
 }

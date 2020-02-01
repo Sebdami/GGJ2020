@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class ConditionList : Condition
 {
     public List<Condition> conditionList = new List<Condition>();

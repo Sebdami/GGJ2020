@@ -18,3 +18,10 @@ public class GameplayRessource
     }
 
 }
+
+[System.Serializable]
+public enum ResourceType
+{
+    Characters,
+    Tools
+}
