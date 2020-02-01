@@ -15,13 +15,16 @@ public class EventChoice
         return choiceEnabled.Check();
     }
 
-    public void ChoiceSelected()
+    /// <summary>
+    /// Retourne l'id de l'event suivant, ou vide si on doit se déplacer ensuite
+    /// </summary>
+    /// <returns></returns>
+    public string ChoiceConsequences()
     {
-        costs.ResolveCosts();
-
         if (PlayerData.CheckIfGameIsOver())
         {
             // Trigger final event
+            return "";
         }
         else
         {
@@ -30,15 +33,18 @@ public class EventChoice
                 if (Random.Range(0, 1.0f) < probaChainedEvent)
                 {
                     // Trigger random chained event
+                    return possibleChainedEvents[Random.Range(0, possibleChainedEvents.Count)];
                 }
                 else
                 {
                     // Move to next event
+                    return "";
                 }
             }
             else
             {
                 // Move to next event
+                return "";
             }
         }
     }
