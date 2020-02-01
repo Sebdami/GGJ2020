@@ -1,8 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
+
+    [SerializeField] Slider slider;
+    [SerializeField] Text people;
+    [SerializeField] Text tools;
+
     public enum EDirection
     {
         LeftToRight = 0,
@@ -79,5 +85,12 @@ public class UIManager : Singleton<UIManager>
         }
 
         return null;
+    }
+
+    public void RefreshData()
+    {
+        slider.value = 1 - ((float)PlayerData.timeLeft / PlayerData.totalTime);
+        people.text = PlayerData.characters.Count.ToString();
+        tools.text = PlayerData.tools.Count.ToString();
     }
 }

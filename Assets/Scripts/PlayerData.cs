@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerData
 {
+    public static int totalTime = 500;
+
     public static int timeLeft;
     public static List<GameplayRessource> characters = new List<GameplayRessource>();
     public static List<GameplayRessource> tools = new List<GameplayRessource>();

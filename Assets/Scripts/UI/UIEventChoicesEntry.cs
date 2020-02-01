@@ -23,7 +23,7 @@ public class UIEventChoicesEntry : MonoBehaviour
         string genericFeedbackCosts = ""; // Peut être utilisé sur le panneau de recap
         genericFeedbackCosts = choiceRef.costs.ResolveCosts();
 
-  
+        UIManager.Instance.RefreshData();
 
         UIManager.Instance.HidePanel<UIEvent>();
 

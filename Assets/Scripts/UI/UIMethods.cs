@@ -9,6 +9,7 @@ public class UIMethods : MonoBehaviour
     {
         GameplayEventManager GEM = FindObjectOfType<GameplayEventManager>();
         string nextAction = GEM.choiceMade.ChoiceConsequences();
+
         if (string.IsNullOrEmpty(nextAction))
         {
             // Close UI
