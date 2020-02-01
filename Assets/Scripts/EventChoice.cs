@@ -7,10 +7,40 @@ public class EventChoice
 { 
     public ConditionList choiceEnabled;
     public ChoiceCost costs;
+    public List<string> possibleChainedEvents;
+    public float probaChainedEvent = 0.5f;
 
     public bool IsChoiceEnabled()
     {
         return choiceEnabled.Check();
+    }
+
+    public void ChoiceSelected()
+    {
+        costs.ResolveCosts();
+
+        if (PlayerData.CheckIfGameIsOver())
+        {
+            // Trigger final event
+        }
+        else
+        {
+            if (possibleChainedEvents.Count > 0)
+            {
+                if (Random.Range(0, 1.0f) < probaChainedEvent)
+                {
+                    // Trigger random chained event
+                }
+                else
+                {
+                    // Move to next event
+                }
+            }
+            else
+            {
+                // Move to next event
+            }
+        }
     }
 
     [System.Serializable]
@@ -60,11 +90,6 @@ public class EventChoice
                     PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources);
                 }
             }
-        }
-
-        void CheckIfGameIsOver()
-        {
-            
         }
     }
 }

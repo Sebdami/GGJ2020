@@ -66,4 +66,15 @@ public class PlayerData
                 return null;
         }
     }
+
+    public static bool CheckIfGameIsOver()
+    {
+        if (charactersLost.Find(x => !x.canBeLost) != null)
+            return true;
+
+        if (timeLeft < 0)
+            return true;
+
+        return false;
+    }
 }
