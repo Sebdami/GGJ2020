@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class GameplayEvent : ScriptableObject
 {
-    public int timeCost;
     public bool lethal;
     public bool isEpic;
     public string eventTitle;
@@ -14,8 +13,9 @@ public class GameplayEvent : ScriptableObject
 
     public float timeToResolveEvent; // if < 0.0f, the event is not timed
 
-    public GameplayTool[] specificTools;
-    public RecruitableCharacter[] specificCharacters;
+    public GameplayRessource[] specificTools;
+    public GameplayRessource[] specificCharacters;
 
     public ConditionList conditionList;
+    public EventChoice[] choices;
 }
