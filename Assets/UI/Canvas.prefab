@@ -1020,6 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2537c949c18ace6478cb8032174785e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 1468003213}
+  people: {fileID: 1704975293}
+  tools: {fileID: 1193586233}
   uipanels:
   - {fileID: 3417127134359510464, guid: 1414ea0a29121e64985930dde891b711, type: 3}
   defaultLayout: {fileID: 7404715046939126906}
