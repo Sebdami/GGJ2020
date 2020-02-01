@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 1650e67f6e633bc46a71a1488432a55e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Flag_Albedo: {fileID: 2800000, guid: bdff9396ddef5cb4e8feda50d6137a01, type: 3}
+  - _Env_Flag: {fileID: 2800000, guid: 92f38222612fa49499ce1034a3ad8552, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
