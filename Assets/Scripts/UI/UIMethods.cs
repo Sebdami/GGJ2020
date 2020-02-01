@@ -13,7 +13,7 @@ public class UIMethods : MonoBehaviour
         {
             // Close UI
             // UIManager.Instance.
-
+            UIManager.Instance.HideAllPanel();
             // Move
 
             // Call Trigger event on GEM quand le move est terminé
@@ -21,6 +21,7 @@ public class UIMethods : MonoBehaviour
         else
         {
             // Close UI
+            UIManager.Instance.HideAllPanel();
 
             // Call next event
             GEM.TriggerEvent(nextAction);

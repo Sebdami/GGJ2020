@@ -15,9 +15,9 @@ MonoBehaviour:
   targetSettings:
     followCharacter: 1
     setFov: 0
-    fov: 68
-    setRotation: 0
-    rotation: {x: 0, y: 0, z: 0}
-    setOffset: 0
-    offset: {x: 0, y: 0, z: 0}
+    fov: 60
+    setRotation: 1
+    rotation: {x: 30, y: 0, z: 0}
+    setOffset: 1
+    offset: {x: 0, y: 14, z: -14}
   duration: 1

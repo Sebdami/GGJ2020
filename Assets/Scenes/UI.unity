@@ -249,49 +249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultSettings: {fileID: 11400000, guid: 347bd3f3eb9205245bd704b153cc1554, type: 2}
---- !u!1 &567767827 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7404715046939126885, guid: 7feb5cc80e7a97a43b99af83c85a2c58,
-    type: 3}
-  m_PrefabInstance: {fileID: 7404715045591974216}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &567767828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567767827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edb27d596875b34d816e587e87d9b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  events: []
-  currentEvent: {fileID: 0}
-  choiceMade:
-    choiceEnabled:
-      required: 0
-    costs:
-      timeCost: 0
-      charactersCost: 0
-      toolsCost: 0
-      lethalForRessources: 0
-      namedCharacters: []
-      namedTools: []
-      showTimeCostOnRecap: 1
-      showCharacterCostOnRecap: 1
-      showToolsCostOnRecap: 1
-      showSpecificCharactersRecap: 1
-      showSpecificToolsRecap: 1
-      overrideRecapCharacter: 
-      overrideRecapTool: 
-      overrideRecapCharacterDeath: 
-      overrideRecapToolBroken: 
-    possibleChainedEvents: []
-    probaChainedEvent: 0.5
-    recapChoice: 
-  nextEventReady: 0
 --- !u!1 &1172839219
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +414,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 150715868, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150715868, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7404715046939126885, guid: 7feb5cc80e7a97a43b99af83c85a2c58,
         type: 3}
       propertyPath: m_Name

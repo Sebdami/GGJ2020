@@ -22,7 +22,7 @@ public class UIEventChoicesEntry : MonoBehaviour
         string genericFeedbackCosts = ""; // Peut être utilisé sur le panneau de recap
         genericFeedbackCosts = choiceRef.costs.ResolveCosts();
 
-        content.text = genericFeedbackCosts;
+        content.text = choiceRef.choiceDescription;
 
         // TODO: Afficher le panneau de recap
         // On peut set un pavé de texte sur le choix pour le recap

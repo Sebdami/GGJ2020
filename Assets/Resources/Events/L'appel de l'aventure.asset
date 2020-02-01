@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: Test1
+  m_Name: L'appel de l'aventure
   m_EditorClassIdentifier: 
   lethal: 0
   isEpic: 1
-  eventTitle: Bite
-  eventDescription: Super Bite
+  eventTitle: L'appel de l'aventure
+  eventDescription: Tout commence ....
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
@@ -23,10 +23,12 @@ MonoBehaviour:
   conditionList:
     required: 0
   choices:
-  - choiceEnabled:
+  - choiceDescription: Continue
+    recapAfterChoice: 
+    choiceEnabled:
       required: 0
     costs:
-      timeCost: 20
+      timeCost: 0
       charactersCost: 0
       toolsCost: 0
       lethalForRessources: 0
@@ -43,25 +45,3 @@ MonoBehaviour:
       overrideRecapToolBroken: 
     possibleChainedEvents: []
     probaChainedEvent: 0
-    recapChoice: 
-  - choiceEnabled:
-      required: 0
-    costs:
-      timeCost: 20
-      charactersCost: 0
-      toolsCost: 0
-      lethalForRessources: 0
-      namedCharacters: []
-      namedTools: []
-      showTimeCostOnRecap: 0
-      showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 0
-      showSpecificCharactersRecap: 0
-      showSpecificToolsRecap: 0
-      overrideRecapCharacter: 
-      overrideRecapTool: 
-      overrideRecapCharacterDeath: 
-      overrideRecapToolBroken: 
-    possibleChainedEvents: []
-    probaChainedEvent: 0
-    recapChoice: 

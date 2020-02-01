@@ -10,11 +10,13 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
     public CameraTransformData DefaultSettings;
     public CameraThemeController ctc;
 
+    public Transform defaultTransform;
+
     public void Start()
     {
         // RUN STATE
         cm = new CameraController(Camera.main, transform, DefaultSettings);
-        //cm.SetFollowTarget(CharacterController.Instance.Character);
+        cm.SetFollowTarget(defaultTransform);
         cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration);
 
         ctc = new CameraThemeController();

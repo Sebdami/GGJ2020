@@ -19,12 +19,6 @@ public class UIManager : Singleton<UIManager>
 
     public Transform defaultLayout;
 
-    public void Start()
-    {
-        FindObjectOfType<GameplayEventManager>().TriggerEvent();
-        ShowPanel<UIEvent>();
-    }
-
     public T ShowPanel<T>() where T : UIPanel
     {
         T panel = GetPanel<T>();
