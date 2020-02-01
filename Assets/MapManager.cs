@@ -27,6 +27,7 @@ public class MapManager : Singleton<MapManager>
         {
             Chunks.Add(Instantiate(chunkPrefabs[Random.Range(0, chunkPrefabs.Count - 1)], transform));
             Chunks[i].transform.localPosition = lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y);
+            Chunks[i].gameObject.SetActive(false);
             lastPosition = Chunks[i].transform.localPosition;
         }
     }
@@ -34,6 +35,7 @@ public class MapManager : Singleton<MapManager>
     public void Init()
     {
         GenerateChunks();
+        Chunks[0].gameObject.SetActive(true);
         CurrentChunk = 0;
     }
 
@@ -77,6 +79,12 @@ public class MapManager : Singleton<MapManager>
     public void GoToNextChunk(Transform toMove, TweenCallback callback)
     {
         CurrentChunk++;
-        toMove.DOMove(Chunks[CurrentChunk].playerTargetTransform.position, 3f).OnComplete(callback);
+        Chunks[CurrentChunk].gameObject.SetActive(true);
+        toMove.DOMove(Chunks[CurrentChunk].playerTargetTransform.position, 3f).OnComplete(() =>
+        {
+            if(CurrentChunk > 0)
+                Chunks[CurrentChunk - 1].gameObject.SetActive(false);
+            callback?.Invoke();
+        });
     }
 }
