@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class RecruitableCharacter
 {
-    
+    public string characterName; // if empty, the character is not named
 }
