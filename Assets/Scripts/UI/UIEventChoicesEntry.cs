@@ -23,9 +23,9 @@ public class UIEventChoicesEntry : MonoBehaviour
         string genericFeedbackCosts = ""; // Peut être utilisé sur le panneau de recap
         genericFeedbackCosts = choiceRef.costs.ResolveCosts();
         choiceRef.rewards.Gain();
-        Debug.Log(genericFeedbackCosts);
+        FindObjectOfType<GameplayEventManager>().choiceMade = choiceRef;
 
-        GameManager.Instance.AchoicewasMade(genericFeedbackCosts);
+        GameManager.Instance.AchoicewasMade(choiceRef.recapAfterChoice);
 
   
 

@@ -42,6 +42,7 @@ public class GameManager : Singleton<GameManager>
     public void Continue()
     {
         PlayerData.eventsDone.Add(gbm.currentEvent);
+        PlayerData.timeLeft -= 10;
         gbm.TriggerEvent();
         UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();

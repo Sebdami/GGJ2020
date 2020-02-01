@@ -15,7 +15,7 @@ MonoBehaviour:
   lethal: 1
   isEpic: 0
   eventTitle: L'attaque des brigands
-  eventDescription: 
+  eventDescription: Un groupe de brigand attaque Robert
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
@@ -34,14 +34,55 @@ MonoBehaviour:
       intParameter: 1
       stringParameter: 
   choices:
-  - choiceDescription: 
-    recapAfterChoice: 
-    conditionsToEnableChoice: []
+  - choiceDescription: Un gars est mort
+    recapAfterChoice: Un personnage est mort
+    conditionsToEnableChoice:
+    - ETconditions:
+      - invertCondition: 0
+        type: 1
+        checkType: 0
+        intParameter: 1
+        stringParameter: 
     costs:
       timeCost: 0
       charactersCost: 1
       toolsCost: 0
-      lethalForRessources: 0
+      lethalForRessources: 1
+      setToDamaged: 0
+      namedCharacters: []
+      namedTools: []
+      showTimeCostOnRecap: 0
+      showCharacterCostOnRecap: 0
+      showToolsCostOnRecap: 0
+      showSpecificCharactersRecap: 0
+      showSpecificToolsRecap: 0
+      overrideRecapCharacter: 
+      overrideRecapTool: 
+      overrideRecapCharacterDeath: 
+      overrideRecapToolBroken: 
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 0
+      namedCharacters: []
+      namedTools: []
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 0
+  - choiceDescription: La pioche c'est bien
+    recapAfterChoice: "Peut \xEAtre qu'en lui jetant une pioche sa marchera"
+    conditionsToEnableChoice:
+    - ETconditions:
+      - invertCondition: 0
+        type: 2
+        checkType: 0
+        intParameter: 1
+        stringParameter: 
+    costs:
+      timeCost: 0
+      charactersCost: 0
+      toolsCost: 1
+      lethalForRessources: 1
       setToDamaged: 0
       namedCharacters: []
       namedTools: []
