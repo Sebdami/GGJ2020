@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 71b83029457e76a409b382a23b8f9a0f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _flamme: {fileID: 2800000, guid: b8e8b9d1b0fc549459e1f94f9fff5512, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
