@@ -23,7 +23,11 @@ public class UIEvent : UIPanel
     public override void Show()
     {
         base.Show();
+
+
+
         m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
+
 
         name.text = m_GameplayEventManager.currentEvent.eventTitle;
         content.text = m_GameplayEventManager.currentEvent.eventDescription;

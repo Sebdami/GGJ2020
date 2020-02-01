@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using DG.Tweening;
 
 public class GameplayEventManager : MonoBehaviour
 {
@@ -16,6 +17,20 @@ public class GameplayEventManager : MonoBehaviour
     public EventChoice choiceMade = null;
     [HideInInspector] public bool nextEventReady = false;
 
+    public void Start()
+    {
+        TriggerEvent("L'appel de l'aventure");
+        UIManager.Instance.ShowPanel<UIEvent>();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            TriggerEvent();
+            CameraStateMachine.Instance.defaultTransform.DOMove(new Vector3(10, 0, 0), 2f).OnComplete(() => { UIManager.Instance.ShowPanel<UIEvent>(); }).Play();
+        }
+    }
     public void TriggerEvent()
     {
         ShuffleEvents();

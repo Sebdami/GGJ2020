@@ -8,6 +8,8 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
 {
     public CameraController cm;
     public CameraTransformData DefaultSettings;
+
+    public CameraTransformData OtherSettings;
     public CameraThemeController ctc;
 
     public Transform defaultTransform;
@@ -21,6 +23,14 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
 
         ctc = new CameraThemeController();
 
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            DoCameraShake(2, delegate () { cm.SetDesiredSettings(OtherSettings.targetSettings, OtherSettings.duration); });
+        }
     }
 
     // Update is called once per frame
@@ -40,9 +50,12 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
     }
 
     // Default
-    public void DoCameraShake(float duration = 0.5f, float strength= 0.1f)
+    public void DoCameraShake(float duration = 0.5f, Action onComplete = null, float strength= 0.1f)
     {
-        Camera.main.DOShakePosition(duration, strength).Play();
+        Camera.main.DOShakePosition(duration, strength).OnComplete(()=>{
+            onComplete?.Invoke();
+
+        }).Play();
     }
 
  

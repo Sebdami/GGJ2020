@@ -3,7 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public abstract class Condition
+public class Condition
 {
-    public abstract bool Check();
+    public Condition()
+    {
+
+    }
+
+    public bool test;
+    public virtual bool Check()
+    {
+        return true;
+    }
 }

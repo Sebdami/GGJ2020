@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: L'appel de l'aventure
+  m_Name: Lamoer
   m_EditorClassIdentifier: 
   lethal: 0
   isEpic: 1
-  eventTitle: L'appel de l'aventure
-  eventDescription: Tout commence ....
+  eventTitle: La morte
+  eventDescription: Tout fini
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
@@ -29,6 +29,8 @@ MonoBehaviour:
   - choiceDescription: Continue
     recapAfterChoice: 
     choiceEnabled:
+      test: 0
+      conditionList: []
       required: 0
     costs:
       timeCost: 0

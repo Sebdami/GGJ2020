@@ -1,42 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[System.Serializable]
-public class ConditionList : Condition
+namespace GGJ
 {
-    public List<Condition> conditionList = new List<Condition>();
+    [System.Serializable]
+    public class ConditionList : Condition
+    {
+        public List<Condition> conditionList = new List<Condition>();
 
-    public enum Required
-    {
-        AllTrueRequired,
-        AnyTrueRequired
-    }
-    public Required required;
-    
-    public override bool Check()
-    {
-        if (conditionList.Count == 0)
-            return true;
-        
-        foreach (var condition in conditionList)
+        public enum Required
         {
-            bool result = condition.Check();
-            if (required == Required.AllTrueRequired && !result)
-                return false;
+            AllTrueRequired,
+            AnyTrueRequired
+        }
+        public Required required;
 
-            if (required == Required.AnyTrueRequired)
-                return true;
+        public ConditionList()
+        {
+            this.conditionList = new List<Condition>();
+            this.required = Required.AllTrueRequired;
         }
 
-        switch (required)
+        public ConditionList(List<Condition> conditionList, Required required)
         {
-            case Required.AllTrueRequired:
+            this.conditionList = conditionList;
+            this.required = required;
+        }
+
+        public bool Check()
+        {
+            if (conditionList.Count == 0)
                 return true;
-            case Required.AnyTrueRequired:
-                return false;
-            default:
-                return true;
+
+            foreach (var condition in conditionList)
+            {
+                bool result = condition.Check();
+                if (required == Required.AllTrueRequired && !result)
+                    return false;
+
+                if (required == Required.AnyTrueRequired)
+                    return true;
+            }
+
+            switch (required)
+            {
+                case Required.AllTrueRequired:
+                    return true;
+                case Required.AnyTrueRequired:
+                    return false;
+                default:
+                    return true;
+            }
         }
     }
 }

@@ -24,6 +24,8 @@ public class UIEventChoicesEntry : MonoBehaviour
 
         content.text = choiceRef.choiceDescription;
 
+        UIManager.Instance.HidePanel<UIEvent>();
+
         // TODO: Afficher le panneau de recap
         // On peut set un pavé de texte sur le choix pour le recap
         // choiceRef.recapChoice

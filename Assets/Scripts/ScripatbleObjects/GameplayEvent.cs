@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ConditionList = GGJ.ConditionList;
 
 [System.Serializable]
 [CreateAssetMenu(fileName = "Data", menuName = "GameplayEvent", order = 1)]
