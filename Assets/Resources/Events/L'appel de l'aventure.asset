@@ -18,7 +18,7 @@ MonoBehaviour:
   eventDescription: "$[Heros] d\xE9cide de partir \xE0 l'aventure, il quitte son
     $[Animal] pour reconstruire son monde apr\xE9s la guerre, il d\xE9cide de partir
     pour aider les gens."
-  mapPrefab: {fileID: 5028725756868240461, guid: cd9a2668fd807884fa9c3204221faeb8,
+  mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,
     type: 3}
   timeToResolveEvent: 0
   specificTools: []
