@@ -28,14 +28,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Displacement: 1
+    - _Displacement: 0.03
     - _Displacement1: 0.186
     - _EdgeLength: 15
     - _Float0: 0.3
     - _TessMax: 0
     - _TessMaxDisp: 0
     - _TessMin: 1
-    - _TessPhongStrength: 0.5
+    - _TessPhongStrength: 1
     - _TessValue: 32
     - __dirty: 0
     m_Colors:
