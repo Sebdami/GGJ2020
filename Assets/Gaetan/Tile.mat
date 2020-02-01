@@ -35,5 +35,5 @@ Material:
     - _TessMin: 1
     - _TessPhongStrength: 0.5
     - _TessValue: 10
-    - __dirty: 0
+    - __dirty: 1
     m_Colors: []
