@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConditionList : Condition
 {
-    List<Condition> conditionList = new List<Condition>();
+    public List<Condition> conditionList = new List<Condition>();
 
     public enum Required
     {

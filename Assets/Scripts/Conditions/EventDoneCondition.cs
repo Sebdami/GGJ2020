@@ -7,6 +7,7 @@ public class EventPassedCondition : Condition
     public GameplayEvent Event;
     public override bool Check()
     {
-        return PlayerData.eventsDone.Contains(Event);
+        bool result = PlayerData.eventsDone.Contains(Event);
+        return Invert ? !result : result;
     }
 }
