@@ -7,17 +7,17 @@ using ConditionList = GGJ.ConditionList;
 [CreateAssetMenu(fileName = "Data", menuName = "GameplayEvent", order = 1)]
 public class GameplayEvent : ScriptableObject
 {
-    public bool lethal;
-    public bool isEpic;
     public string eventTitle;
     public string eventDescription;
+    public List<ConditionMalabarGroup> conditionList;
+    public EventChoice[] choices;
+
+    public bool lethal;
+    public bool isEpic;
     public GameObject mapPrefab;
 
     public float timeToResolveEvent; // if < 0.0f, the event is not timed
 
     public GameplayRessource[] specificTools;
     public GameplayRessource[] specificCharacters;
-
-    public List<ConditionMalabarGroup> conditionList;
-    public EventChoice[] choices;
 }

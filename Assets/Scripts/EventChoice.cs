@@ -8,13 +8,13 @@ public class EventChoice
 {
     public string choiceDescription;
     public string recapAfterChoice;
-    public List<ConditionMalabarGroup> conditionsToEnableChoice;
-    public ChoiceCost costs;
-    public ChoiceRewards rewards;
     public List<string> possibleChainedEvents;
     public float probaChainedEvent = 0.5f;
     public bool alterPrefab;
-
+    public List<ConditionMalabarGroup> conditionsToEnableChoice;
+    public ChoiceCost costs;
+    public ChoiceRewards rewards;
+    
     public bool IsChoiceEnabled()
     {
         return conditionsToEnableChoice.CheckAll();
@@ -99,16 +99,16 @@ public class EventChoice
 
         // Variables feedback
         [Header("Variables feedback")]
-        public bool showTimeCostOnRecap = true;
-        public bool showCharacterCostOnRecap = true;
-        public bool showToolsCostOnRecap = true;
-        public bool showSpecificCharactersRecap = true;
-        public bool showSpecificToolsRecap = true;
+        private bool showTimeCostOnRecap = true;
+        bool showCharacterCostOnRecap = true;
+        bool showToolsCostOnRecap = true;
+        bool showSpecificCharactersRecap = true;
+        bool showSpecificToolsRecap = true;
 
-        public string overrideRecapCharacter = "";
-        public string overrideRecapTool = "";
-        public string overrideRecapCharacterDeath = "";
-        public string overrideRecapToolBroken = "";
+        string overrideRecapCharacter = "";
+        string overrideRecapTool = "";
+        string overrideRecapCharacterDeath = "";
+        string overrideRecapToolBroken = "";
 
 
         public string ResolveCosts()
