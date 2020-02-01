@@ -13,6 +13,7 @@ public class EventChoice
         return choiceEnabled.Check();
     }
 
+    [System.Serializable]
     public class ChoiceCost
     {
         public int timeCost;
