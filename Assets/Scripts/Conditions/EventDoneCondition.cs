@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EventPassedCondition : Condition
 {
+    public GameplayEvent Event;
     public override bool Check()
     {
-        return true;
+        return PlayerData.eventsDone.Contains(Event);
     }
 }
