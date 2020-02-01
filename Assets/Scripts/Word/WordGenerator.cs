@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Text.RegularExpressions;
 
 public static class WordGenerator
 {

@@ -17,11 +17,6 @@ public class MapManager : Singleton<MapManager>
     public List<Chunk> Chunks = new List<Chunk>();
     public int CurrentChunk = 0;
 
-    private void Start()
-    {
-        Init();
-    }
-
     public void GenerateChunks()
     {
         for (int i = 0; i < transform.childCount; ++i)
@@ -64,6 +59,11 @@ public class MapManager : Singleton<MapManager>
             return Vector3.zero;
 
         return Chunks[CurrentChunk].prefabSpawnTransform.position;
+    }
+
+    public Transform GetCurrentChuckTransform()
+    {
+        return Chunks[CurrentChunk].transform;
     }
 
     public Vector3 GetNextPrefabTargetPosition()

@@ -89,6 +89,7 @@ public class UIManager : Singleton<UIManager>
 
     public void RefreshData()
     {
+        Debug.Log(PlayerData.tools.Count.ToString());
         slider.value = 1 - ((float)PlayerData.timeLeft / PlayerData.totalTime);
         people.text = PlayerData.characters.Count.ToString();
         tools.text = PlayerData.tools.Count.ToString();

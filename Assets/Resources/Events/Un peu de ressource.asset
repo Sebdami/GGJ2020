@@ -10,34 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: L'appel de l'aventure
+  m_Name: Un peu de ressource
   m_EditorClassIdentifier: 
   lethal: 0
   isEpic: 1
-  eventTitle: L'appel de l'aventure
-  eventDescription: "$[Heros] d\xE9cide de partir \xE0 l'aventure, il quitte son
-    $[Animal] pour reconstruire son monde apr\xE9s la guerre, il d\xE9cide de partir
-    pour aider les gens."
-  mapPrefab: {fileID: 5028725756868240461, guid: cd9a2668fd807884fa9c3204221faeb8,
-    type: 3}
+  eventTitle: Un peu de ressource
+  eventDescription: "En se baladant dans la for\xEAt, $[Heros] tombe sur un sac rempli
+    d'outils"
+  mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
-  conditionList: []
+  conditionList:
+  - ETconditions: []
   choices:
-  - choiceDescription: Continue
+  - choiceDescription: Un peu plus d'outils ne serait pas de refus
     recapAfterChoice: 
     conditionsToEnableChoice: []
     costs:
       timeCost: 0
       charactersCost: 0
-      toolsCost: 0
+      toolsCost: -4
       lethalForRessources: 0
       namedCharacters: []
       namedTools: []
       showTimeCostOnRecap: 0
       showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 0
+      showToolsCostOnRecap: 1
       showSpecificCharactersRecap: 0
       showSpecificToolsRecap: 0
       overrideRecapCharacter: 

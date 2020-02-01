@@ -12,17 +12,15 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
     public CameraTransformData OtherSettings;
     public CameraThemeController ctc;
 
-    public Transform defaultTransform;
 
-    public void Start()
+
+    public void Init(Transform followTarget)
     {
         // RUN STATE
         cm = new CameraController(Camera.main, transform, DefaultSettings);
-        cm.SetFollowTarget(defaultTransform);
-        cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration);
-
         ctc = new CameraThemeController();
-
+        cm.SetFollowTarget(followTarget);
+        cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration);
     }
 
     public void Update()

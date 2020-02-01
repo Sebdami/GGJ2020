@@ -10,28 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: Lamoer
+  m_Name: Toute histoire a une fin
   m_EditorClassIdentifier: 
   lethal: 0
   isEpic: 1
-  eventTitle: La morte
+  eventTitle: Toute histoire a une fin
   eventDescription: Tout fini
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
   conditionList:
-    test: 0
-    conditionList:
-    - test: 0
-    required: 0
+  - ETconditions:
+    - invertCondition: 0
+      type: 3
+      checkType: 0
+      intParameter: 40
+      stringParameter: 
   choices:
-  - choiceDescription: Continue
+  - choiceDescription: Un peu plus d'outils ne serait pas de refus
     recapAfterChoice: 
-    choiceEnabled:
-      test: 0
-      conditionList: []
-      required: 0
+    conditionsToEnableChoice: []
     costs:
       timeCost: 0
       charactersCost: 0
@@ -50,3 +49,4 @@ MonoBehaviour:
       overrideRecapToolBroken: 
     possibleChainedEvents: []
     probaChainedEvent: 0
+    alterPrefab: 0
