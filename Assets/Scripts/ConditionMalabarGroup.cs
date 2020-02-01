@@ -25,6 +25,9 @@ public static class ExtensionMalabarGroup
 {
     public static bool CheckAll(this List<ConditionMalabarGroup> conditions)
     {
+        if (conditions == null || conditions.Count == 0)
+            return true;
+
         foreach (var condition in conditions)
         {
             if (condition.Check())
