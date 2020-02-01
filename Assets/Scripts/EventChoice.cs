@@ -11,7 +11,7 @@ public class EventChoice
     public ChoiceCost costs;
     public List<string> possibleChainedEvents;
     public float probaChainedEvent = 0.5f;
-    public GameObject mapPrefab;
+    public bool alterPrefab;
 
     public bool IsChoiceEnabled()
     {
