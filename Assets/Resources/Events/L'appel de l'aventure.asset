@@ -15,21 +15,18 @@ MonoBehaviour:
   lethal: 0
   isEpic: 1
   eventTitle: L'appel de l'aventure
-  eventDescription: Tout commence ....
+  eventDescription: "$[Heros] d\xE9cide de partir \xE0 l'aventure, il quitte son
+    $[Animal] pour reconstruire son monde apr\xE9s la guerre, il d\xE9cide de partir
+    pour aider les gens."
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
-  conditionList:
-    test: 0
-    conditionList:
-    - test: 0
-    required: 0
+  conditionList: []
   choices:
   - choiceDescription: Continue
     recapAfterChoice: 
-    choiceEnabled:
-      required: 0
+    conditionsToEnableChoice: []
     costs:
       timeCost: 0
       charactersCost: 0
@@ -48,3 +45,4 @@ MonoBehaviour:
       overrideRecapToolBroken: 
     possibleChainedEvents: []
     probaChainedEvent: 0
+    alterPrefab: 0

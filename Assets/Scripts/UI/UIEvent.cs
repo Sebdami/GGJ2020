@@ -19,18 +19,15 @@ public class UIEvent : UIPanel
 
     private GameplayEventManager m_GameplayEventManager;
 
-
     public override void Show()
     {
         base.Show();
 
-
-
         m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
 
 
-        name.text = m_GameplayEventManager.currentEvent.eventTitle;
-        content.text = m_GameplayEventManager.currentEvent.eventDescription;
+        name.text = WordGenerator.ReplaceSentence( m_GameplayEventManager.currentEvent.eventTitle);
+        content.text = WordGenerator.ReplaceSentence(m_GameplayEventManager.currentEvent.eventDescription);
         lethalIcon.SetActive(m_GameplayEventManager.currentEvent.lethal);
 
         foreach (Transform t in choicesPlace)
