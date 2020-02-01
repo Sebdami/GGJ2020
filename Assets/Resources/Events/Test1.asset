@@ -13,13 +13,55 @@ MonoBehaviour:
   m_Name: Test1
   m_EditorClassIdentifier: 
   lethal: 0
-  isEpic: 0
-  eventTitle: 
-  eventDescription: 
+  isEpic: 1
+  eventTitle: Bite
+  eventDescription: Super Bite
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
   conditionList:
     required: 0
-  choices: []
+  choices:
+  - choiceEnabled:
+      required: 0
+    costs:
+      timeCost: 20
+      charactersCost: 0
+      toolsCost: 0
+      lethalForRessources: 0
+      namedCharacters: []
+      namedTools: []
+      showTimeCostOnRecap: 0
+      showCharacterCostOnRecap: 0
+      showToolsCostOnRecap: 0
+      showSpecificCharactersRecap: 0
+      showSpecificToolsRecap: 0
+      overrideRecapCharacter: 
+      overrideRecapTool: 
+      overrideRecapCharacterDeath: 
+      overrideRecapToolBroken: 
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    recapChoice: 
+  - choiceEnabled:
+      required: 0
+    costs:
+      timeCost: 20
+      charactersCost: 0
+      toolsCost: 0
+      lethalForRessources: 0
+      namedCharacters: []
+      namedTools: []
+      showTimeCostOnRecap: 0
+      showCharacterCostOnRecap: 0
+      showToolsCostOnRecap: 0
+      showSpecificCharactersRecap: 0
+      showSpecificToolsRecap: 0
+      overrideRecapCharacter: 
+      overrideRecapTool: 
+      overrideRecapCharacterDeath: 
+      overrideRecapToolBroken: 
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    recapChoice: 

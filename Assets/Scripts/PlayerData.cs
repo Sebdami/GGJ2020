@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerData
 {
     public static int timeLeft;
-    public static List<GameplayRessource> characters;
-    public static List<GameplayRessource> tools;
-    public static List<GameplayEvent> eventsDone;
-    public static List<GameplayRessource> charactersLost;
+    public static List<GameplayRessource> characters = new List<GameplayRessource>();
+    public static List<GameplayRessource> tools = new List<GameplayRessource>();
+    public static List<GameplayEvent> eventsDone = new List<GameplayEvent>();
+    public static List<GameplayRessource> charactersLost = new List<GameplayRessource>();
 
     public static string DamageRessource(string _ressourceName, bool _isCharacter, bool _destroy, string _feedback, string _overrideFeedback, string _overrideFeedbackDeath)
     {
