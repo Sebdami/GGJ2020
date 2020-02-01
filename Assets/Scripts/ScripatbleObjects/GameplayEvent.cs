@@ -18,6 +18,6 @@ public class GameplayEvent : ScriptableObject
     public GameplayRessource[] specificTools;
     public GameplayRessource[] specificCharacters;
 
-    public ConditionList conditionList;
+    public List<ConditionMalabarGroup> conditionList;
     public EventChoice[] choices;
 }

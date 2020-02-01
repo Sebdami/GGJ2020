@@ -8,7 +8,7 @@ public class EventChoice
 {
     public string choiceDescription;
     public string recapAfterChoice;
-    public ConditionList choiceEnabled;
+    public List<ConditionMalabarGroup> conditionsToEnableChoice;
     public ChoiceCost costs;
     public List<string> possibleChainedEvents;
     public float probaChainedEvent = 0.5f;
@@ -16,7 +16,7 @@ public class EventChoice
 
     public bool IsChoiceEnabled()
     {
-        return choiceEnabled.Check();
+        return conditionsToEnableChoice.CheckAll();
     }
 
     /// <summary>

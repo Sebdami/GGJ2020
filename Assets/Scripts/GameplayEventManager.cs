@@ -19,6 +19,7 @@ public class GameplayEventManager : MonoBehaviour
 
     public void Start()
     {
+        PlayerData.timeLeft = PlayerData.totalTime;
         TriggerEvent("L'appel de l'aventure");
         UIManager.Instance.ShowPanel<UIEvent>();
     }
@@ -34,7 +35,7 @@ public class GameplayEventManager : MonoBehaviour
     public void TriggerEvent()
     {
         ShuffleEvents();
-        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.Check());
+        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll());
         if (nextEvent == null)
         {
             Debug.LogError("Can't find an event not done, restart game");
@@ -47,7 +48,7 @@ public class GameplayEventManager : MonoBehaviour
 
     public void TriggerEvent(string _eventId)
     {
-        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.Check() && x.name == _eventId);
+        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll() && x.name == _eventId);
         if (nextEvent == null)
         {
             TriggerEvent();
