@@ -18,4 +18,9 @@ public class UIRecap : UIPanel
         content.text = m_GameplayEventManager.choiceMade.recapAfterChoice;
  
     }
+
+    public void CloseRecap()
+    {
+        GameManager.Instance.NextAction();
+    }
 }

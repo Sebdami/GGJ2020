@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: Un peu de ressource
+  m_Name: La taverne
   m_EditorClassIdentifier: 
   lethal: 0
   isEpic: 1
-  eventTitle: Un peu de ressources
+  eventTitle: La [$Taverne] du [$Lieux] [$Adjectif]
   eventDescription: "En se baladant dans la for\xEAt, $[Heros] tombe sur un sac rempli
     d'outils"
   mapPrefab: {fileID: 0}
@@ -24,13 +24,35 @@ MonoBehaviour:
   conditionList:
   - ETconditions: []
   choices:
-  - choiceDescription: Un peu plus d'outils ne serait pas de refus
+  - choiceDescription: Enter dans la taverne
     recapAfterChoice: 
     conditionsToEnableChoice: []
     costs:
       timeCost: 0
       charactersCost: 0
       toolsCost: 4
+      lethalForRessources: 0
+      namedCharacters: []
+      namedTools: []
+      showTimeCostOnRecap: 0
+      showCharacterCostOnRecap: 0
+      showToolsCostOnRecap: 1
+      showSpecificCharactersRecap: 0
+      showSpecificToolsRecap: 0
+      overrideRecapCharacter: 
+      overrideRecapTool: 
+      overrideRecapCharacterDeath: 
+      overrideRecapToolBroken: 
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 0
+  - choiceDescription: Partir
+    recapAfterChoice: 
+    conditionsToEnableChoice: []
+    costs:
+      timeCost: 0
+      charactersCost: 0
+      toolsCost: -4
       lethalForRessources: 0
       namedCharacters: []
       namedTools: []

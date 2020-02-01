@@ -29,27 +29,7 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.HidePanel<UIEvent>();
         if (info == string.Empty)
         {
-            GameplayEventManager GEM = FindObjectOfType<GameplayEventManager>();
-            string nextAction = GEM.choiceMade.ChoiceConsequences();
-            if (string.IsNullOrEmpty(nextAction))
-            {
-                // Close UI
-                // UIManager.Instance.
-                UIManager.Instance.HideAllPanel();
-                // Move
-
-                MapManager.Instance.GoToNextChunk(perso, () => { Continue(); });
-
-                // Call Trigger event on GEM quand le move est terminé
-            }
-            else
-            {
-                // Close UI
-                UIManager.Instance.HideAllPanel();
-
-                // Call next event
-                GEM.TriggerEvent(nextAction);
-            }
+            NextAction();
         }
         else
         {
@@ -59,12 +39,40 @@ public class GameManager : Singleton<GameManager>
 
     public void Continue()
     {
+        PlayerData.eventsDone.Add(gbm.currentEvent);
         gbm.TriggerEvent();
+        UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
     }
 
     public void SpawnPrefab()
     {
+        // Load scene
         Instantiate(gbm.currentEvent.mapPrefab, mapm.GetPrefabTargetPosition(), Quaternion.identity, mapm.GetCurrentChuckTransform());
+    }
+
+    public void NextAction()
+    {
+        string nextAction = gbm.choiceMade.ChoiceConsequences();
+        if (string.IsNullOrEmpty(nextAction))
+        {
+            // Close UI
+            // UIManager.Instance.
+            UIManager.Instance.HideAllPanel();
+            // Move
+            MapManager.Instance.GoToNextChunk(perso, 
+                () => { Continue(); });
+
+            // Call Trigger event on GEM quand le move est terminé
+        }
+        else
+        {
+            // Close UI
+            UIManager.Instance.HideAllPanel();
+
+            // Call next event
+            gbm.TriggerEvent(nextAction);
+        }
+
     }
 }
