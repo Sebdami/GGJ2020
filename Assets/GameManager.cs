@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -48,6 +48,9 @@ public class GameManager : Singleton<GameManager>
     public void SpawnPrefab()
     {
         // Load scene
+        if (gbm.currentEvent.mapPrefab == null)
+            return;
+
         Instantiate(gbm.currentEvent.mapPrefab, mapm.GetPrefabTargetPosition(), Quaternion.identity, mapm.GetCurrentChuckTransform());
     }
 

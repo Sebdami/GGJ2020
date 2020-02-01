@@ -70,7 +70,9 @@ public class EventChoice
             PlayerData.timeLeft += timeGain;
 
             for (int i = 0; i < charactersGain; i++)
-                PlayerData.characters.Add(new GameplayRessource());
+                PlayerData.characters.Add(new GameplayRessource(
+                    WordManager.Instance.noms.wordList[Random.Range(0, WordManager.Instance.noms.wordList.Count)])
+                );
 
             for (int i = 0; i < toolsGain; i++)
                 PlayerData.tools.Add(new GameplayRessource());
@@ -91,6 +93,7 @@ public class EventChoice
         public int toolsCost;
 
         public bool lethalForRessources;
+        public bool setToDamaged;
         public List<string> namedCharacters;
         public List<string> namedTools;
 

@@ -12,7 +12,7 @@ public class PlayerData
     public static List<GameplayEvent> eventsDone = new List<GameplayEvent>();
     public static List<GameplayRessource> charactersLost = new List<GameplayRessource>();
 
-    public static string DamageRessource(string _ressourceName, bool _isCharacter, bool _destroy, string _feedback, string _overrideFeedback, string _overrideFeedbackDeath)
+    public static string DamageRessource(string _ressourceName, bool _isCharacter, bool _destroy, bool _setToDamaged, string _feedback, string _overrideFeedback, string _overrideFeedbackDeath)
     {
         GameplayRessource ressource;
         if (_isCharacter)
@@ -22,6 +22,12 @@ public class PlayerData
 
         if (ressource != null)
         {
+            if (_setToDamaged)
+            {
+                ressource.damaged = true;
+                return _feedback;
+            }
+
             // Trouver un moyen de communiquer qui est mort ce tour ci 
             if (ressource.damaged || _destroy)
             {

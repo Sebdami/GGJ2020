@@ -14,6 +14,12 @@ public class GameplayRessource
         ressourceName = _ressourceName;
     }
 
+    public GameplayRessource(string _ressourceName, bool _canBeLost)
+    {
+        ressourceName = _ressourceName;
+        canBeLost = _canBeLost;
+    }
+
     public GameplayRessource(GameplayRessource _from) {
         ressourceName = _from.ressourceName;
         damaged = _from.damaged;
