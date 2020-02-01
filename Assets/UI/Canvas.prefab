@@ -380,7 +380,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 38
+  m_Text: 0
 --- !u!114 &1193586232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,7 +818,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 0
 --- !u!114 &1704975292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1025,7 @@ MonoBehaviour:
   tools: {fileID: 1193586233}
   uipanels:
   - {fileID: 3417127134359510464, guid: 1414ea0a29121e64985930dde891b711, type: 3}
+  - {fileID: 4923523414840545868, guid: 0d3e705ba1fa46b4bb25b62c9d5f8ee6, type: 3}
   defaultLayout: {fileID: 7404715046939126906}
 --- !u!114 &567767828
 MonoBehaviour:
