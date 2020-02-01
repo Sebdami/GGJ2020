@@ -13,38 +13,52 @@ MonoBehaviour:
   m_Name: La taverne
   m_EditorClassIdentifier: 
   lethal: 0
-  isEpic: 1
-  eventTitle: La [$Taverne] du [$Lieux] [$Adjectif]
-  eventDescription: "En se baladant dans la for\xEAt, $[Heros] tombe sur un sac rempli
-    d'outils"
+  isEpic: 0
+  eventTitle: La Taverne du $[Lieux]
+  eventDescription: "Une taberne en vue, peu \xEAtre que le groupe pourrrait prendre
+    un de repos"
   mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
   conditionList:
-  - ETconditions: []
+  - ETconditions:
+    - invertCondition: 0
+      type: 1
+      checkType: 0
+      intParameter: 1
+      stringParameter: 
   choices:
   - choiceDescription: Enter dans la taverne
-    recapAfterChoice: 
+    recapAfterChoice: "C'etait peut \xEAtre pas une si bonne id\xE9e, tout le monde
+      est saoul."
     conditionsToEnableChoice: []
     costs:
       timeCost: 0
-      charactersCost: 0
-      toolsCost: 4
+      charactersCost: 200
+      toolsCost: 0
       lethalForRessources: 0
+      setToDamaged: 1
       namedCharacters: []
       namedTools: []
       showTimeCostOnRecap: 0
       showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 1
+      showToolsCostOnRecap: 0
       showSpecificCharactersRecap: 0
       showSpecificToolsRecap: 0
       overrideRecapCharacter: 
       overrideRecapTool: 
       overrideRecapCharacterDeath: 
       overrideRecapToolBroken: 
-    possibleChainedEvents: []
-    probaChainedEvent: 0
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 0
+      namedCharacters: []
+      namedTools: []
+    possibleChainedEvents:
+    - L'attaque des brigands
+    probaChainedEvent: 0.5
     alterPrefab: 0
   - choiceDescription: Partir
     recapAfterChoice: 
@@ -54,6 +68,7 @@ MonoBehaviour:
       charactersCost: 0
       toolsCost: -4
       lethalForRessources: 0
+      setToDamaged: 0
       namedCharacters: []
       namedTools: []
       showTimeCostOnRecap: 0
@@ -65,6 +80,12 @@ MonoBehaviour:
       overrideRecapTool: 
       overrideRecapCharacterDeath: 
       overrideRecapToolBroken: 
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 0
+      namedCharacters: []
+      namedTools: []
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0

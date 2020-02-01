@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Un peu de ressource
   m_EditorClassIdentifier: 
   lethal: 0
-  isEpic: 1
+  isEpic: 0
   eventTitle: Un peu de ressources
   eventDescription: "En se baladant dans la for\xEAt, $[Heros] tombe sur un sac rempli
     d'outils"
@@ -21,8 +21,7 @@ MonoBehaviour:
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
-  conditionList:
-  - ETconditions: []
+  conditionList: []
   choices:
   - choiceDescription: Un peu plus d'outils ne serait pas de refus
     recapAfterChoice: 
@@ -32,6 +31,7 @@ MonoBehaviour:
       charactersCost: 0
       toolsCost: 4
       lethalForRessources: 0
+      setToDamaged: 0
       namedCharacters: []
       namedTools: []
       showTimeCostOnRecap: 0
@@ -43,6 +43,12 @@ MonoBehaviour:
       overrideRecapTool: 
       overrideRecapCharacterDeath: 
       overrideRecapToolBroken: 
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 4
+      namedCharacters: []
+      namedTools: []
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
