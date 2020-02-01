@@ -10,6 +10,9 @@ public class GameplayRessource
     public bool canBeLost = true;
 
     public GameplayRessource() { }
+    public GameplayRessource(string _ressourceName) {
+        ressourceName = _ressourceName;
+    }
 
     public GameplayRessource(GameplayRessource _from) {
         ressourceName = _from.ressourceName;

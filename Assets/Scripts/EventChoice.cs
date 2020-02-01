@@ -10,6 +10,7 @@ public class EventChoice
     public string recapAfterChoice;
     public List<ConditionMalabarGroup> conditionsToEnableChoice;
     public ChoiceCost costs;
+    public ChoiceRewards rewards;
     public List<string> possibleChainedEvents;
     public float probaChainedEvent = 0.5f;
     public bool alterPrefab;
@@ -50,6 +51,35 @@ public class EventChoice
                 // Move to next event
                 return "";
             }
+        }
+    }
+
+
+    [System.Serializable]
+    public class ChoiceRewards
+    {
+        public int timeGain;
+        public int charactersGain;
+        public int toolsGain;
+
+        public List<string> namedCharacters;
+        public List<string> namedTools;
+
+        public void Gain()
+        {
+            PlayerData.timeLeft += timeGain;
+
+            for (int i = 0; i < charactersGain; i++)
+                PlayerData.characters.Add(new GameplayRessource());
+
+            for (int i = 0; i < toolsGain; i++)
+                PlayerData.tools.Add(new GameplayRessource());
+
+            foreach (var namedChara in namedCharacters)
+                PlayerData.characters.Add(new GameplayRessource(namedChara));
+
+            foreach (var namedTool in namedTools)
+                PlayerData.tools.Add(new GameplayRessource(namedTool));
         }
     }
 
