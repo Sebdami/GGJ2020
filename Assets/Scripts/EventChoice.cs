@@ -134,16 +134,16 @@ public class EventChoice
                 if (_isCharacter)
                 {
                     if (showSpecificCharactersRecap)
-                        _feedback = PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, _feedback, overrideRecapCharacter, overrideRecapCharacterDeath);
+                        _feedback = PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, setToDamaged, _feedback, overrideRecapCharacter, overrideRecapCharacterDeath);
                     else
-                        PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, null, "", "");
+                        PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, setToDamaged, null, "", "");
                 }
                 else
                 {
                     if (showSpecificToolsRecap)
-                        _feedback = PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, _feedback, overrideRecapTool, overrideRecapToolBroken);
+                        _feedback = PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, setToDamaged, _feedback, overrideRecapTool, overrideRecapToolBroken);
                     else
-                        PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, null, "", "");
+                        PlayerData.DamageRessource(id, _isCharacter, lethalForRessources, setToDamaged, null, "", "");
                 }
             }
         }
@@ -172,16 +172,16 @@ public class EventChoice
                     if (_isCharacter)
                     {
                         if (showSpecificCharactersRecap)
-                            _feedback = PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, _feedback, overrideRecapCharacter, overrideRecapCharacterDeath);
+                            _feedback = PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, setToDamaged, _feedback, overrideRecapCharacter, overrideRecapCharacterDeath);
                         else
-                            PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, null, "", "");
+                            PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, setToDamaged, null, "", "");
                     }
                     else
                     {
                         if (showSpecificToolsRecap)
-                            _feedback = PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, _feedback, overrideRecapTool, overrideRecapToolBroken);
+                            _feedback = PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, setToDamaged, _feedback, overrideRecapTool, overrideRecapToolBroken);
                         else
-                            PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, null, "", "");
+                            PlayerData.DamageRessource(gameplayRessourcesNamed[i].ressourceName, _isCharacter, lethalForRessources, setToDamaged, null, "", "");
                     }
                 }
             }
