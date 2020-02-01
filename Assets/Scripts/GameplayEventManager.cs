@@ -13,6 +13,7 @@ public class GameplayEventManager : MonoBehaviour
     }
     
     public GameplayEvent currentEvent = null;
+    public EventChoice choiceMade = null;
     [HideInInspector] public bool nextEventReady = false;
 
     public void TriggerEvent()
