@@ -48,13 +48,20 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.ShowPanel<UIEvent>();
     }
 
+    Tile currentTile;
+
     public void SpawnPrefab()
     {
         // Load scene
         if (gbm.currentEvent.mapPrefab == null)
             return;
 
-        Instantiate(gbm.currentEvent.mapPrefab, mapm.GetPrefabTargetPosition(), Quaternion.identity, mapm.GetCurrentChuckTransform());
+        currentTile = Instantiate(gbm.currentEvent.mapPrefab, mapm.GetPrefabTargetPosition(), Quaternion.identity, mapm.GetCurrentChuckTransform()).GetComponent<Tile>();
+    }
+
+    public void ActivatePrefab()
+    {
+        currentTile.Activate();
     }
 
     public void NextAction()
