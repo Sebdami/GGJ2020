@@ -23,13 +23,13 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
         cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration);
     }
 
-    public void ZoomIn(Action calback)
+    public void ZoomIn(Action calback = null)
     {
         DoCameraShake(0.5f, delegate () { calback?.Invoke(); cm.SetDesiredSettings(OtherSettings.targetSettings, OtherSettings.duration); });
 
     }
 
-    public void ZoomOut(Action calback)
+    public void ZoomOut(Action calback = null)
     {
         DoCameraShake(0.5f, delegate () { calback?.Invoke(); cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration); });
     }

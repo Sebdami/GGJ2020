@@ -105,6 +105,8 @@ public class MapManager : Singleton<MapManager>
         CoroutineManager.StartStaticCoroutine(DoBlend(CurrentChunk.lightingSettings, transistionTime));
         
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
+
+        CurrentChunk.test.gameObject.SetActive(false);
         toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime+0.1f).OnComplete(() =>
         {
             if (CurrentChunkIndex > 0)

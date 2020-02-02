@@ -61,7 +61,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Continue()
     {
-
+        MakePrefabAppear();
         PlayerData.timeLeft -= 10;
 
         UIManager.Instance.RefreshData();
@@ -70,6 +70,7 @@ public class GameManager : Singleton<GameManager>
 
     public void MakePrefabAppear()
     {
+        MapManager.Instance.CurrentChunk.test.gameObject.SetActive(true);
         MapManager.Instance.CurrentChunk.Appear();
     }
 
@@ -80,11 +81,10 @@ public class GameManager : Singleton<GameManager>
 
     public void WaitForAlterPrefab()
     {
-
         if (gbm.choiceMade.alterPrefab)
         {
-            ActivatePrefab();
-            StartCoroutine(WaitBeforeNextAction(3f));
+
+            StartCoroutine(WaitBeforeNextAction());
         }
         else
         {
@@ -130,9 +130,14 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    public IEnumerator WaitBeforeNextAction(float duration)
+    public IEnumerator WaitBeforeNextAction()
     {
-        yield return new WaitForSeconds(duration);
+        CameraStateMachine.Instance.ZoomIn();
+        yield return new WaitForSeconds(1f);
+        ActivatePrefab();
+        yield return new WaitForSeconds(0.75f);
+        CameraStateMachine.Instance.ZoomOut();
+        yield return new WaitForSeconds(1f);
         NextAction();
 
     }

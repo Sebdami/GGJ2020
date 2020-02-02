@@ -26,7 +26,7 @@ public class UIEventChoicesEntry : MonoBehaviour
         FindObjectOfType<GameplayEventManager>().choiceMade = choiceRef;
         GameManager.Instance.AchoicewasMade(choiceRef.recapAfterChoice);
 
-        
+            
 
         // TODO: Afficher le panneau de recap
         // On peut set un pavé de texte sur le choix pour le recap

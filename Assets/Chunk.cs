@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class Chunk : MonoBehaviour
 {
+    public GameObject test;
+
     public Color light1;
     public Color light2;
 
