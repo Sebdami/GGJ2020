@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: The Sawmill
+  m_Name: The Windmill
   m_EditorClassIdentifier: 
-  eventTitle: The sawmill of $[Lieux]
-  eventDescription: An old sawmill is in ruins, if $[Heros] spend some time here,
+  eventTitle: The windmill of $[Lieux]
+  eventDescription: An old windmill is in ruins, if $[Heros] spend some time here,
     he will probably gains some tools.
   conditionList:
   - ETconditions:
@@ -83,7 +83,7 @@ MonoBehaviour:
   isReutilisable: 0
   lethal: 0
   isEpic: 1
-  mapPrefab: {fileID: 4442802507564691778, guid: acbaab20fa193e54c9cab2ccbc152213,
+  mapPrefab: {fileID: 6348783628125167158, guid: fd70e4963f0b7a34fa1891571c317402,
     type: 3}
   timeToResolveEvent: 0
   specificTools: []
