@@ -62,6 +62,7 @@ public class EventChoice
         public int charactersGain;
         public int toolsGain;
         public bool isGainRandom = false;
+        public bool healCharacter;
 
         public List<string> namedCharacters;
         public List<string> namedTools;
@@ -83,6 +84,12 @@ public class EventChoice
 
             foreach (var namedTool in namedTools)
                 PlayerData.tools.Add(new GameplayRessource(namedTool));
+
+            if (healCharacter)
+            {
+                for (int i = 0; i < charactersGain; i++)
+                    PlayerData.characters[i].damaged = false;
+            }
         }
     }
 

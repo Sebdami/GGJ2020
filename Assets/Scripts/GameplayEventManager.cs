@@ -44,7 +44,7 @@ public class GameplayEventManager : MonoBehaviour
         }
 
 
-        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll() && x.name == _eventId);
+        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.name == _eventId);
         if (nextEvent == null)
         {
             TriggerEvent();
