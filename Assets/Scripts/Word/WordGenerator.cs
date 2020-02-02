@@ -73,6 +73,6 @@ public static class WordGenerator
            
         }
 
-        return sentence;
+        return sentence.Replace("\\n", "\n");
     }
 }

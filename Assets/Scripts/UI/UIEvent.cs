@@ -23,7 +23,7 @@ public class UIEvent : UIPanel
         base.Show();
 
         name.text = WordGenerator.ReplaceSentence( m_GameplayEventManager.currentEvent.eventTitle);
-        content.SetText(WordGenerator.ReplaceSentence(m_GameplayEventManager.currentEvent.eventDescription).Replace("\\n", "\n"));
+        content.SetText(WordGenerator.ReplaceSentence(m_GameplayEventManager.currentEvent.eventDescription));
 
         lethalIcon.SetActive(m_GameplayEventManager.currentEvent.lethal);
 
