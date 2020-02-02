@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1adb79fc6e756c746ae7b5f6c0841f04, type: 3}
-  m_Name: WordNames
+  m_Name: WordHero
   m_EditorClassIdentifier: 
   wordList:
-  - Bob
-  - Jean
-  - Anthony
+  - Jean-Eude
+  - Jason
+  - Karlos
   - Carlos
+  - Robert
+  - Jimmu-Bobby

@@ -19,8 +19,10 @@ public class GameplayEventManager : MonoBehaviour
 
     public void TriggerEvent()
     {
+       
         ShuffleEvents();
         GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll());
+
         if (nextEvent == null)
         {
             Debug.LogError("Can't find an event not done, restart game");
@@ -33,6 +35,15 @@ public class GameplayEventManager : MonoBehaviour
 
     public void TriggerEvent(string _eventId)
     {
+        if (_eventId == "The End")
+        {
+            GameplayEvent endEvent = events.Find(x => x.name == "The End");
+            currentEvent = endEvent;
+            nextEventReady = true;
+            return;
+        }
+
+
         GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll() && x.name == _eventId);
         if (nextEvent == null)
         {

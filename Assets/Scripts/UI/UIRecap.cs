@@ -15,8 +15,9 @@ public class UIRecap : UIPanel
         base.Show();
 
         m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
-        content.text = m_GameplayEventManager.choiceMade.recapAfterChoice;
- 
+
+
+        content.text = WordGenerator.ReplaceSentence(m_GameplayEventManager.choiceMade.recapAfterChoice);
     }
 
     public void CloseRecap()

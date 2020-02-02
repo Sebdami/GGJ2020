@@ -12,6 +12,7 @@ public class GameplayEvent : ScriptableObject
     public List<ConditionMalabarGroup> conditionList;
     public EventChoice[] choices;
 
+    public bool isReutilisable = false;
     public bool lethal;
     public bool isEpic;
     public GameObject mapPrefab;

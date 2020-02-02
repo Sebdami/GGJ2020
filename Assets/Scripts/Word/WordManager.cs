@@ -6,12 +6,16 @@ public class WordManager : Singleton<WordManager>
 {
     public WordData lieux;
     public WordData noms;
+    public WordData heros;
     public WordData animaux;
 
     protected override void SingletonAwake()
     {
         base.SingletonAwake();
+        WordGenerator.herosName = heros.wordList[Random.Range(0, heros.wordList.Count)];
+
         Reload();
+
     }
 
     public void Reload()

@@ -29,6 +29,12 @@ public class GameManager : Singleton<GameManager>
     {
         UIManager.Instance.RefreshData();
         UIManager.Instance.HidePanel<UIEvent>();
+
+        if (gbm.currentEvent.eventTitle == "The End")
+        { 
+            UIManager.Instance.ShowPanel<UIRecapEnd>(); 
+        }
+
         if (info == string.Empty)
         {
             WaitForAlterPrefab();
@@ -41,7 +47,9 @@ public class GameManager : Singleton<GameManager>
 
     public void Continue()
     {
-        PlayerData.eventsDone.Add(gbm.currentEvent);
+        if(!gbm.currentEvent.isReutilisable)
+            PlayerData.eventsDone.Add(gbm.currentEvent);
+
         PlayerData.timeLeft -= 10;
         gbm.TriggerEvent();
         UIManager.Instance.RefreshData();

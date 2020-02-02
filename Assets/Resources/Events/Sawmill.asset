@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
+  m_Name: Sawmill
+  m_EditorClassIdentifier: 
+  isReutilisable: 0
+  lethal: 0
+  isEpic: 1
+  eventTitle: The sawmill of $[Lieux]
+  eventDescription: An old sawmill is in ruins, if $[Heros] spend some time here,
+    he will probably gains some tools.
+  mapPrefab: {fileID: 0}
+  timeToResolveEvent: 0
+  specificTools: []
+  specificCharacters: []
+  conditionList:
+  - ETconditions:
+    - invertCondition: 0
+      type: 3
+      checkType: 0
+      intParameter: 100
+      stringParameter: 
+    - invertCondition: 1
+      type: 2
+      checkType: 0
+      intParameter: 3
+      stringParameter: 
+  choices:
+  - choiceDescription: With a little help
+    recapAfterChoice: You and your friends did a great job.
+    conditionsToEnableChoice:
+    - ETconditions:
+      - invertCondition: 0
+        type: 1
+        checkType: 0
+        intParameter: 3
+        stringParameter: 
+    costs:
+      timeCost: 20
+      charactersCost: 0
+      toolsCost: 0
+      lethalForRessources: 0
+      setToDamaged: 0
+      namedCharacters: []
+      namedTools: []
+      showTimeCostOnRecap: 0
+      showCharacterCostOnRecap: 0
+      showToolsCostOnRecap: 0
+      showSpecificCharactersRecap: 0
+      showSpecificToolsRecap: 0
+      overrideRecapCharacter: 
+      overrideRecapTool: 
+      overrideRecapCharacterDeath: 
+      overrideRecapToolBroken: 
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 3
+      namedCharacters: []
+      namedTools: []
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 1
+  - choiceDescription: Let's get to work
+    recapAfterChoice: Alone it was difficult, but $[Heros] did it
+    conditionsToEnableChoice: []
+    costs:
+      timeCost: 40
+      charactersCost: 0
+      toolsCost: 0
+      lethalForRessources: 0
+      setToDamaged: 0
+      namedCharacters: []
+      namedTools: []
+      showTimeCostOnRecap: 0
+      showCharacterCostOnRecap: 0
+      showToolsCostOnRecap: 0
+      showSpecificCharactersRecap: 0
+      showSpecificToolsRecap: 0
+      overrideRecapCharacter: 
+      overrideRecapTool: 
+      overrideRecapCharacterDeath: 
+      overrideRecapToolBroken: 
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 3
+      namedCharacters: []
+      namedTools: []
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 1

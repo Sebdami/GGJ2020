@@ -29,7 +29,7 @@ public class EventChoice
         if (PlayerData.CheckIfGameIsOver())
         {
             // Trigger final event
-            return "";
+            return "The End";
         }
         else
         {

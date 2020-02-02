@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lieux: {fileID: 11400000, guid: 5635830621472c34884d96e6d4086766, type: 2}
   noms: {fileID: 11400000, guid: 89caeed795a217a4889310e754eda3e7, type: 2}
+  heros: {fileID: 11400000, guid: 353e18a34ae1f5e4db784ea90d9956eb, type: 2}
   animaux: {fileID: 11400000, guid: 8c03bdba5a39b8e42bc36596e41ebbd9, type: 2}
 --- !u!4 &713262246
 Transform:
@@ -803,6 +804,29 @@ MonoBehaviour:
   enableOcclusionCulling: 1
   occlusionCullingAccuracy: 2
   enableLightProbes: 0
+--- !u!114 &1562219608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
+  m_Name: New Aura Base Settings
+  m_EditorClassIdentifier: 
+  useDensity: 1
+  density: 0.25
+  useScattering: 1
+  scattering: 0.5
+  useAmbientLighting: 1
+  ambientLightingStrength: 1
+  useColor: 0
+  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
+  colorStrength: 1
+  useExtinction: 0
+  extinction: 0.75
 --- !u!1 &1921285856
 GameObject:
   m_ObjectHideFlags: 0

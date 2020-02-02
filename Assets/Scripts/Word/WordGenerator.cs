@@ -7,6 +7,10 @@ public static class WordGenerator
     public static string names = "$[Nom]";
     public static string animal = "$[Animal]";
     public static string heros = "$[Heros]";
+    public static string minstrel = "$[Minstrel]";
+
+    public static string herosName = "Robert";
+    public static string menestrelName = "Minstrel";
 
     public static List<string> alreadyUsedPlace = new List<string>();
     public static List<string> alreadyUsedNom = new List<string>();
@@ -29,7 +33,8 @@ public static class WordGenerator
 
     public static string ReplaceSentence(string sentence)
     {
-        sentence = sentence.Replace(heros, "Robert");
+        sentence = sentence.Replace(heros, herosName);
+        sentence = sentence.Replace(minstrel, menestrelName);
 
         if (sentence.Contains(animal))
         {

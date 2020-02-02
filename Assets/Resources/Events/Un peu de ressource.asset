@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: Un peu de ressource
   m_EditorClassIdentifier: 
+  isReutilisable: 1
+  lethal: 0
+  isEpic: 0
   eventTitle: Un peu de ressources
   eventDescription: "En se baladant dans la for\xEAt, $[Heros] tombe sur un sac rempli
     d'outils"
