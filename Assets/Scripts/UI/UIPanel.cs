@@ -5,7 +5,10 @@ using UnityEngine;
 public abstract class UIPanel : MonoBehaviour
 {
     protected const float FadeTime = 0.15f;
-    
+
+    protected GameplayEventManager m_GameplayEventManager;
+
+
     public Ease defaultEaseIn = Ease.Linear;
     public Ease defaultEaseOut = Ease.Linear;
 
@@ -20,6 +23,8 @@ public abstract class UIPanel : MonoBehaviour
         _canvasGroup = GetComponent<CanvasGroup>();
         InitializeTween();
         _canvasGroup.interactable = false;
+        m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
+
     }
 
     public virtual void ResetPanel()

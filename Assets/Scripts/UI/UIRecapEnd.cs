@@ -8,15 +8,12 @@ public class UIRecapEnd : UIPanel
     [Header("Labels")]
     public TextMeshProUGUI content;
 
-    private GameplayEventManager m_GameplayEventManager;
 
 
     public override void Show()
     {
         base.Show();
-
-        m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
-
+       
         GameplayEvent[] accomplissement = PlayerData.eventsDone.FindAll(x => x.isEpic = true).ToArray();
         string contentTmp = "$[Heros] had a great life, he ";
         if (accomplissement.Length > 0)

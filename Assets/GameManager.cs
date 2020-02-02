@@ -18,9 +18,10 @@ public class GameManager : Singleton<GameManager>
         CameraStateMachine.Instance.Init(perso);
         gbm.TriggerEvent("L'appel de l'aventure");
         PlayerData.characters.Add(new GameplayRessource("Robert", false));
-        UIManager.Instance.RefreshData();
+     
         SpawnPrefab();
         PlayerData.timeLeft = PlayerData.totalTime;
+        UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
     }
 

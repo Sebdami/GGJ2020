@@ -7,21 +7,23 @@ public class UIRecap : UIPanel
     [Header("Labels")]
     public TextMeshProUGUI content;
 
-    private GameplayEventManager m_GameplayEventManager;
+    private bool test = false;
+
 
 
     public override void Show()
     {
         base.Show();
-
-        m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
-
-
+        test = false;
         content.text = WordGenerator.ReplaceSentence(m_GameplayEventManager.choiceMade.recapAfterChoice);
     }
 
     public void CloseRecap()
     {
-        GameManager.Instance.WaitForAlterPrefab();
+        if (!test)
+        {
+            test = true;
+            GameManager.Instance.WaitForAlterPrefab();
+        }
     }
 }

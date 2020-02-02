@@ -19,7 +19,9 @@ MonoBehaviour:
   conditionList: []
   choices:
   - choiceDescription: Let's go $[Heros] !
-    recapAfterChoice: 
+    recapAfterChoice: Manage carefully your teammates and tools to optimize your
+      encounters. Here, have your first tool to begin your journey. But be careful,
+      $[Heros] is mortal, and every action may take time.
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
@@ -36,8 +38,9 @@ MonoBehaviour:
     rewards:
       timeGain: 0
       charactersGain: 0
-      toolsGain: 0
+      toolsGain: 1
       isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools: []
   isReutilisable: 0

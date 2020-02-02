@@ -15,7 +15,13 @@ MonoBehaviour:
   eventTitle: A Legendary Place
   eventDescription: You've found the ruins of the place of Legends. It has been devastated
     by long years of battles, but the place still holds some magical properties.
-  conditionList: []
+  conditionList:
+  - ETconditions:
+    - invertCondition: 0
+      type: 3
+      checkType: 0
+      intParameter: 300
+      stringParameter: 
   choices:
   - choiceDescription: Repair the place of Legends
     recapAfterChoice: The place shines once again thanks to you. After these long
@@ -51,6 +57,7 @@ MonoBehaviour:
       charactersGain: 0
       toolsGain: 0
       isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools: []
   - choiceDescription: Leave the place, it'd take too many resources
@@ -73,6 +80,7 @@ MonoBehaviour:
       charactersGain: 0
       toolsGain: 0
       isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools: []
   isReutilisable: 0

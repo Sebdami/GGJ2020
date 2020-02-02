@@ -17,14 +17,10 @@ public class UIEvent : UIPanel
 
     public RectTransform choicesPlace;
 
-    private GameplayEventManager m_GameplayEventManager;
 
     public override void Show()
     {
         base.Show();
-
-        m_GameplayEventManager = FindObjectOfType<GameplayEventManager>();
-
 
         name.text = WordGenerator.ReplaceSentence( m_GameplayEventManager.currentEvent.eventTitle);
         content.text = WordGenerator.ReplaceSentence(m_GameplayEventManager.currentEvent.eventDescription);
