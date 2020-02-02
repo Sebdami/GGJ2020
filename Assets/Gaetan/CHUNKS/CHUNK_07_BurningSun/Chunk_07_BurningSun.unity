@@ -361,6 +361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk_06_NewTown
       objectReference: {fileID: 0}
+    - target: {fileID: 4702811034110943174, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4702811034280299661, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: frustumSettings.baseSettings
@@ -371,5 +376,20 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 1096013690}
+    - target: {fileID: 4702811035514270247, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702811035675725372, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251086614968204506, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acbaab20fa193e54c9cab2ccbc152213, type: 3}
