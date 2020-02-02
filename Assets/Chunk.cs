@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Experimental.GlobalIllumination;
 
 public class Chunk : MonoBehaviour
@@ -17,4 +18,16 @@ public class Chunk : MonoBehaviour
     }
     public LightingSettings lightingSettings;
 
+    public UnityEvent OnAppear;
+    public UnityEvent OnActivate;
+
+    public void Appear()
+    {
+        OnAppear?.Invoke();
+    }
+
+    public void Activate()
+    {
+        OnActivate?.Invoke();
+    }
 }

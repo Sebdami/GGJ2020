@@ -7,85 +7,88 @@ using UnityEngine.SceneManagement;
 public class MapManager : Singleton<MapManager>
 {
     [SerializeField]
-    List<Chunk> chunkPrefabs = new List<Chunk>();
-
-    [SerializeField]
     public int NumberOfChunks = 15;
 
     [SerializeField]
     Vector2 chunkSize = new Vector2(200, 200);
 
-    public List<Chunk> Chunks = new List<Chunk>();
-    public int CurrentChunk = 0;
+    public List<Vector3> ChunkPositions = new List<Vector3>();
+    public int CurrentChunkIndex = 0;
 
-    public void GenerateChunks()
+    public Chunk CurrentChunk;
+    Chunk lastChunk;
+
+    public void GenerateChunkPositions()
     {
         for (int i = 0; i < transform.childCount; ++i)
             Destroy(transform.GetChild(i).gameObject);
-        Chunks = new List<Chunk>();
+        ChunkPositions = new List<Vector3>();
         Vector3 lastPosition = Vector3.zero;
-        for(int i = 0; i < NumberOfChunks; ++i)
+        ChunkPositions.Add(lastPosition);
+        for (int i = 1; i < NumberOfChunks; ++i)
         {
-            Chunks.Add(Instantiate(chunkPrefabs[Random.Range(0, chunkPrefabs.Count - 1)], transform));
-            Chunks[i].transform.localPosition = lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y);
-            Chunks[i].gameObject.SetActive(false);
-            lastPosition = Chunks[i].transform.localPosition;
+            ChunkPositions.Add(lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
         }
     }
 
-    public void Init()
+    public void Init(GameplayEvent gevent)
     {
-        GenerateChunks();
-        Chunks[0].gameObject.SetActive(true);
-        CurrentChunk = 0;
+        GenerateChunkPositions();
+        CurrentChunkIndex = 0;
+        InstantiateFirst(gevent.mapPrefab);
+        ApplyChunkSettings(CurrentChunk);
+    }
+
+    void InstantiateFirst(Chunk prefab)
+    {
+        CurrentChunk = Instantiate(prefab, transform);
+        CurrentChunk.transform.position = ChunkPositions[0];
     }
 
     public Vector3 GetNextPlayerTargetPosition()
     {
-        if (CurrentChunk >= NumberOfChunks - 1)
+        if (CurrentChunkIndex >= NumberOfChunks - 1)
             return Vector3.zero;
 
-        return Chunks[CurrentChunk + 1].playerTargetTransform.position;
+        return ChunkPositions[CurrentChunkIndex + 1];
     }
 
     public Vector3 GetPlayerTargetPosition()
     {
-        if (CurrentChunk >= NumberOfChunks - 1)
+        if (CurrentChunkIndex >= NumberOfChunks - 1)
             return Vector3.zero;
 
-        return Chunks[CurrentChunk].playerTargetTransform.position;
+        return ChunkPositions[CurrentChunkIndex];
     }
 
     public Vector3 GetPrefabTargetPosition()
     {
-        if (CurrentChunk >= NumberOfChunks - 1)
+        if (CurrentChunkIndex >= NumberOfChunks - 1)
             return Vector3.zero;
 
-        return Chunks[CurrentChunk].prefabSpawnTransform.position;
-    }
-
-    public Transform GetCurrentChuckTransform()
-    {
-        return Chunks[CurrentChunk].transform;
+        return ChunkPositions[CurrentChunkIndex];
     }
 
     public Vector3 GetNextPrefabTargetPosition()
     {
-        if (CurrentChunk >= NumberOfChunks - 1)
+        if (CurrentChunkIndex >= NumberOfChunks - 1)
             return Vector3.zero;
 
-        return Chunks[CurrentChunk + 1].prefabSpawnTransform.position;
+        return ChunkPositions[CurrentChunkIndex + 1];
     }
 
-    public void GoToNextChunk(Transform toMove, TweenCallback callback)
+    public void GoToNextChunk(Transform toMove, Chunk chunkPrefab, TweenCallback callback)
     {
-        CurrentChunk++;
-        Chunks[CurrentChunk].gameObject.SetActive(true);
-        toMove.DOMove(Chunks[CurrentChunk].playerTargetTransform.position, 3f).OnComplete(() =>
+        CurrentChunkIndex++;
+        lastChunk = CurrentChunk;
+        CurrentChunk = Instantiate(chunkPrefab, transform);
+        CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
+        toMove.DOMove(ChunkPositions[CurrentChunkIndex], 3f).OnComplete(() =>
         {
-            if(CurrentChunk > 0)
-                Chunks[CurrentChunk - 1].gameObject.SetActive(false);
-            ApplyChunkSettings(Chunks[CurrentChunk]);
+            if (CurrentChunkIndex > 0)
+                Destroy(lastChunk.gameObject);
+            ApplyChunkSettings(CurrentChunk);
+            
             callback?.Invoke();
         });
     }

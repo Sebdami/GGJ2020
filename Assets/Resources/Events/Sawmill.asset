@@ -12,16 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: Sawmill
   m_EditorClassIdentifier: 
-  isReutilisable: 0
-  lethal: 0
-  isEpic: 1
   eventTitle: The sawmill of $[Lieux]
   eventDescription: An old sawmill is in ruins, if $[Heros] spend some time here,
     he will probably gains some tools.
-  mapPrefab: {fileID: 0}
-  timeToResolveEvent: 0
-  specificTools: []
-  specificCharacters: []
   conditionList:
   - ETconditions:
     - invertCondition: 0
@@ -37,6 +30,9 @@ MonoBehaviour:
   choices:
   - choiceDescription: With a little help
     recapAfterChoice: You and your friends did a great job.
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 1
     conditionsToEnableChoice:
     - ETconditions:
       - invertCondition: 0
@@ -48,54 +44,47 @@ MonoBehaviour:
       timeCost: 20
       charactersCost: 0
       toolsCost: 0
+      isCostRandom: 0
       lethalForRessources: 0
       setToDamaged: 0
       namedCharacters: []
       namedTools: []
-      showTimeCostOnRecap: 0
-      showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 0
-      showSpecificCharactersRecap: 0
-      showSpecificToolsRecap: 0
-      overrideRecapCharacter: 
-      overrideRecapTool: 
-      overrideRecapCharacterDeath: 
-      overrideRecapToolBroken: 
     rewards:
       timeGain: 0
       charactersGain: 0
       toolsGain: 3
+      isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools: []
+  - choiceDescription: Let's get to work
+    recapAfterChoice: Alone it was difficult, but $[Heros] did it
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 1
-  - choiceDescription: Let's get to work
-    recapAfterChoice: Alone it was difficult, but $[Heros] did it
     conditionsToEnableChoice: []
     costs:
       timeCost: 40
       charactersCost: 0
       toolsCost: 0
+      isCostRandom: 0
       lethalForRessources: 0
       setToDamaged: 0
       namedCharacters: []
       namedTools: []
-      showTimeCostOnRecap: 0
-      showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 0
-      showSpecificCharactersRecap: 0
-      showSpecificToolsRecap: 0
-      overrideRecapCharacter: 
-      overrideRecapTool: 
-      overrideRecapCharacterDeath: 
-      overrideRecapToolBroken: 
     rewards:
       timeGain: 0
       charactersGain: 0
       toolsGain: 3
+      isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools: []
-    possibleChainedEvents: []
-    probaChainedEvent: 0
-    alterPrefab: 1
+  isReutilisable: 0
+  lethal: 0
+  isEpic: 1
+  mapPrefab: {fileID: 3500821665003763063, guid: b6bc8916416d215429fd35b7e976e850,
+    type: 3}
+  timeToResolveEvent: 0
+  specificTools: []
+  specificCharacters: []

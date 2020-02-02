@@ -37,6 +37,7 @@ MonoBehaviour:
       charactersGain: 0
       toolsGain: 0
       isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools:
       - Pickaxe
@@ -60,6 +61,7 @@ MonoBehaviour:
       charactersGain: 0
       toolsGain: 0
       isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools:
       - Shovel
@@ -83,13 +85,15 @@ MonoBehaviour:
       charactersGain: 0
       toolsGain: 0
       isGainRandom: 0
+      healCharacter: 0
       namedCharacters: []
       namedTools:
       - Hammer
   isReutilisable: 1
   lethal: 0
   isEpic: 0
-  mapPrefab: {fileID: 0}
+  mapPrefab: {fileID: 3500821665003763063, guid: b6bc8916416d215429fd35b7e976e850,
+    type: 3}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []

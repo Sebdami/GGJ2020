@@ -15,7 +15,7 @@ public class GameplayEvent : ScriptableObject
     public bool isReutilisable = false;
     public bool lethal;
     public bool isEpic;
-    public GameObject mapPrefab;
+    public Chunk mapPrefab;
 
     public float timeToResolveEvent; // if < 0.0f, the event is not timed
 

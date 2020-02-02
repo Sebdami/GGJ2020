@@ -13,13 +13,13 @@ public class GameManager : Singleton<GameManager>
     {
         mapm = MapManager.Instance;
         gbm = FindObjectOfType<GameplayEventManager>();
-        MapManager.Instance.Init();
-        perso.transform.position = mapm.GetPlayerTargetPosition();
         CameraStateMachine.Instance.Init(perso);
-        PlayerData.characters.Add(new GameplayRessource("Robert", false));
-
         gbm.TriggerEvent("L'appel de l'aventure");
-        SpawnPrefab();
+        MapManager.Instance.Init(gbm.currentEvent);
+        perso.transform.position = mapm.GetPlayerTargetPosition();
+        PlayerData.characters.Add(new GameplayRessource("Robert", false));
+        UIManager.Instance.RefreshData();
+        MakePrefabAppear();
         PlayerData.timeLeft = PlayerData.totalTime;
         UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
@@ -59,13 +59,9 @@ public class GameManager : Singleton<GameManager>
 
     Tile currentTile;
 
-    public void SpawnPrefab()
+    public void MakePrefabAppear()
     {
-        // Load scene
-        if (gbm.currentEvent.mapPrefab == null)
-            return;
-
-        currentTile = Instantiate(gbm.currentEvent.mapPrefab, mapm.GetPrefabTargetPosition(), Quaternion.identity, mapm.GetCurrentChuckTransform()).GetComponent<Tile>();
+        MapManager.Instance.CurrentChunk.Appear();
     }
 
     public void ActivatePrefab()
@@ -98,7 +94,7 @@ public class GameManager : Singleton<GameManager>
                 // UIManager.Instance.
                 UIManager.Instance.HideAllPanel();
                 // Move
-                MapManager.Instance.GoToNextChunk(perso,
+                MapManager.Instance.GoToNextChunk(perso, gbm.currentEvent.mapPrefab,
                     () => { Continue(); });
 
                 // Call Trigger event on GEM quand le move est terminé
