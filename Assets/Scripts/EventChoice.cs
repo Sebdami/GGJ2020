@@ -29,7 +29,7 @@ public class EventChoice
     {
         if (PlayerData.CheckIfGameIsOver())
         {
-            if (PlayerData.timeLeft < 0)
+            if (PlayerData.TimeLeft < 0)
                 UIManager.Instance.BumpSablier();
             // Trigger final event
             return "The End";
@@ -72,7 +72,7 @@ public class EventChoice
 
         public void Gain()
         {
-            PlayerData.timeLeft += (isGainRandom) ? Random.Range(0, timeGain) : timeGain;
+            PlayerData.TimeLeft += (isGainRandom) ? Random.Range(0, timeGain) : timeGain;
 
             if (!healCharacter)
                 for (int i = 0; i < ((isGainRandom) ? Random.Range(0, charactersGain): charactersGain); i++)
@@ -127,7 +127,7 @@ public class EventChoice
         public string ResolveCosts()
         {
             string feedback = "";
-            PlayerData.timeLeft -= (isCostRandom) ? Random.Range(0, timeCost) : timeCost;
+            PlayerData.TimeLeft -= (isCostRandom) ? Random.Range(0, timeCost) : timeCost;
 
             if (showTimeCostOnRecap)
                 feedback += "Cette action vous a pris " + timeCost + " unités de temps. ";

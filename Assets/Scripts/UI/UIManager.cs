@@ -97,7 +97,7 @@ public class UIManager : Singleton<UIManager>
 
     public void RefreshData()
     {
-        slider.fillAmount = ((float)PlayerData.timeLeft / PlayerData.totalTime);
+        slider.fillAmount = ((float)PlayerData.TimeLeft / PlayerData.totalTime);
         people.text = PlayerData.characters.Count.ToString();
         tools.text = PlayerData.tools.Count.ToString();
     }

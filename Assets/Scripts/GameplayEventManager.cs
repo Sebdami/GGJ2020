@@ -39,6 +39,8 @@ public class GameplayEventManager : MonoBehaviour
     {
         if (_eventId == "The End")
         {
+            if(!GameManager.Instance.EndMusicIsPlaying)
+                AudioManager.Instance.FadeMusic(AudioManager.Instance.endMusic, 2f);
             GameplayEvent endEvent = events.Find(x => x.name == "The End");
             currentEvent = endEvent;
             nextEventReady = true;

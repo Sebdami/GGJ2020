@@ -63,7 +63,7 @@ public class ConditionMalabar
                 }
                 break;
             case ConditionType.Time:
-                result = PlayerData.totalTime - PlayerData.timeLeft > intParameter;
+                result = PlayerData.totalTime - PlayerData.TimeLeft > intParameter;
                 break;
             default:
                 break;

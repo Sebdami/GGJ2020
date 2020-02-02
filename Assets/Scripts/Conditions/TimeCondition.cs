@@ -10,7 +10,7 @@ public class TimeCondition : InvertibleCondition
 
     public override bool Check()
     {
-        bool result = ComparisonOperation.CheckComparison(comparison, time, PlayerData.timeLeft);
+        bool result = ComparisonOperation.CheckComparison(comparison, time, PlayerData.TimeLeft);
         return Invert ? !result : result;
     }
 }

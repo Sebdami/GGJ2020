@@ -6,11 +6,25 @@ public class PlayerData
 {
     public static int totalTime = 500;
 
-    public static int timeLeft;
+    private static int timeLeft;
     public static List<GameplayRessource> characters = new List<GameplayRessource>();
     public static List<GameplayRessource> tools = new List<GameplayRessource>();
     public static List<GameplayEvent> eventsDone = new List<GameplayEvent>();
     public static List<GameplayRessource> charactersLost = new List<GameplayRessource>();
+
+    public static int TimeLeft
+    {
+        get => timeLeft;
+        set
+        {
+            timeLeft = value;
+            if (PlayerData.timeLeft < 100 && !GameManager.Instance.EndMusicIsPlaying)
+            {
+                AudioManager.Instance.FadeMusic(AudioManager.Instance.endMusic, 3f);
+                GameManager.Instance.EndMusicIsPlaying = true;
+            }
+        }
+    }
 
     public static void Reset()
     {
@@ -117,7 +131,7 @@ public class PlayerData
         if (charactersLost.Find(x => !x.canBeLost) != null)
             return true;
 
-        if (timeLeft < 0)
+        if (TimeLeft < 0)
             return true;
 
         return false;

@@ -11,12 +11,14 @@ public class GameManager : Singleton<GameManager>
 
     public string cheat = "";
 
+    public bool EndMusicIsPlaying;
+
     public void Start()
     {
         mapm = MapManager.Instance;
         gbm = FindObjectOfType<GameplayEventManager>();
-
-        if(cheat != "")
+        EndMusicIsPlaying = false;
+        if (cheat != "")
         {
             gbm.TriggerEvent(cheat);
         }
@@ -32,7 +34,7 @@ public class GameManager : Singleton<GameManager>
         PlayerData.characters.Add(new GameplayRessource("Robert", false));
         UIManager.Instance.RefreshData();
         MakePrefabAppear();
-        PlayerData.timeLeft = PlayerData.totalTime;
+        PlayerData.TimeLeft = PlayerData.totalTime;
         UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
 
@@ -65,8 +67,7 @@ public class GameManager : Singleton<GameManager>
     public void Continue()
     {
         MakePrefabAppear();
-        PlayerData.timeLeft -= 10;
-
+        PlayerData.TimeLeft -= 10;
         UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
     }
