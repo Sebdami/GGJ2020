@@ -1,15 +1,13 @@
 ﻿using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.SceneManagement;
-using RenderSettings = UnityEngine.RenderSettings;
 
 public class MapManager : Singleton<MapManager>
 {
-    public DirectionalLight ligth1;
-    public DirectionalLight ligth2;
+    public Light ligth1;
+    public Light ligth2;
+
+    public float transistionTime = 2.5f;
 
     [SerializeField]
     public int NumberOfChunks = 15;
@@ -100,8 +98,10 @@ public class MapManager : Singleton<MapManager>
         }
         lastChunk = CurrentChunk;
         CurrentChunk = Instantiate(chunkPrefab, transform);
+        ligth1.DOBlendableColor(CurrentChunk.light1, transistionTime);   
+        ligth2.DOBlendableColor(CurrentChunk.light2, transistionTime);
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
-        toMove.DOMove(ChunkPositions[CurrentChunkIndex], 3f).OnComplete(() =>
+        toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime).OnComplete(() =>
         {
             if (CurrentChunkIndex > 0)
                 Destroy(lastChunk.gameObject);
