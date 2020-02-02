@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Le Menestrel
   m_EditorClassIdentifier: 
   eventTitle: The $[Minstrel]
-  eventDescription: Along the road, you encounter an unexpected foe, he likes to
-    sing and party, he joyfully purpose you to join forces to the rythm of his catchy
-    music. Accept to hear his repetitive creation forever, or deny his joyful purposition.
-    You hear sad bard noises as you walk away.
+  eventDescription: Along the road, you encounter an unexpected fellow, he likes
+    to sing and party, he joyfully purpose you to join forces to the rythm of his
+    catchy music. Accept to hear his repetitive creation forever, or deny his joyful
+    purposition. You hear sad bard noises as you walk away.
   conditionList:
   - ETconditions:
     - invertCondition: 1

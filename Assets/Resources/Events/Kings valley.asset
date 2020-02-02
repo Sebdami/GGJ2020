@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Kings valley
   m_EditorClassIdentifier: 
   eventTitle: King's valley
-  eventDescription: While wandering in the King's valley, $[Heroes] learns about
-    the architecture $[Lieux]
+  eventDescription: While wandering in the King's valley, $[Heros] learns about the
+    architecture $[Lieux]
   conditionList:
   - ETconditions:
     - invertCondition: 0
