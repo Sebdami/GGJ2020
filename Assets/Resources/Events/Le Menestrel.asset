@@ -12,17 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: Le Menestrel
   m_EditorClassIdentifier: 
-  isReutilisable: 0
-  lethal: 0
-  isEpic: 0
   eventTitle: The $[Minstrel]
   eventDescription: Along the road, you encounter an unexpected foe, he likes to
     sing and party, he joyfully purpose you to join forces to the rythm of his catchy
-    music
-  mapPrefab: {fileID: 0}
-  timeToResolveEvent: 0
-  specificTools: []
-  specificCharacters: []
+    music. Accept to hear his repetitive creation forever, or deny his joyful purposition.
+    You hear sad bard noises as you walk away.
   conditionList:
   - ETconditions:
     - invertCondition: 1
@@ -54,13 +48,11 @@ MonoBehaviour:
       namedCharacters:
       - $[Minstrel]
       namedTools: []
-  - choiceDescription: Ignore
-    recapAfterChoice: 
-    possibleChainedEvents: []
-    probaChainedEvent: 0
-    alterPrefab: 0
   - choiceDescription: Ignore him, we don't want any music with us
     recapAfterChoice: 
+    possibleChainedEvents: []
+    probaChainedEvent: 0.5
+    alterPrefab: 0
     conditionsToEnableChoice: []
     costs:
       timeCost: 10
@@ -78,10 +70,10 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 0
   lethal: 0
   isEpic: 0
-  mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,
-    type: 3}
+  mapPrefab: {fileID: 0}
   timeToResolveEvent: 0
   specificTools: []
   specificCharacters: []
