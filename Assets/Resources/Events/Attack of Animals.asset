@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
+  m_Name: Attack of Animals
+  m_EditorClassIdentifier: 
+  eventTitle: 'Attack $[Lieux]''s $[Animal]s '
+  eventDescription: $[Heros] hears a roaring sound in the distance. It's already
+    too late, animals jump out of bushes.
+  conditionList: []
+  choices:
+  - choiceDescription: Use your Hammer
+    recapAfterChoice: You brandished your hammer like the Mighty Thor himself. It's
+      very effective, the animals flee.
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 0
+    conditionsToEnableChoice:
+    - ETconditions:
+      - invertCondition: 0
+        type: 2
+        checkType: 0
+        intParameter: 0
+        stringParameter: Hammer
+    costs:
+      timeCost: 0
+      charactersCost: 0
+      toolsCost: 0
+      isCostRandom: 0
+      lethalForRessources: 1
+      setToDamaged: 0
+      namedCharacters: []
+      namedTools:
+      - Hammer
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 0
+      isGainRandom: 0
+      healCharacter: 0
+      namedCharacters: []
+      namedTools: []
+  - choiceDescription: Run for your life $[Heros]
+    recapAfterChoice: You ran as fast as you can.
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 0
+    conditionsToEnableChoice: []
+    costs:
+      timeCost: 0
+      charactersCost: 2
+      toolsCost: 0
+      isCostRandom: 1
+      lethalForRessources: 1
+      setToDamaged: 0
+      namedCharacters: []
+      namedTools: []
+    rewards:
+      timeGain: 0
+      charactersGain: 0
+      toolsGain: 0
+      isGainRandom: 0
+      healCharacter: 0
+      namedCharacters: []
+      namedTools: []
+  isReutilisable: 1
+  lethal: 0
+  isEpic: 0
+  mapPrefab: {fileID: 0}
+  timeToResolveEvent: 0
+  specificTools: []
+  specificCharacters: []
