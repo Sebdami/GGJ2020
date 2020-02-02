@@ -771,26 +771,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EntryChoice (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4066312194066992216, guid: 29978cadb9b58f34e8c8d5f19db9949c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066312194066992216, guid: 29978cadb9b58f34e8c8d5f19db9949c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066312194066992216, guid: 29978cadb9b58f34e8c8d5f19db9949c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066312194066992216, guid: 29978cadb9b58f34e8c8d5f19db9949c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9118145334407188686, guid: 29978cadb9b58f34e8c8d5f19db9949c,
         type: 3}
       propertyPath: m_LocalPosition.x
