@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8334a49e76cafef4da22976db1613959, type: 3}
-  m_Name: AuraEditionQualitySettings
+  m_Name: Setup_aura
   m_EditorClassIdentifier: 
   displayVolumetricLightingBuffer: 0
-  frustumGridResolution: {x: 64, y: 32, z: 32}
-  enableAutomaticStereoResizing: 0
-  farClipPlaneDistance: 64
-  depthBiasCoefficient: 0.35000002
+  frustumGridResolution: {x: 160, y: 88, z: 128}
+  enableAutomaticStereoResizing: 1
+  farClipPlaneDistance: 128
+  depthBiasCoefficient: 0.7
   enableVolumes: 1
-  enableVolumesTexture2DMask: 1
-  enableVolumesTexture3DMask: 1
-  enableVolumesNoiseMask: 1
+  enableVolumesTexture2DMask: 0
+  enableVolumesTexture3DMask: 0
+  enableVolumesNoiseMask: 0
   enableAmbientLighting: 1
   enableDirectionalLights: 1
   enableDirectionalLightsShadows: 1
@@ -29,12 +29,12 @@ MonoBehaviour:
   enablePointLights: 1
   enablePointLightsShadows: 1
   enableLightsCookies: 1
-  enableDithering: 0
-  texture3DFiltering: 0
-  enableDenoisingFilter: 1
+  enableDithering: 1
+  texture3DFiltering: 1
+  enableDenoisingFilter: 0
   denoisingFilterRange: 0
   enableTemporalReprojection: 1
-  temporalReprojectionFactor: 0.5
+  temporalReprojectionFactor: 0.95
   enableOcclusionCulling: 1
   occlusionCullingAccuracy: 4
   enableLightProbes: 0
