@@ -28,6 +28,7 @@ public class MapManager : Singleton<MapManager>
         for (int i = 1; i < NumberOfChunks; ++i)
         {
             ChunkPositions.Add(lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
+            lastPosition = ChunkPositions[i];
         }
     }
 

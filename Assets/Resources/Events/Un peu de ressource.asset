@@ -26,7 +26,7 @@ MonoBehaviour:
     costs:
       timeCost: 0
       charactersCost: 0
-      toolsCost: 4
+      toolsCost: 0
       isCostRandom: 0
       lethalForRessources: 0
       setToDamaged: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     rewards:
       timeGain: 0
       charactersGain: 0
-      toolsGain: 4
+      toolsGain: 3
       isGainRandom: 0
       healCharacter: 0
       namedCharacters: []

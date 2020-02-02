@@ -169,7 +169,18 @@ MonoBehaviour:
         m_CallState: 2
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4464524135142612394}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default_Activate_Smooth
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &4464524135142612394
 Animator:
   serializedVersion: 3

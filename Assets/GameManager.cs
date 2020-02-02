@@ -14,7 +14,8 @@ public class GameManager : Singleton<GameManager>
         mapm = MapManager.Instance;
         gbm = FindObjectOfType<GameplayEventManager>();
         CameraStateMachine.Instance.Init(perso);
-        gbm.TriggerEvent("L'appel de l'aventure");
+        //gbm.TriggerEvent("L'appel de l'aventure");
+        gbm.TriggerEvent("A Fire in the Night");
         MapManager.Instance.Init(gbm.currentEvent);
         perso.transform.position = mapm.GetPlayerTargetPosition();
         PlayerData.characters.Add(new GameplayRessource("Robert", false));
@@ -57,8 +58,6 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.ShowPanel<UIEvent>();
     }
 
-    Tile currentTile;
-
     public void MakePrefabAppear()
     {
         MapManager.Instance.CurrentChunk.Appear();
@@ -66,7 +65,7 @@ public class GameManager : Singleton<GameManager>
 
     public void ActivatePrefab()
     {
-        currentTile.Activate();
+        MapManager.Instance.CurrentChunk.Activate();
     }
 
     public void WaitForAlterPrefab()
@@ -87,26 +86,34 @@ public class GameManager : Singleton<GameManager>
     {
         string nextAction = gbm.choiceMade.ChoiceConsequences();
 
+        if (string.IsNullOrEmpty(nextAction))
+        {
+            // Close UI
+            // UIManager.Instance.
+            UIManager.Instance.HideAllPanel();
 
-            if (string.IsNullOrEmpty(nextAction))
-            {
-                // Close UI
-                // UIManager.Instance.
-                UIManager.Instance.HideAllPanel();
-                // Move
-                MapManager.Instance.GoToNextChunk(perso, gbm.currentEvent.mapPrefab,
-                    () => { Continue(); });
+            if (gbm.currentEvent.mapPrefab == null)
+                Debug.Log(gbm.currentEvent.name + "has no chunk null");
+            // Move
+            MapManager.Instance.GoToNextChunk(perso, gbm.currentEvent.mapPrefab,
+                () => { Continue(); });
 
-                // Call Trigger event on GEM quand le move est terminé
-            }
-            else
-            {
-                // Close UI
-                UIManager.Instance.HideAllPanel();
+            // Call Trigger event on GEM quand le move est terminé
+        }
+        else
+        {
 
-                // Call next event
-                gbm.TriggerEvent(nextAction);
-            }
+            Debug.Log("test");
+
+            // Close UI
+            UIManager.Instance.HidePanel<UIRecap>();
+   
+
+            // Call next event
+            gbm.TriggerEvent(nextAction);
+
+            UIManager.Instance.ShowPanel<UIEvent>();
+        }
 
     }
 
