@@ -73,7 +73,7 @@ MonoBehaviour:
   isReutilisable: 0
   lethal: 0
   isEpic: 0
-  mapPrefab: {fileID: 299992917298689577, guid: adf435114ccdd0648bd0f42c5bc9779e,
+  mapPrefab: {fileID: 2449875543819847592, guid: 6ca377ea365a8ef44af3a9c7ab63f939,
     type: 3}
   timeToResolveEvent: 0
   specificTools: []
