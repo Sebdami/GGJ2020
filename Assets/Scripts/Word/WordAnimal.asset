@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: WordAnimal
   m_EditorClassIdentifier: 
   wordList:
-  - Chien
-  - Ours
-  - Loup
-  - Lapin
+  - Dog
+  - Bear
+  - Wolf
+  - Bunny
+  - Tiger
+  - Cat

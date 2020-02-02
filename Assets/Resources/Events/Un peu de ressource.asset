@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: Un peu de ressource
   m_EditorClassIdentifier: 
-  isReutilisable: 1
-  lethal: 0
-  isEpic: 0
-  eventTitle: Un peu de ressources
-  eventDescription: "En se baladant dans la for\xEAt, $[Heros] tombe sur un sac rempli
-    d'outils"
+  eventTitle: A small bag of tools
+  eventDescription: While walking in the forest of $[Lieux], $[Heros] finds on a
+    bag full of tools. A usefull ressource for this kind of journey.
   conditionList: []
   choices:
-  - choiceDescription: Un peu plus d'outils ne serait pas de refus
+  - choiceDescription: There is never enough.
     recapAfterChoice: 
     possibleChainedEvents: []
     probaChainedEvent: 0
@@ -42,6 +39,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 1
   lethal: 0
   isEpic: 0
   mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,

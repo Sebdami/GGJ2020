@@ -12,7 +12,7 @@ public class UIEventChoicesEntry : MonoBehaviour
     public void FillWithInfo(EventChoice e,  UIEvent owner)
     {
         choiceRef = e;
-        content.text = choiceRef.choiceDescription;
+        content.text = WordGenerator.ReplaceSentence(choiceRef.choiceDescription);
         gameObject.SetActive(choiceRef.IsChoiceEnabled());
         GetComponent<Button>().onClick.RemoveAllListeners();
         GetComponent<Button>().onClick.AddListener(() => SelectAChoice());

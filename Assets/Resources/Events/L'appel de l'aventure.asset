@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: L'appel de l'aventure
   m_EditorClassIdentifier: 
-  eventTitle: L'appel de l'aventure
-  eventDescription: "$[Heros] d\xE9cide de partir \xE0 l'aventure, il quitte son
-    $[Animal] pour reconstruire son monde apr\xE9s la guerre, il d\xE9cide de partir
-    pour aider les gens."
+  eventTitle: The journey begins.
+  eventDescription: As if providence had spoken, $[Heros] decides to go on an adventure,
+    he leaves his $[Animal] from his hometown to rebuild his world after the war
+    $[Lieux], he decides to go to help people.
   conditionList: []
   choices:
-  - choiceDescription: Continue
+  - choiceDescription: Let's go $[Heros] !
     recapAfterChoice: 
     possibleChainedEvents: []
     probaChainedEvent: 0
@@ -40,6 +40,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 0
   lethal: 0
   isEpic: 0
   mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,

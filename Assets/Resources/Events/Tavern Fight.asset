@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: L'attaque des brigands
+  m_Name: Tavern Fight
   m_EditorClassIdentifier: 
-  eventTitle: L'attaque des brigands
+  eventTitle: A fight in a tavern
   eventDescription: Un groupe de brigand attaque Robert
   conditionList:
   - ETconditions:
@@ -21,6 +21,11 @@ MonoBehaviour:
       checkType: 0
       intParameter: 1
       stringParameter: 
+    - invertCondition: 0
+      type: 0
+      checkType: 1
+      intParameter: 0
+      stringParameter: La taverne
   - ETconditions:
     - invertCondition: 0
       type: 2
@@ -84,6 +89,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 0
   lethal: 1
   isEpic: 0
   mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,

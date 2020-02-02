@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: La taverne
   m_EditorClassIdentifier: 
-  isReutilisable: 0
-  lethal: 0
-  isEpic: 0
-  eventTitle: La Taverne du $[Lieux]
-  eventDescription: "Une taberne en vue, peu \xEAtre que le groupe pourrrait prendre
-    un de repos"
+  eventTitle: Tavern $[Lieux]
+  eventDescription: In the far distance, the group seems to dicern the shollow light
+    of a tavern. Maybe they could get some rest. They should act very carefully.
   conditionList:
   - ETconditions:
     - invertCondition: 0
@@ -26,16 +23,15 @@ MonoBehaviour:
       intParameter: 1
       stringParameter: 
   choices:
-  - choiceDescription: Enter dans la taverne
-    recapAfterChoice: "C'etait peut \xEAtre pas une si bonne id\xE9e, tout le monde
-      est saoul."
+  - choiceDescription: Enter the tavern, at you own risk.
+    recapAfterChoice: It wasn't a good idea, everybody is drunk.
     possibleChainedEvents:
     - L'attaque des brigands
     probaChainedEvent: 0.5
     alterPrefab: 0
     conditionsToEnableChoice: []
     costs:
-      timeCost: 20
+      timeCost: 10
       charactersCost: 200
       toolsCost: 0
       isCostRandom: 0
@@ -50,17 +46,17 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
-  - choiceDescription: Partir
+  - choiceDescription: Keep going, even if it's completly dark
     recapAfterChoice: 
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
     conditionsToEnableChoice: []
     costs:
-      timeCost: 0
+      timeCost: 21
       charactersCost: 0
-      toolsCost: -4
-      isCostRandom: 0
+      toolsCost: 0
+      isCostRandom: 1
       lethalForRessources: 0
       setToDamaged: 0
       namedCharacters: []
@@ -72,6 +68,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 0
   lethal: 0
   isEpic: 0
   mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,
