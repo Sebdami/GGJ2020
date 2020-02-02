@@ -126,6 +126,8 @@ public class UIManager : Singleton<UIManager>
     {
         if (_value != 0)
         {
+            _feedback.SetActive(true);
+
             _feedback.GetComponentInChildren<Text>().text = "";
             if (_value > 0)
             {
@@ -137,7 +139,7 @@ public class UIManager : Singleton<UIManager>
                 _feedback.GetComponentInChildren<Text>().color = negativeColor;
             }
 
-            _feedback.SetActive(true);
+            _feedback.GetComponentInChildren<Text>().text += _value;
         }
         else
             _feedback.SetActive(false);

@@ -28,12 +28,15 @@ public class GameManager : Singleton<GameManager>
         perso.transform.position = mapm.GetPlayerTargetPosition();
         CameraStateMachine.Instance.Init(perso);
 
+        UIManager.Instance.SaveOldDataValues();
         PlayerData.characters.Add(new GameplayRessource("Robert", false));
         UIManager.Instance.RefreshData();
         MakePrefabAppear();
         PlayerData.timeLeft = PlayerData.totalTime;
         UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
+
+        UIManager.Instance.PopFeedbackUI();
     }
 
 

@@ -126,8 +126,6 @@ public class EventChoice
 
         public string ResolveCosts()
         {
-            UIManager.Instance.SaveOldDataValues();
-
             string feedback = "";
             PlayerData.timeLeft -= (isCostRandom) ? Random.Range(0, timeCost) : timeCost;
 
@@ -139,8 +137,6 @@ public class EventChoice
 
             NotNamedCosts(PlayerData.characters, true, feedback);
             NotNamedCosts(PlayerData.tools, false, feedback);
-
-            UIManager.Instance.PopFeedbackUI();
 
             return feedback;
         }

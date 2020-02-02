@@ -20,13 +20,15 @@ public class UIEventChoicesEntry : MonoBehaviour
 
     public void SelectAChoice()
     {
+        UIManager.Instance.SaveOldDataValues();
+
         GetComponent<Button>().onClick.RemoveAllListeners();
         choiceRef.costs.ResolveCosts();
         choiceRef.rewards.Gain();
         FindObjectOfType<GameplayEventManager>().choiceMade = choiceRef;
         GameManager.Instance.AchoicewasMade(choiceRef.recapAfterChoice);
 
-            
+        UIManager.Instance.PopFeedbackUI();
 
         // TODO: Afficher le panneau de recap
         // On peut set un pavé de texte sur le choix pour le recap

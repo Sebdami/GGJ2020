@@ -29,5 +29,6 @@ public class UIFeedback : MonoBehaviour
         }
 
         activeFade = null;
+        gameObject.SetActive(false);
     }
 }
