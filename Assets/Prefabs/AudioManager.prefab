@@ -80,6 +80,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   musicVolume: 1
   sfxVolume: 1
+  transitionSfxVolume: 1.5
+  appearVolume: 1.1
   mainMusicIntro: {fileID: 8300000, guid: e737f3c67151bc54ca304115c0d42cfe, type: 3}
   mainMusic: {fileID: 8300000, guid: f62a7448fd1fa5343bde791594405855, type: 3}
   endMusic: {fileID: 8300000, guid: fab9b19890a974c4dbdb24365bc21e40, type: 3}

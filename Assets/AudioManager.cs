@@ -16,6 +16,11 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField]
     float sfxVolume = 1f;
 
+    [SerializeField]
+    float transitionSfxVolume = 1f;
+    [SerializeField]
+    float appearVolume = 1f;
+
     public AudioClip mainMusicIntro;
     public AudioClip mainMusic;
     public AudioClip endMusic;
@@ -23,14 +28,14 @@ public class AudioManager : Singleton<AudioManager>
     public AudioClip[] appearSound;
     public AudioClip[] goToNextSound;
 
-    public AudioClip GetAppearSound()
+    public void PlayAppearSound()
     {
-        return appearSound[Random.Range(0, appearSound.Length)];
+        PlaySFX(appearSound[Random.Range(0, appearSound.Length)], appearVolume);        
     }
 
-    public AudioClip GetGoToNextSound()
+    public void PlayGoToNextSound()
     {
-        return goToNextSound[Random.Range(0, goToNextSound.Length)];
+        PlaySFX(goToNextSound[Random.Range(0, goToNextSound.Length)], transitionSfxVolume);
     }
 
 
@@ -71,6 +76,18 @@ public class AudioManager : Singleton<AudioManager>
         musicAudioSource.volume = musicVolume;
     }
 
+    public void PlaySFX(AudioClip clip, float _volume)
+    {
+        if (clip == null)
+            return;
+
+        AudioSource source = gameObject.AddComponent<AudioSource>();
+        source.volume = _volume;
+        source.clip = clip;
+        source.Play();
+        Destroy(source, clip.length + 0.1f);
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         if (clip == null)
@@ -82,4 +99,5 @@ public class AudioManager : Singleton<AudioManager>
         source.Play();
         Destroy(source, clip.length + 0.1f);
     }
+
 }

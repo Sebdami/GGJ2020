@@ -34,7 +34,7 @@ public class Chunk : MonoBehaviour
     public void Appear()
     {
         OnAppear?.Invoke();
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.GetAppearSound());
+        AudioManager.Instance.PlayAppearSound();
     }
 
     public void Activate()
