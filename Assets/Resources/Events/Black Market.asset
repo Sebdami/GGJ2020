@@ -40,7 +40,7 @@ MonoBehaviour:
       namedCharacters: []
       namedTools:
       - Pickaxe
-  - choiceDescription: Get the Axe
+  - choiceDescription: Get the Shovel
     recapAfterChoice: 
     possibleChainedEvents: []
     probaChainedEvent: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools:
-      - Axe
+      - Shovel
   - choiceDescription: Get the Hammer
     recapAfterChoice: 
     possibleChainedEvents: []
@@ -86,6 +86,7 @@ MonoBehaviour:
       namedCharacters: []
       namedTools:
       - Hammer
+  isReutilisable: 1
   lethal: 0
   isEpic: 0
   mapPrefab: {fileID: 0}

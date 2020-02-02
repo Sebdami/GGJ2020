@@ -62,6 +62,7 @@ MonoBehaviour:
       isGainRandom: 1
       namedCharacters: []
       namedTools: []
+  isReutilisable: 1
   lethal: 0
   isEpic: 0
   mapPrefab: {fileID: 0}

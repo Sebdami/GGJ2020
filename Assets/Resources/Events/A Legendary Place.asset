@@ -23,7 +23,18 @@ MonoBehaviour:
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
-    conditionsToEnableChoice: []
+    conditionsToEnableChoice:
+    - ETconditions:
+      - invertCondition: 0
+        type: 2
+        checkType: 0
+        intParameter: 3
+        stringParameter: 
+      - invertCondition: 0
+        type: 3
+        checkType: 0
+        intParameter: 250
+        stringParameter: 
     costs:
       timeCost: 80
       charactersCost: 1
@@ -33,7 +44,7 @@ MonoBehaviour:
       setToDamaged: 0
       namedCharacters: []
       namedTools:
-      - Axe
+      - Shovel
       - Hammer
     rewards:
       timeGain: 0
@@ -64,6 +75,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 0
   lethal: 0
   isEpic: 1
   mapPrefab: {fileID: 0}
