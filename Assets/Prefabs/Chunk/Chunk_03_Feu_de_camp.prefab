@@ -564,7 +564,6 @@ GameObject:
   - component: {fileID: 3203767662596889445}
   - component: {fileID: 5849356822359023955}
   - component: {fileID: 149074409208700330}
-  - component: {fileID: 9203461367477024588}
   m_Layer: 0
   m_Name: ilot_1
   m_TagString: Untagged
@@ -634,20 +633,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9203461367477024588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886243456497379702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7793e7036a387eb42b22283339a195bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tesselation: {fileID: 2100000, guid: 9e44b6d0a747d3448b90c476ffb6bff4, type: 2}
-  animationTime: 2
 --- !u!1 &2348510055140170493
 GameObject:
   m_ObjectHideFlags: 0
@@ -36444,17 +36429,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Default_Appear_Smooth
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9203461367477024588}
-        m_MethodName: StartAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnActivate:
