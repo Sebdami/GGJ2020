@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: The Fountain
   m_EditorClassIdentifier: 
   eventTitle: The Fountain
-  eventDescription: You find a broken fountain. It may be a good idea to repair it.
+  eventDescription: Here's a really strange ruin... So much older than anything else
+    I've ever seen. A very strange aura seems to emanate from this place. Feels soothing.
+    Repair the fountain and quench your thirst, or let those ruins untouched and
+    carefully continue your way
   conditionList:
   - ETconditions:
     - invertCondition: 0
