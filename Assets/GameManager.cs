@@ -138,7 +138,7 @@ public class GameManager : Singleton<GameManager>
         ActivatePrefab();
         yield return new WaitForSeconds(0.75f);
         CameraStateMachine.Instance.ZoomOut();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.75f);
         NextAction();
 
     }

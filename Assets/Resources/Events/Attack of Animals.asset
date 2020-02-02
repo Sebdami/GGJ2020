@@ -15,7 +15,13 @@ MonoBehaviour:
   eventTitle: 'Attack $[Lieux]''s $[Animal]s '
   eventDescription: $[Heros] hears a roaring sound in the distance. It's already
     too late, animals jump out of bushes.
-  conditionList: []
+  conditionList:
+  - ETconditions:
+    - invertCondition: 0
+      type: 3
+      checkType: 0
+      intParameter: 100
+      stringParameter: 
   choices:
   - choiceDescription: Use your Hammer
     recapAfterChoice: You brandished your hammer like the Mighty Thor himself. It's
@@ -72,7 +78,7 @@ MonoBehaviour:
       namedCharacters: []
       namedTools: []
   isReutilisable: 1
-  lethal: 0
+  lethal: 1
   isEpic: 0
   mapPrefab: {fileID: 8763614544238114499, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
     type: 3}
