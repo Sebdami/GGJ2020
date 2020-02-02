@@ -19,7 +19,11 @@ public class GameplayEventManager : MonoBehaviour
     {
        
         ShuffleEvents();
-        GameplayEvent nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll());
+        GameplayEvent nextEvent;
+        if (currentEvent != null)
+            nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll() && x != currentEvent);
+        else
+            nextEvent = events.Find(x => !PlayerData.eventsDone.Contains(x) && x.conditionList.CheckAll());
 
         if (nextEvent == null)
         {
