@@ -61,6 +61,7 @@ public class EventChoice
         public int timeGain;
         public int charactersGain;
         public int toolsGain;
+        public bool isGainRandom = false;
 
         public List<string> namedCharacters;
         public List<string> namedTools;
@@ -69,12 +70,12 @@ public class EventChoice
         {
             PlayerData.timeLeft += timeGain;
 
-            for (int i = 0; i < charactersGain; i++)
+            for (int i = 0; i < ((isGainRandom) ? Random.Range(0, charactersGain): charactersGain); i++)
                 PlayerData.characters.Add(new GameplayRessource(
                     WordManager.Instance.noms.wordList[Random.Range(0, WordManager.Instance.noms.wordList.Count)])
                 );
 
-            for (int i = 0; i < toolsGain; i++)
+            for (int i = 0; i < ((isGainRandom) ? Random.Range(0, toolsGain) : toolsGain); i++)
                 PlayerData.tools.Add(new GameplayRessource());
 
             foreach (var namedChara in namedCharacters)
@@ -91,6 +92,7 @@ public class EventChoice
         public int timeCost;
         public int charactersCost;
         public int toolsCost;
+        public bool isCostRandom = false;
 
         public bool lethalForRessources;
         public bool setToDamaged;
@@ -151,17 +153,21 @@ public class EventChoice
         void NotNamedCosts(List<GameplayRessource> _playerData, bool _isCharacter, string _feedback)
         {
             List<GameplayRessource> gameplayRessourcesNotNamed = _playerData.FindAll(x => string.IsNullOrEmpty(x.ressourceName));
-            int diff = gameplayRessourcesNotNamed.Count - ((_isCharacter) ? charactersCost : toolsCost);
-            for (int i = 0; i < ((_isCharacter) ? charactersCost : toolsCost) && i < gameplayRessourcesNotNamed.Count; i++)
+            int baseCost = ((_isCharacter) ? 
+                ((isCostRandom) ? Random.Range(0, charactersCost + 1) : charactersCost)
+                : ((isCostRandom) ? Random.Range(0, toolsCost + 1) : toolsCost));
+
+            int diff = gameplayRessourcesNotNamed.Count - baseCost;
+            for (int i = 0; i < baseCost && i < gameplayRessourcesNotNamed.Count; i++)
             {
                 _playerData.Remove(gameplayRessourcesNotNamed[i]);
             }
 
             if (_isCharacter && showCharacterCostOnRecap)
-                _feedback += "Vous avez perdu " + ((diff > 0) ? charactersCost : charactersCost + diff) + " unités. ";
+                _feedback += "Vous avez perdu " + ((diff > 0) ? baseCost : baseCost + diff) + " unités. ";
 
             if (!_isCharacter && showToolsCostOnRecap)
-                _feedback += "Vous avez perdu " + ((diff > 0) ? toolsCost : toolsCost + diff) + " outils. ";
+                _feedback += "Vous avez perdu " + ((diff > 0) ? baseCost : baseCost + diff) + " outils. ";
 
             if (diff < 0)
             {
