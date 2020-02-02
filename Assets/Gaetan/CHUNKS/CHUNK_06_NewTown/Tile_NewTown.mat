@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tile_Legendaire
+  m_Name: Tile_NewTown
   m_Shader: {fileID: 4800000, guid: 3505286e390d7dd4db6d2ebd0c0fe404, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -39,4 +39,4 @@ Material:
     - _TessValue: 32
     - __dirty: 0
     m_Colors:
-    - _Color0: {r: 0.52118194, g: 0.6037736, b: 0.6005725, a: 0}
+    - _Color0: {r: 0.6415094, g: 0.5732321, b: 0.4206123, a: 0}
