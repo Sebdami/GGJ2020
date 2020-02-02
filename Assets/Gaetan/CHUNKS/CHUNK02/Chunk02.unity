@@ -121,30 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &681362589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
-  m_Name: New Aura Base Settings
-  m_EditorClassIdentifier: 
-  useDensity: 1
-  density: 0.25
-  useScattering: 1
-  scattering: 0.5
-  useAmbientLighting: 1
-  ambientLightingStrength: 1
-  useColor: 0
-  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
-  colorStrength: 1
-  useExtinction: 0
-  extinction: 0.75
---- !u!114 &859571655
+--- !u!114 &735832514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,9 +139,9 @@ MonoBehaviour:
   farClipPlaneDistance: 128
   depthBiasCoefficient: 0.35
   enableVolumes: 1
-  enableVolumesTexture2DMask: 1
-  enableVolumesTexture3DMask: 1
-  enableVolumesNoiseMask: 1
+  enableVolumesTexture2DMask: 0
+  enableVolumesTexture3DMask: 0
+  enableVolumesNoiseMask: 0
   enableAmbientLighting: 1
   enableDirectionalLights: 1
   enableDirectionalLightsShadows: 1
@@ -180,165 +157,76 @@ MonoBehaviour:
   enableTemporalReprojection: 1
   temporalReprojectionFactor: 0.95
   enableOcclusionCulling: 1
-  occlusionCullingAccuracy: 2
+  occlusionCullingAccuracy: 4
   enableLightProbes: 0
---- !u!114 &942202430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
-  m_Name: New Aura Base Settings
-  m_EditorClassIdentifier: 
-  useDensity: 1
-  density: 0.25
-  useScattering: 1
-  scattering: 0.5
-  useAmbientLighting: 1
-  ambientLightingStrength: 1
-  useColor: 0
-  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
-  colorStrength: 1
-  useExtinction: 0
-  extinction: 0.75
---- !u!114 &1573152152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a49e76cafef4da22976db1613959, type: 3}
-  m_Name: Default Aura Quality Settings
-  m_EditorClassIdentifier: 
-  displayVolumetricLightingBuffer: 0
-  frustumGridResolution: {x: 160, y: 88, z: 128}
-  enableAutomaticStereoResizing: 1
-  farClipPlaneDistance: 128
-  depthBiasCoefficient: 0.35
-  enableVolumes: 1
-  enableVolumesTexture2DMask: 1
-  enableVolumesTexture3DMask: 1
-  enableVolumesNoiseMask: 1
-  enableAmbientLighting: 1
-  enableDirectionalLights: 1
-  enableDirectionalLightsShadows: 1
-  enableSpotLights: 1
-  enableSpotLightsShadows: 1
-  enablePointLights: 1
-  enablePointLightsShadows: 1
-  enableLightsCookies: 1
-  enableDithering: 1
-  texture3DFiltering: 1
-  enableDenoisingFilter: 0
-  denoisingFilterRange: 0
-  enableTemporalReprojection: 1
-  temporalReprojectionFactor: 0.95
-  enableOcclusionCulling: 1
-  occlusionCullingAccuracy: 2
-  enableLightProbes: 0
---- !u!1001 &5502467055256159209
+--- !u!1001 &8022400845711030776
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2888470581914397433, guid: dac2f9602973ab144814c6992f9f1e65,
-        type: 3}
-      propertyPath: antialiasingMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323309787868529967, guid: dac2f9602973ab144814c6992f9f1e65,
-        type: 3}
-      propertyPath: frustumSettings.baseSettings
-      value: 
-      objectReference: {fileID: 681362589}
-    - target: {fileID: 3323309787868529967, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400845777727200, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: frustumSettings.qualitySettings
       value: 
-      objectReference: {fileID: 859571655}
-    - target: {fileID: 3879551610436737699, guid: dac2f9602973ab144814c6992f9f1e65,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5667961617959078298, guid: 51181d5215572ab479bd43508513dc65,
-        type: 3}
-    - target: {fileID: 3879551610508149672, guid: dac2f9602973ab144814c6992f9f1e65,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5667961617959078298, guid: 51181d5215572ab479bd43508513dc65,
-        type: 3}
-    - target: {fileID: 3879551611539011233, guid: dac2f9602973ab144814c6992f9f1e65,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5667961617959078298, guid: 51181d5215572ab479bd43508513dc65,
-        type: 3}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+      objectReference: {fileID: 735832514}
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168003403779156031, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8773906089007997554, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 8022400847540006887, guid: dac2f9602973ab144814c6992f9f1e65,
         type: 3}
       propertyPath: m_Name
       value: Chunk02
