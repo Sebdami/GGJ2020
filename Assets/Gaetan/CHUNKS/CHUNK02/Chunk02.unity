@@ -159,77 +159,77 @@ MonoBehaviour:
   enableOcclusionCulling: 1
   occlusionCullingAccuracy: 4
   enableLightProbes: 0
---- !u!1001 &8022400845711030776
+--- !u!1001 &1530692437122043223
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8022400845777727200, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 1530692436654856783, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 735832514}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828641, guid: 214da8e38e5e85442a214e783579c244,
+        type: 3}
+      propertyPath: m_Name
+      value: Chunk_02_Mort
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006872, guid: dac2f9602973ab144814c6992f9f1e65,
+    - target: {fileID: 3044387724181828646, guid: 214da8e38e5e85442a214e783579c244,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022400847540006887, guid: dac2f9602973ab144814c6992f9f1e65,
-        type: 3}
-      propertyPath: m_Name
-      value: Chunk02
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dac2f9602973ab144814c6992f9f1e65, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 214da8e38e5e85442a214e783579c244, type: 3}
