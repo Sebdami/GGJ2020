@@ -26,7 +26,7 @@ MonoBehaviour:
   - choiceDescription: Enter the tavern, at you own risk.
     recapAfterChoice: It wasn't a good idea, everybody is drunk.
     possibleChainedEvents:
-    - L'attaque des brigands
+    - Tavern Fight
     probaChainedEvent: 0.5
     alterPrefab: 0
     conditionsToEnableChoice: []
