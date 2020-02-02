@@ -15,12 +15,7 @@ public class Menu : MonoBehaviour
 
     public void OpenCredits()
     {
-        credits.SetActive(!credits.activeInHierarchy);
-    }
-
-    public void CloseCredits()
-    {
-        credits.SetActive(false);
+        GetComponent<Animator>().SetBool("openCredits", !credits.activeInHierarchy);
     }
 
     public void ExitGame()
