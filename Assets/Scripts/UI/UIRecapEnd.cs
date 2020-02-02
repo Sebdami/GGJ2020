@@ -22,9 +22,9 @@ public class UIRecapEnd : UIPanel
             for (int i = 0; i < accomplissement.Length; i++)
             {
                 if(i < accomplissement.Length-1)
-                    contentTmp += ("rebuild " + accomplissement[i].eventTitle + " and").ToString() ;
+                    contentTmp += ("rebuilt " + accomplissement[i].eventTitle + " and ").ToString() ;
                 else
-                    contentTmp += ("rebuild " + accomplissement[i].eventTitle + ".").ToString();
+                    contentTmp += ("rebuilt " + accomplissement[i].eventTitle + ".").ToString();
             }
         }
         else

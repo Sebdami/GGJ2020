@@ -9,12 +9,20 @@ public class Chunk : MonoBehaviour
     public Transform playerTargetTransform;
     public Transform prefabSpawnTransform;
     [System.Serializable]
-    public struct LightingSettings
+    public class LightingSettings
     {
         public Color skyColor;
         public Color equatorColor;
         public Color groundColor;
         public Color skyboxTint;
+
+        public LightingSettings(Color skyColor, Color equatorColor, Color groundColor, Color skyboxTint)
+        {
+            this.skyColor = skyColor;
+            this.equatorColor = equatorColor;
+            this.groundColor = groundColor;
+            this.skyboxTint = skyboxTint;
+        }
     }
     public LightingSettings lightingSettings;
 

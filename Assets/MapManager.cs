@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +41,8 @@ public class MapManager : Singleton<MapManager>
         GenerateChunkPositions();
         CurrentChunkIndex = 0;
         InstantiateFirst(gevent.mapPrefab);
-        ApplyChunkSettings(CurrentChunk);
+        ApplyChunkSettings(CurrentChunk.lightingSettings);
+        source = CurrentChunk.lightingSettings;
     }
 
     void InstantiateFirst(Chunk prefab)
@@ -100,22 +102,47 @@ public class MapManager : Singleton<MapManager>
         CurrentChunk = Instantiate(chunkPrefab, transform);
         ligth1.DOBlendableColor(CurrentChunk.light1, transistionTime);   
         ligth2.DOBlendableColor(CurrentChunk.light2, transistionTime);
+        CoroutineManager.StartStaticCoroutine(DoBlend(CurrentChunk.lightingSettings, transistionTime));
+        
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
         toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime).OnComplete(() =>
         {
             if (CurrentChunkIndex > 0)
                 Destroy(lastChunk.gameObject);
-            ApplyChunkSettings(CurrentChunk);
-            
+
+            source = CurrentChunk.lightingSettings;
+
             callback?.Invoke();
         });
     }
 
-    public void ApplyChunkSettings(Chunk chunk)
+    Chunk.LightingSettings source;
+
+    public void ApplyChunkSettings(Chunk.LightingSettings light)
     {
-        RenderSettings.ambientSkyColor = chunk.lightingSettings.skyColor;
-        RenderSettings.ambientEquatorColor = chunk.lightingSettings.equatorColor;
-        RenderSettings.ambientGroundColor = chunk.lightingSettings.groundColor;
-        RenderSettings.skybox.SetColor("_Tint", chunk.lightingSettings.skyboxTint);
+        RenderSettings.ambientSkyColor = light.skyColor;
+        RenderSettings.ambientEquatorColor = light.equatorColor;
+        RenderSettings.ambientGroundColor = light.groundColor;
+        RenderSettings.skybox.SetColor("_Tint", light.skyboxTint); 
     }
+
+    private IEnumerator DoBlend(Chunk.LightingSettings targetData, float duration)
+    {
+        float t = 0;
+        while (t < 1)
+        {
+            t = Mathf.Clamp01(t + Time.deltaTime / transistionTime);
+            var _currentSettings = Blend(source, targetData, t);
+            ApplyChunkSettings(_currentSettings);
+            yield return null;
+        }
+    }
+
+    public Chunk.LightingSettings Blend(Chunk.LightingSettings fromSettings, Chunk.LightingSettings toSettings, float t)
+    {
+        return new Chunk.LightingSettings(Color.Lerp(fromSettings.skyColor, toSettings.skyColor, t),
+            Color.Lerp(fromSettings.equatorColor, toSettings.equatorColor, t),
+            Color.Lerp(fromSettings.groundColor, toSettings.groundColor, t), Color.Lerp(fromSettings.skyboxTint, toSettings.skyboxTint, t));
+    }
+
 }
