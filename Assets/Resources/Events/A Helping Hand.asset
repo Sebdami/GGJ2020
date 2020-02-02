@@ -28,7 +28,7 @@ MonoBehaviour:
       some also decided to give YOU a hand in return and joined your party.
     possibleChainedEvents: []
     probaChainedEvent: 0
-    alterPrefab: 1
+    alterPrefab: 0
     conditionsToEnableChoice: []
     costs:
       timeCost: 40
