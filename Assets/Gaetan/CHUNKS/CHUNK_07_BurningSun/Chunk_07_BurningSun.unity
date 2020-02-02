@@ -356,6 +356,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4442802507564691778, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: lightingSettings.skyboxTint.r
+      value: 0.8862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442802507564691778, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: lightingSettings.skyboxTint.g
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442802507564691778, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: lightingSettings.skyboxTint.b
+      value: 0.3647059
+      objectReference: {fileID: 0}
     - target: {fileID: 4442802507564691783, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_Name
@@ -364,7 +379,7 @@ PrefabInstance:
     - target: {fileID: 4702811034110943174, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4702811034280299661, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
@@ -376,10 +391,25 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 1096013690}
+    - target: {fileID: 4702811035514270246, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702811035514270246, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9253336
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702811035514270246, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7216981
+      objectReference: {fileID: 0}
     - target: {fileID: 4702811035514270247, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4702811035675725372, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
