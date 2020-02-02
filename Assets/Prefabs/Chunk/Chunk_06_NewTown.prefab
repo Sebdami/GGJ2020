@@ -501,7 +501,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4442802507564691783}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -523,15 +523,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fee8e9f8bff8c41bed30bcb5a7d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light1: {r: 0, g: 0, b: 0, a: 0}
-  light2: {r: 0, g: 0, b: 0, a: 0}
+  light1: {r: 1, g: 0.9568628, b: 0.83921576, a: 0}
+  light2: {r: 0.58431375, g: 0.19607845, b: 0.5686275, a: 0}
   playerTargetTransform: {fileID: 4442802506481688251}
   prefabSpawnTransform: {fileID: 4442802507140890590}
   lightingSettings:
-    skyColor: {r: 0.8196079, g: 0.9568628, b: 0.93725497, a: 1}
-    equatorColor: {r: 0.9058824, g: 0.7372549, b: 0.45882356, a: 1}
-    groundColor: {r: 0.10980393, g: 0.10980393, b: 0.14509805, a: 1}
-    skyboxTint: {r: 0.36862746, g: 0.83921576, b: 0.48627454, a: 0.49019608}
+    skyColor: {r: 0.9215687, g: 0.81568635, b: 0.5019608, a: 1}
+    equatorColor: {r: 0.90196085, g: 0.74509805, b: 0.6431373, a: 1}
+    groundColor: {r: 0.86274517, g: 0.33333334, b: 0.33333334, a: 1}
+    skyboxTint: {r: 0.58431375, g: 0.19607845, b: 0.5686275, a: 0.49019608}
   OnAppear:
     m_PersistentCalls:
       m_Calls: []

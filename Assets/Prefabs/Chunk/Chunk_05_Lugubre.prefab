@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 460810140562900717}
   m_LocalRotation: {x: 0.10963136, y: -0.19962215, z: -0.02248148, w: 0.97346115}
   m_LocalPosition: {x: 3.2838717, y: 1.02446, z: 0.90783834}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 8450104715557629852}
   m_RootOrder: 8
@@ -501,7 +501,7 @@ Transform:
   m_GameObject: {fileID: 460810140730028740}
   m_LocalRotation: {x: -0, y: -0.16584781, z: -0, w: 0.9861514}
   m_LocalPosition: {x: 3.4238715, y: 0.74446, z: 8.157839}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 8450104715557629852}
   m_RootOrder: 3
@@ -580,7 +580,7 @@ Transform:
   m_GameObject: {fileID: 460810140772150940}
   m_LocalRotation: {x: -0.14281066, y: -0.21943851, z: -0.00033244884, w: 0.9651175}
   m_LocalPosition: {x: 1.3738713, y: 0.64445996, z: 6.417838}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 8450104715557629852}
   m_RootOrder: 2
@@ -1212,7 +1212,7 @@ Transform:
   m_GameObject: {fileID: 460810141110082816}
   m_LocalRotation: {x: -0, y: -0.16584781, z: -0, w: 0.9861514}
   m_LocalPosition: {x: 2.2838717, y: 0.74446, z: 3.5978384}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 8450104715557629852}
   m_RootOrder: 1
@@ -1607,7 +1607,7 @@ Transform:
   m_GameObject: {fileID: 460810141328997058}
   m_LocalRotation: {x: -0, y: -0.08569077, z: -0, w: 0.99632186}
   m_LocalPosition: {x: 4.333872, y: 0.74446, z: 4.2478385}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 8450104715557629852}
   m_RootOrder: 0
@@ -2371,14 +2371,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light1: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  light2: {r: 0.58431375, g: 0.19607843, b: 0.5686275, a: 1}
+  light2: {r: 1, g: 0.45882356, b: 0.44705886, a: 1}
   playerTargetTransform: {fileID: 3192424294414937178}
   prefabSpawnTransform: {fileID: 3192424293790862655}
   lightingSettings:
-    skyColor: {r: 0.8196079, g: 0.9568628, b: 0.93725497, a: 1}
-    equatorColor: {r: 0.9058824, g: 0.7372549, b: 0.45882356, a: 1}
-    groundColor: {r: 0.10980393, g: 0.10980393, b: 0.14509805, a: 1}
-    skyboxTint: {r: 0.36862746, g: 0.83921576, b: 0.48627454, a: 0.49019608}
+    skyColor: {r: 0.9568628, g: 0.882353, b: 0.8000001, a: 1}
+    equatorColor: {r: 0.8000001, g: 0.4156863, b: 0.4156863, a: 1}
+    groundColor: {r: 0.7019608, g: 0.10588236, b: 0.16470589, a: 1}
+    skyboxTint: {r: 1, g: 0.45882356, b: 0.44705886, a: 0.49019608}
   OnAppear:
     m_PersistentCalls:
       m_Calls:
@@ -2534,7 +2534,7 @@ Transform:
   m_GameObject: {fileID: 3267872382235520239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 5339638046741075738}
   m_RootOrder: 0
@@ -2613,7 +2613,7 @@ Transform:
   m_GameObject: {fileID: 3267872382338071167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 5339638046651138442}
   m_RootOrder: 0

@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1528923651703261248, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1528923651703261249, guid: 4321137f79c0bb747a167c8b10fc8530,
         type: 3}
       propertyPath: frustumSettings.qualitySettings
@@ -301,6 +306,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 951786745926949660, guid: 3362f7673bf72d943bde9cf09bf35013,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943058801342769658, guid: 3362f7673bf72d943bde9cf09bf35013,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943058801453897185, guid: 3362f7673bf72d943bde9cf09bf35013,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943058802864961536, guid: 3362f7673bf72d943bde9cf09bf35013,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2943058803172764491, guid: 3362f7673bf72d943bde9cf09bf35013,
         type: 3}
       propertyPath: frustumSettings.baseSettings
