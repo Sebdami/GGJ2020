@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: e635ea7473ccbd342b3acd6540e17601
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Env_WindMill: {fileID: 2800000, guid: c49ae99c79fb0314aa42bccfc6dfc81d, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
