@@ -23,7 +23,8 @@ public class UIEvent : UIPanel
         base.Show();
 
         name.text = WordGenerator.ReplaceSentence( m_GameplayEventManager.currentEvent.eventTitle);
-        content.text = WordGenerator.ReplaceSentence(m_GameplayEventManager.currentEvent.eventDescription);
+        content.SetText(WordGenerator.ReplaceSentence(m_GameplayEventManager.currentEvent.eventDescription).Replace("\\n", "\n"));
+
         lethalIcon.SetActive(m_GameplayEventManager.currentEvent.lethal);
 
         foreach (Transform t in choicesPlace)

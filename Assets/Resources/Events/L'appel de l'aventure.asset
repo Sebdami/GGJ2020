@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: L'appel de l'aventure
   m_EditorClassIdentifier: 
   eventTitle: The journey begins.
-  eventDescription: As if providence had spoken, $[Heros] decides to go on an adventure,
-    he leaves his $[Animal] from his hometown to rebuild his world after the war
-    $[Lieux], he decides to go to help people.
+  eventDescription: The infamous war $[Lieux] has left the world scarred and broken.\n
+    $[Heros], our Hero, intends to mend the wounds of the lands, and devote his life
+    to repair what has been broken. \n Today is the day he leaves both his hometown
+    and his pet $[Animal], and heads out into the wild.\n You will define his destiny.
   conditionList: []
   choices:
   - choiceDescription: Let's go $[Heros] !
