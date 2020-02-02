@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ConditionList = GGJ.ConditionList;
+using System.Linq;
 
 [System.Serializable]
 public class EventChoice
@@ -28,6 +29,8 @@ public class EventChoice
     {
         if (PlayerData.CheckIfGameIsOver())
         {
+            if (PlayerData.timeLeft < 0)
+                UIManager.Instance.BumpSablier();
             // Trigger final event
             return "The End";
         }
@@ -181,7 +184,7 @@ public class EventChoice
             if (diff < 0)
             {
                 PlayerData.ShuffleRessources();
-                List<GameplayRessource> gameplayRessourcesNamed = _playerData.FindAll(x => !string.IsNullOrEmpty(x.ressourceName));
+                List<GameplayRessource> gameplayRessourcesNamed = _playerData.FindAll(x => !string.IsNullOrEmpty(x.ressourceName)).OrderBy(x => x.canBeLost == false).ToList();
                 for (int i = 0; i < Mathf.Abs(diff) && i < gameplayRessourcesNamed.Count; i++)
                 {
                     if (_isCharacter)

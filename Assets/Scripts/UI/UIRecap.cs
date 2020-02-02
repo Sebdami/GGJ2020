@@ -14,8 +14,8 @@ public class UIRecap : UIPanel
     public override void Show()
     {
         base.Show();
-        test = false;
         content.text = WordGenerator.ReplaceSentence(m_GameplayEventManager.choiceMade.recapAfterChoice);
+        test = false;
     }
 
     public void CloseRecap()
@@ -24,6 +24,8 @@ public class UIRecap : UIPanel
         {
             test = true;
             GameManager.Instance.WaitForAlterPrefab();
+       
+          
         }
     }
 }

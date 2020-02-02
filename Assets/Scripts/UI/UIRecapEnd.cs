@@ -37,6 +37,7 @@ public class UIRecapEnd : UIPanel
 
     public void CloseRecap()
     {
+        PlayerData.Reset();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

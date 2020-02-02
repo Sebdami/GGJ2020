@@ -17,7 +17,7 @@ MonoBehaviour:
     setFov: 0
     fov: 60
     setRotation: 1
-    rotation: {x: 0, y: 90, z: 0}
+    rotation: {x: 43.09, y: -180, z: 0}
     setOffset: 1
-    offset: {x: -30, y: 14, z: 0}
+    offset: {x: -5, y: 15.4, z: 19}
   duration: 1

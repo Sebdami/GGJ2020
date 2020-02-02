@@ -12,6 +12,15 @@ public class PlayerData
     public static List<GameplayEvent> eventsDone = new List<GameplayEvent>();
     public static List<GameplayRessource> charactersLost = new List<GameplayRessource>();
 
+    public static void Reset()
+    {
+        characters.Clear();
+        tools.Clear();
+        eventsDone.Clear();
+        charactersLost.Clear();
+    }
+
+
     public static string DamageRessource(string _ressourceName, bool _isCharacter, bool _destroy, bool _setToDamaged, string _feedback, string _overrideFeedback, string _overrideFeedbackDeath)
     {
         GameplayRessource ressource;

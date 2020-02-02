@@ -23,12 +23,15 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
         cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration);
     }
 
-    public void Update()
+    public void ZoomIn(Action calback)
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            DoCameraShake(2, delegate () { cm.SetDesiredSettings(OtherSettings.targetSettings, OtherSettings.duration); });
-        }
+        DoCameraShake(0.5f, delegate () { calback?.Invoke(); cm.SetDesiredSettings(OtherSettings.targetSettings, OtherSettings.duration); });
+
+    }
+
+    public void ZoomOut(Action calback)
+    {
+        DoCameraShake(0.5f, delegate () { calback?.Invoke(); cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration); });
     }
 
     // Update is called once per frame

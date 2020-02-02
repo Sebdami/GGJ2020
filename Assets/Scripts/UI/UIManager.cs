@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -8,6 +9,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] Slider slider;
     [SerializeField] Text people;
     [SerializeField] Text tools;
+    [SerializeField] Image sablier;
 
     public enum EDirection
     {
@@ -92,5 +94,10 @@ public class UIManager : Singleton<UIManager>
         slider.value = 1 - ((float)PlayerData.timeLeft / PlayerData.totalTime);
         people.text = PlayerData.characters.Count.ToString();
         tools.text = PlayerData.tools.Count.ToString();
+    }
+
+    public void BumpSablier()
+    {
+        sablier.rectTransform.DOPunchScale(Vector3.one, 0.5f);
     }
 }
