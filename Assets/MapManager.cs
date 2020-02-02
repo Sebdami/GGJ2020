@@ -82,6 +82,7 @@ public class MapManager : Singleton<MapManager>
     {
         CurrentChunkIndex++;
         lastChunk = CurrentChunk;
+        Debug.Log(chunkPrefab);
         CurrentChunk = Instantiate(chunkPrefab, transform);
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
         toMove.DOMove(ChunkPositions[CurrentChunkIndex], 3f).OnComplete(() =>

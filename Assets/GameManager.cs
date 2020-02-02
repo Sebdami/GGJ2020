@@ -45,7 +45,8 @@ public class GameManager : Singleton<GameManager>
         if (gbm.currentEvent.eventTitle == "The End")
         {
             UIManager.Instance.HideAllPanel();
-            UIManager.Instance.ShowPanel<UIRecapEnd>(); 
+            UIManager.Instance.ShowPanel<UIRecapEnd>();
+            return;
         }
 
         if (info == string.Empty)
@@ -60,11 +61,9 @@ public class GameManager : Singleton<GameManager>
 
     public void Continue()
     {
-        if(!gbm.currentEvent.isReutilisable)
-            PlayerData.eventsDone.Add(gbm.currentEvent);
 
         PlayerData.timeLeft -= 10;
-        gbm.TriggerEvent();
+
         UIManager.Instance.RefreshData();
         UIManager.Instance.ShowPanel<UIEvent>();
     }
@@ -106,6 +105,11 @@ public class GameManager : Singleton<GameManager>
             if (gbm.currentEvent.mapPrefab == null)
                 Debug.Log(gbm.currentEvent.name + "has no chunk null");
             // Move
+
+            if (!gbm.currentEvent.isReutilisable)
+                PlayerData.eventsDone.Add(gbm.currentEvent);
+            gbm.TriggerEvent();
+
             MapManager.Instance.GoToNextChunk(perso, gbm.currentEvent.mapPrefab,
                 () => { Continue(); });
 
