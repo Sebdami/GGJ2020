@@ -128,11 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8201570299336349952, guid: 446a483a53f9ea24db439a4152b8ed34,
-        type: 3}
-      propertyPath: NumberOfChunks
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 8201570299336349953, guid: 446a483a53f9ea24db439a4152b8ed34,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,12 +676,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 1528923651703261249, guid: 4321137f79c0bb747a167c8b10fc8530,
-        type: 3}
-      propertyPath: frustumSettings.baseSettings
-      value: 
-      objectReference: {fileID: 11400000, guid: 6b5d103f11e9bac449865d0cd8a53789,
-        type: 2}
     - target: {fileID: 1528923651703261249, guid: 4321137f79c0bb747a167c8b10fc8530,
         type: 3}
       propertyPath: frustumSettings.qualitySettings

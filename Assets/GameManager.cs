@@ -118,8 +118,6 @@ public class GameManager : Singleton<GameManager>
         else
         {
 
-            Debug.Log("test");
-
             // Close UI
             UIManager.Instance.HidePanel<UIRecap>();
    

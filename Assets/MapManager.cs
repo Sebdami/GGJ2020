@@ -81,8 +81,19 @@ public class MapManager : Singleton<MapManager>
     public void GoToNextChunk(Transform toMove, Chunk chunkPrefab, TweenCallback callback)
     {
         CurrentChunkIndex++;
+
+        // @seb j'ai rajouté par ce que sinon quand on arrive a NumberOfChunks sa plante
+        if (CurrentChunkIndex > NumberOfChunks -1)
+        {
+            NumberOfChunks += 3;
+            var lastPos = ChunkPositions[CurrentChunkIndex - 1];
+            for (int i = CurrentChunkIndex; i < NumberOfChunks; ++i)
+            {
+                ChunkPositions.Add(lastPos + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
+                lastPos = ChunkPositions[i];
+            }
+        }
         lastChunk = CurrentChunk;
-        Debug.Log(chunkPrefab);
         CurrentChunk = Instantiate(chunkPrefab, transform);
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
         toMove.DOMove(ChunkPositions[CurrentChunkIndex], 3f).OnComplete(() =>

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class UIRecapEnd : UIPanel
 {
@@ -26,12 +27,16 @@ public class UIRecapEnd : UIPanel
                     contentTmp += ("rebuild " + accomplissement[i].eventTitle + ".").ToString();
             }
         }
+        else
+        {
+            contentTmp += ("didn't do nothing incredible.").ToString();
+        }
   
         content.text = WordGenerator.ReplaceSentence(contentTmp);
     }
 
     public void CloseRecap()
     {
-        GameManager.Instance.NextAction();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
