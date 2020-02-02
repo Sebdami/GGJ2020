@@ -26,7 +26,7 @@ MonoBehaviour:
       intParameter: 499
       stringParameter: 
   choices:
-  - choiceDescription: Accept fate
+  - choiceDescription: Accept your fate.
     recapAfterChoice: 
     possibleChainedEvents: []
     probaChainedEvent: 0
