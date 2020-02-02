@@ -16,8 +16,11 @@ public class GameManager : Singleton<GameManager>
         MapManager.Instance.Init();
         perso.transform.position = mapm.GetPlayerTargetPosition();
         CameraStateMachine.Instance.Init(perso);
-        gbm.TriggerEvent("L'appel de l'aventure");
+        //gbm.TriggerEvent("L'appel de l'aventure");
         PlayerData.characters.Add(new GameplayRessource("Robert", false));
+        PlayerData.characters.Add(new GameplayRessource("Robert", true));
+
+        gbm.TriggerEvent("A Shifty Trade");
      
         SpawnPrefab();
         PlayerData.timeLeft = PlayerData.totalTime;

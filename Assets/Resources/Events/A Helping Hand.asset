@@ -15,7 +15,13 @@ MonoBehaviour:
   eventTitle: A Helping Hand
   eventDescription: You see peasants struggling with a broken cart. They won't go
     any further without some help.
-  conditionList: []
+  conditionList:
+  - ETconditions:
+    - invertCondition: 0
+      type: 3
+      checkType: 0
+      intParameter: 40
+      stringParameter: 
   choices:
   - choiceDescription: Help them
     recapAfterChoice: You helped them. As a thanks, they gave you a lot of stuff,

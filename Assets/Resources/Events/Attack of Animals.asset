@@ -27,7 +27,7 @@ MonoBehaviour:
     - ETconditions:
       - invertCondition: 0
         type: 2
-        checkType: 0
+        checkType: 1
         intParameter: 0
         stringParameter: Hammer
     costs:
