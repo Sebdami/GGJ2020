@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _heightmap_test:
-        m_Texture: {fileID: 2800000, guid: 9e75b6bfa78581743ab818958403a7d4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 578dc1bb3816f4445ad4bdd6ac4fb210, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -39,4 +39,4 @@ Material:
     - _TessValue: 32
     - __dirty: 0
     m_Colors:
-    - _Color0: {r: 0.20265009, g: 0.2735849, b: 0.14582591, a: 0}
+    - _Color0: {r: 0.233314, g: 0.254717, b: 0.14778392, a: 0}
