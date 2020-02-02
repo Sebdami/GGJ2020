@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.8490566, g: 0.600569, b: 0.084104665, a: 1}
-  m_AmbientEquatorColor: {r: 0.764151, g: 0.34129143, b: 0.111739054, a: 1}
-  m_AmbientGroundColor: {r: 0.6320754, g: 0.012378352, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 0.8301887, g: 0.63219917, b: 0.21537916, a: 1}
+  m_AmbientEquatorColor: {r: 0.7924528, g: 0.5172165, b: 0.3700605, a: 1}
+  m_AmbientGroundColor: {r: 0.7169812, g: 0.091313645, b: 0.091313645, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 43cbd5de05f669a4397f97ef97823f99, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 76c8656d4d0145948b61bb4e5698c247, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -294,82 +294,82 @@ MonoBehaviour:
   colorStrength: 1
   useExtinction: 0
   extinction: 0.75
---- !u!1001 &951786746121408158
+--- !u!1001 &7251086615297108312
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2943058803172764491, guid: 3362f7673bf72d943bde9cf09bf35013,
-        type: 3}
-      propertyPath: frustumSettings.baseSettings
-      value: 
-      objectReference: {fileID: 1616119591}
-    - target: {fileID: 2943058803172764491, guid: 3362f7673bf72d943bde9cf09bf35013,
-        type: 3}
-      propertyPath: frustumSettings.qualitySettings
-      value: 
-      objectReference: {fileID: 1096013690}
-    - target: {fileID: 6069836950695171713, guid: 3362f7673bf72d943bde9cf09bf35013,
-        type: 3}
-      propertyPath: m_Name
-      value: Chunk_07_SunBurning
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6069836950695171718, guid: 3362f7673bf72d943bde9cf09bf35013,
+    - target: {fileID: 4442802507564691776, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4442802507564691783, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: m_Name
+      value: Chunk_06_NewTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702811034280299661, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: frustumSettings.baseSettings
+      value: 
+      objectReference: {fileID: 1616119591}
+    - target: {fileID: 4702811034280299661, guid: acbaab20fa193e54c9cab2ccbc152213,
+        type: 3}
+      propertyPath: frustumSettings.qualitySettings
+      value: 
+      objectReference: {fileID: 1096013690}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3362f7673bf72d943bde9cf09bf35013, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: acbaab20fa193e54c9cab2ccbc152213, type: 3}
