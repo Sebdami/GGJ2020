@@ -47,7 +47,7 @@ Shader "Tile"
 			float2 uv_heightmap_test = v.texcoord * _heightmap_test_ST.xy + _heightmap_test_ST.zw;
 			float grayscale7 = Luminance(tex2Dlod( _heightmap_test, float4( uv_heightmap_test, 0, 0.0) ).rgb);
 			float3 ase_vertexNormal = v.normal.xyz;
-			float3 lerpResult13 = lerp( float3( 0,0,0 ) , ( ( ( grayscale7 * 0.75 ) * ase_vertexNormal ) * _Displacement ) , ase_vertexNormal.y);
+			float3 lerpResult13 = lerp( float3( 0,0,0 ) , ( ( ( grayscale7 * 0.5 ) * ase_vertexNormal ) * _Displacement ) , ase_vertexNormal.y);
 			v.vertex.xyz += lerpResult13;
 		}
 
@@ -65,11 +65,11 @@ Shader "Tile"
 }
 /*ASEBEGIN
 Version=17700
--271;167;1920;917;2068.384;228.388;1.3;True;False
+70;128;1920;857;1605.057;219.5803;1;True;False
 Node;AmplifyShaderEditor.SamplerNode;1;-1419.091,27.31269;Inherit;True;Property;_heightmap_test;heightmap_test;7;0;Create;True;0;0;False;0;-1;None;8ec3583c5705bf94aa373966abc3ae57;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TFHCGrayscale;7;-1075.65,32.29146;Inherit;False;0;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.NormalVertexDataNode;2;-815.1404,391.7844;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;14;-768.9654,59.0507;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0.75;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;14;-768.9654,59.0507;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;5;-455.8401,244.1844;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.RangedFloatNode;4;-533.6403,386.4847;Float;False;Property;_Displacement;Displacement;9;0;Create;True;0;0;False;0;0;1;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;6;-250.8401,264.1844;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
@@ -93,4 +93,4 @@ WireConnection;0;0;9;0
 WireConnection;0;4;11;0
 WireConnection;0;11;13;0
 ASEEND*/
-//CHKSM=EAD35F62CD4C52C8F5ABFC1DA7E84B21BF6FFD6C
+//CHKSM=799929532377F1E08421CE95BCA5AF974B8427C4

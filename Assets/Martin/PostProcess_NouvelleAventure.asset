@@ -99,7 +99,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.1
+    value: 0.2
   contrast:
     overrideState: 0
     value: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
     value: {x: 1, y: 0.8221114, z: 0.9306445, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 0.9801052, y: 1, z: 0.89678377, w: 0}
+    value: {x: 0.9801052, y: 1, z: 0.89678377, w: 0.042372882}
   gain:
     overrideState: 1
     value: {x: 0.85374564, y: 0.8540902, z: 1, w: 0}
@@ -1420,13 +1420,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 5
   threshold:
     overrideState: 0
     value: 1
