@@ -68,7 +68,7 @@ public class EventChoice
 
         public void Gain()
         {
-            PlayerData.timeLeft += timeGain;
+            PlayerData.timeLeft += (isGainRandom) ? Random.Range(0, timeGain) : timeGain;
 
             for (int i = 0; i < ((isGainRandom) ? Random.Range(0, charactersGain): charactersGain); i++)
                 PlayerData.characters.Add(new GameplayRessource(
@@ -116,7 +116,8 @@ public class EventChoice
         public string ResolveCosts()
         {
             string feedback = "";
-            PlayerData.timeLeft -= timeCost;
+            PlayerData.timeLeft -= (isCostRandom) ? Random.Range(0, timeCost) : timeCost;
+
             if (showTimeCostOnRecap)
                 feedback += "Cette action vous a pris " + timeCost + " unités de temps. ";
 
