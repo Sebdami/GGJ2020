@@ -6534,6 +6534,7 @@ GameObject:
   - component: {fileID: 1530692437040769107}
   - component: {fileID: 1530692437040769105}
   - component: {fileID: 1530692437040769106}
+  - component: {fileID: 6237223617837517673}
   m_Layer: 0
   m_Name: ilot_1
   m_TagString: Untagged
@@ -6603,6 +6604,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6237223617837517673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530692437040769108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7793e7036a387eb42b22283339a195bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tesselation: {fileID: 2100000, guid: e0ca42f6d9057a44fa1121602450d64b, type: 2}
+  animationTime: 2
 --- !u!1 &1530692437109171264
 GameObject:
   m_ObjectHideFlags: 0
@@ -7411,6 +7426,17 @@ MonoBehaviour:
           m_StringArgument: Default_Appear_Smooth
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6237223617837517673}
+        m_MethodName: StartAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnActivate:
     m_PersistentCalls:
       m_Calls:
@@ -7454,7 +7480,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f512f47e6b8241f4a97f5c6a2eae0f9c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
