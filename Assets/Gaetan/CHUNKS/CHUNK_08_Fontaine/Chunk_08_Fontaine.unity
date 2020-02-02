@@ -359,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 4442802507564691783, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
       propertyPath: m_Name
-      value: Chunk_06_NewTown
+      value: Chunk_08_Fontaine
       objectReference: {fileID: 0}
     - target: {fileID: 4702811034280299661, guid: acbaab20fa193e54c9cab2ccbc152213,
         type: 3}
