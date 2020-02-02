@@ -31,7 +31,7 @@ public class MapManager : Singleton<MapManager>
         ChunkPositions.Add(lastPosition);
         for (int i = 1; i < NumberOfChunks; ++i)
         {
-            ChunkPositions.Add(lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
+            ChunkPositions.Add(lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.back * chunkSize.y));
             lastPosition = ChunkPositions[i];
         }
     }
@@ -94,7 +94,7 @@ public class MapManager : Singleton<MapManager>
             var lastPos = ChunkPositions[CurrentChunkIndex - 1];
             for (int i = CurrentChunkIndex; i < NumberOfChunks; ++i)
             {
-                ChunkPositions.Add(lastPos + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
+                ChunkPositions.Add(lastPos + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.back * chunkSize.y));
                 lastPos = ChunkPositions[i];
             }
         }
@@ -105,7 +105,7 @@ public class MapManager : Singleton<MapManager>
         CoroutineManager.StartStaticCoroutine(DoBlend(CurrentChunk.lightingSettings, transistionTime));
         
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
-        toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime).OnComplete(() =>
+        toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime+0.1f).OnComplete(() =>
         {
             if (CurrentChunkIndex > 0)
                 Destroy(lastChunk.gameObject);
