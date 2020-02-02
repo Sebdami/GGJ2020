@@ -19,7 +19,7 @@ MonoBehaviour:
     - invertCondition: 0
       type: 3
       checkType: 0
-      intParameter: 100
+      intParameter: 50
       stringParameter: 
   choices:
   - choiceDescription: Get closer

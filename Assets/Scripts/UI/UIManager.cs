@@ -11,6 +11,12 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] Text tools;
     [SerializeField] Image sablier;
 
+    [SerializeField] GameObject feedbackTools;
+    [SerializeField] GameObject feedbackCharacters;
+
+    [SerializeField] Color positiveColor;
+    [SerializeField] Color negativeColor;
+
     public enum EDirection
     {
         LeftToRight = 0,
@@ -99,5 +105,33 @@ public class UIManager : Singleton<UIManager>
     public void BumpSablier()
     {
         sablier.rectTransform.DOPunchScale(Vector3.one, 0.5f);
+    }
+
+
+    public void PopFeedbackUI(int nextCharactersFeedback, int nextToolsFeedback)
+    {
+        PopFeedback(nextCharactersFeedback, feedbackCharacters);
+        PopFeedback(nextToolsFeedback, feedbackTools);
+    }
+
+    void PopFeedback(int _value, GameObject _feedback)
+    {
+        if (_value != 0)
+        {
+            _feedback.GetComponentInChildren<Text>().text = "";
+            if (_value > 0)
+            {
+                _feedback.GetComponentInChildren<Text>().color = positiveColor;
+                _feedback.GetComponentInChildren<Text>().text = "+";
+            }
+            else
+            {
+                _feedback.GetComponentInChildren<Text>().color = negativeColor;
+            }
+
+            _feedback.SetActive(true);
+        }
+        else
+            _feedback.SetActive(false);
     }
 }
