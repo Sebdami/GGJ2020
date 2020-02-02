@@ -15,7 +15,13 @@ MonoBehaviour:
   eventTitle: A small bag of tools
   eventDescription: While walking in the forest of $[Lieux], $[Heros] finds on a
     bag full of tools. A usefull ressource for this kind of journey.
-  conditionList: []
+  conditionList:
+  - ETconditions:
+    - invertCondition: 1
+      type: 2
+      checkType: 0
+      intParameter: 4
+      stringParameter: 
   choices:
   - choiceDescription: There is never enough.
     recapAfterChoice: 
