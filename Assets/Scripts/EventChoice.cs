@@ -71,10 +71,11 @@ public class EventChoice
         {
             PlayerData.timeLeft += (isGainRandom) ? Random.Range(0, timeGain) : timeGain;
 
-            for (int i = 0; i < ((isGainRandom) ? Random.Range(0, charactersGain): charactersGain); i++)
-                PlayerData.characters.Add(new GameplayRessource(
-                    WordManager.Instance.noms.wordList[Random.Range(0, WordManager.Instance.noms.wordList.Count)])
-                );
+            if (!healCharacter)
+                for (int i = 0; i < ((isGainRandom) ? Random.Range(0, charactersGain): charactersGain); i++)
+                    PlayerData.characters.Add(new GameplayRessource(
+                        WordManager.Instance.noms.wordList[Random.Range(0, WordManager.Instance.noms.wordList.Count)])
+                    );
 
             for (int i = 0; i < ((isGainRandom) ? Random.Range(0, toolsGain) : toolsGain); i++)
                 PlayerData.tools.Add(new GameplayRessource());
