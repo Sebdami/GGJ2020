@@ -132,13 +132,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.9766821, y: 0.8345096, z: 1, w: 0}
+    value: {x: 0.8537445, y: 0.8403184, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 0.98341507, y: 1, z: 0.9032442, w: 0}
+    value: {x: 1, y: 0.9337351, z: 0.96124524, w: 0}
   gain:
     overrideState: 1
-    value: {x: 0.85374564, y: 0.8540902, z: 1, w: 0}
+    value: {x: 0.9894562, y: 1, z: 0.9705473, w: 0}
   masterCurve:
     overrideState: 0
     value:
@@ -1363,7 +1363,7 @@ MonoBehaviour:
     value: 0.5
   color:
     overrideState: 1
-    value: {r: 0.15045391, g: 0.448091, b: 0.46226418, a: 1}
+    value: {r: 0.13415134, g: 0.2735849, b: 0.11227306, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: PostProcess_NouvelleAventure01
+  m_Name: PP_Chunk01
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -746943325020119370}
