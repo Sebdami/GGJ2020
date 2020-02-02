@@ -7386,6 +7386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fee8e9f8bff8c41bed30bcb5a7d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  light1: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  light2: {r: 0.5849056, g: 0.19588822, b: 0.5703895, a: 1}
   playerTargetTransform: {fileID: 3044387723117796317}
   prefabSpawnTransform: {fileID: 3044387724571818680}
   lightingSettings:
