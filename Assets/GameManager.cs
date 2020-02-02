@@ -51,7 +51,11 @@ public class GameManager : Singleton<GameManager>
         {
             UIManager.Instance.HideAllPanel();
             UIManager.Instance.ShowPanel<UIRecapEnd>();
+
+            MapManager.Instance.GoToNextChunk(perso, gbm.currentEvent.mapPrefab,
+                () => { MakePrefabAppear(); });
             return;
+
         }
 
         if (info == string.Empty)
