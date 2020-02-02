@@ -2,10 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.SceneManagement;
+using RenderSettings = UnityEngine.RenderSettings;
 
 public class MapManager : Singleton<MapManager>
 {
+    public DirectionalLight ligth1;
+    public DirectionalLight ligth2;
+
     [SerializeField]
     public int NumberOfChunks = 15;
 

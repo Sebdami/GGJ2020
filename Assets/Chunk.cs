@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Experimental.GlobalIllumination;
 
 public class Chunk : MonoBehaviour
 {
+    public Color light1;
+    public Color light2;
+
     public Transform playerTargetTransform;
     public Transform prefabSpawnTransform;
     [System.Serializable]
