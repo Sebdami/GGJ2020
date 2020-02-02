@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Tile
-  m_Shader: {fileID: 4800000, guid: a5384645d7bf14c4aa31fe2f6680d709, type: 3}
+  m_Shader: {fileID: 4800000, guid: 12e657740a900614cb17005cb865d661, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _heightmap_test:
-        m_Texture: {fileID: 2800000, guid: ca21672667d09194da96e0ff91aa9f8d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9e75b6bfa78581743ab818958403a7d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
