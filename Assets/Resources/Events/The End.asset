@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: The End
   m_EditorClassIdentifier: 
   eventTitle: The End
-  eventDescription: Our Hero, $[Heros], had died.\n  The savior of the broken, the
-    beaten and the damned (as some may call him), has lived a great life guided by
-    your words.\n  Unfortunately, everything must come to an end.\n You shall accept
-    his fate and be proud of your actions.\n Well Done.\n \n Go now, other Heroes
-    await you.
+  eventDescription: Our Hero, $[Heros], has died.\n  He has lived a great life guided
+    by your words.\n  Unfortunately, everything must come to an end.\n You shall
+    accept his fate and be proud of your actions.\n Well Done.\n \n Go now, other
+    Heroes await you.
   conditionList:
   - ETconditions:
     - invertCondition: 0
