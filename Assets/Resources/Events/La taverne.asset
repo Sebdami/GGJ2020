@@ -19,9 +19,9 @@ MonoBehaviour:
   - ETconditions:
     - invertCondition: 0
       type: 1
-      checkType: 0
-      intParameter: 1
-      stringParameter: 
+      checkType: 1
+      intParameter: 0
+      stringParameter: $[Minstrel]
   choices:
   - choiceDescription: Enter the tavern, at you own risk.
     recapAfterChoice: It wasn't a good idea, everybody is drunk.
