@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8584906, g: 0.44949272, b: 0.44949272, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1026,6 +1026,7 @@ MonoBehaviour:
   uipanels:
   - {fileID: 3417127134359510464, guid: 1414ea0a29121e64985930dde891b711, type: 3}
   - {fileID: 4923523414840545868, guid: 0d3e705ba1fa46b4bb25b62c9d5f8ee6, type: 3}
+  - {fileID: 3865346381784669414, guid: da2e6b3f3593a9c4b8dadcea140c05b6, type: 3}
   defaultLayout: {fileID: 7404715046939126906}
 --- !u!114 &567767828
 MonoBehaviour:
