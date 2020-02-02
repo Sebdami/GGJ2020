@@ -16,6 +16,9 @@ public class MapManager : Singleton<MapManager>
     [SerializeField]
     Vector2 chunkSize = new Vector2(200, 200);
 
+    [SerializeField]
+    Vector3 chunkDefaultRotation = new Vector3(0, 180, 0);
+
     public List<Vector3> ChunkPositions = new List<Vector3>();
     public int CurrentChunkIndex = 0;
 
@@ -31,7 +34,7 @@ public class MapManager : Singleton<MapManager>
         ChunkPositions.Add(lastPosition);
         for (int i = 1; i < NumberOfChunks; ++i)
         {
-            ChunkPositions.Add(lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.back * chunkSize.y));
+            ChunkPositions.Add(lastPosition + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
             lastPosition = ChunkPositions[i];
         }
     }
@@ -49,6 +52,7 @@ public class MapManager : Singleton<MapManager>
     {
         CurrentChunk = Instantiate(prefab, transform);
         CurrentChunk.transform.position = ChunkPositions[0];
+        CurrentChunk.transform.eulerAngles = chunkDefaultRotation;
     }
 
     public Vector3 GetNextPlayerTargetPosition()
@@ -94,7 +98,7 @@ public class MapManager : Singleton<MapManager>
             var lastPos = ChunkPositions[CurrentChunkIndex - 1];
             for (int i = CurrentChunkIndex; i < NumberOfChunks; ++i)
             {
-                ChunkPositions.Add(lastPos + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.back * chunkSize.y));
+                ChunkPositions.Add(lastPos + (Random.Range(0, 2) == 1 ? Vector3.right * chunkSize.x : Vector3.forward * chunkSize.y));
                 lastPos = ChunkPositions[i];
             }
         }
@@ -105,9 +109,10 @@ public class MapManager : Singleton<MapManager>
         CoroutineManager.StartStaticCoroutine(DoBlend(CurrentChunk.lightingSettings, transistionTime));
         
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
+        CurrentChunk.transform.eulerAngles = chunkDefaultRotation;
 
-        if(CurrentChunk.test)
-        CurrentChunk.test.gameObject.SetActive(false);
+        if (CurrentChunk.test)
+            CurrentChunk.test.gameObject.SetActive(false);
         toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime+0.1f).OnComplete(() =>
         {
             if (CurrentChunkIndex > 0)
