@@ -20,8 +20,19 @@ public class AudioManager : Singleton<AudioManager>
     public AudioClip mainMusic;
     public AudioClip endMusic;
 
-    public AudioClip appearSound;
-    public AudioClip goToNextSound;
+    public AudioClip[] appearSound;
+    public AudioClip[] goToNextSound;
+
+    public AudioClip GetAppearSound()
+    {
+        return appearSound[Random.Range(0, appearSound.Length)];
+    }
+
+    public AudioClip GetGoToNextSound()
+    {
+        return goToNextSound[Random.Range(0, goToNextSound.Length)];
+    }
+
 
     IEnumerator Start()
     {

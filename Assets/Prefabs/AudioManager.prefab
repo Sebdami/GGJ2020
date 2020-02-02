@@ -83,8 +83,13 @@ MonoBehaviour:
   mainMusicIntro: {fileID: 8300000, guid: e737f3c67151bc54ca304115c0d42cfe, type: 3}
   mainMusic: {fileID: 8300000, guid: f62a7448fd1fa5343bde791594405855, type: 3}
   endMusic: {fileID: 8300000, guid: fab9b19890a974c4dbdb24365bc21e40, type: 3}
-  appearSound: {fileID: 0}
-  goToNextSound: {fileID: 0}
+  appearSound:
+  - {fileID: 8300000, guid: 70ebb4bdc49e1844f879c9e07ae26d3b, type: 3}
+  - {fileID: 8300000, guid: a0ad22b4884594948b565ef571a0cc10, type: 3}
+  goToNextSound:
+  - {fileID: 8300000, guid: 7b7030dbccf3ba8448776094eec67486, type: 3}
+  - {fileID: 8300000, guid: c133a5b989d4ea04fb78b1cecdcba122, type: 3}
+  - {fileID: 8300000, guid: 160e31d3cdeeda54da397f3d77f36be2, type: 3}
 --- !u!82 &5182122396550238707
 AudioSource:
   m_ObjectHideFlags: 0

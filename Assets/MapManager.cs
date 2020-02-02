@@ -123,7 +123,7 @@ public class MapManager : Singleton<MapManager>
             callback?.Invoke();
         });
 
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.goToNextSound);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.GetGoToNextSound());
     }
 
     Chunk.LightingSettings source;
