@@ -15,15 +15,23 @@ public class AudioManager : Singleton<AudioManager>
 
     [SerializeField]
     float sfxVolume = 1f;
-    
+
+    public AudioClip mainMusicIntro;
     public AudioClip mainMusic;
     public AudioClip endMusic;
 
     public AudioClip appearSound;
     public AudioClip goToNextSound;
 
-    private void Start()
+    IEnumerator Start()
     {
+        musicAudioSource.loop = false;
+        musicAudioSource.clip = mainMusicIntro;
+        musicAudioSource.Play();
+
+        yield return new WaitWhile(() => musicAudioSource.isPlaying);
+
+        musicAudioSource.loop = true;
         musicAudioSource.clip = mainMusic;
         musicAudioSource.Play();
     }

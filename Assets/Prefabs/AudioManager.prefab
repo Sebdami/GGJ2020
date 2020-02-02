@@ -79,8 +79,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   musicVolume: 1
-  mainMusic: {fileID: 8300000, guid: b546b91ea0090bf44be8f29b6a295297, type: 3}
+  sfxVolume: 1
+  mainMusicIntro: {fileID: 8300000, guid: e737f3c67151bc54ca304115c0d42cfe, type: 3}
+  mainMusic: {fileID: 8300000, guid: f62a7448fd1fa5343bde791594405855, type: 3}
   endMusic: {fileID: 8300000, guid: fab9b19890a974c4dbdb24365bc21e40, type: 3}
+  appearSound: {fileID: 0}
+  goToNextSound: {fileID: 0}
 --- !u!82 &5182122396550238707
 AudioSource:
   m_ObjectHideFlags: 0
