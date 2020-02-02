@@ -19,6 +19,9 @@ public class AudioManager : Singleton<AudioManager>
     public AudioClip mainMusic;
     public AudioClip endMusic;
 
+    public AudioClip appearSound;
+    public AudioClip goToNextSound;
+
     private void Start()
     {
         musicAudioSource.clip = mainMusic;
@@ -51,6 +54,9 @@ public class AudioManager : Singleton<AudioManager>
 
     public void PlaySFX(AudioClip clip)
     {
+        if (clip == null)
+            return;
+
         AudioSource source = gameObject.AddComponent<AudioSource>();
         source.volume = sfxVolume;
         source.clip = clip;

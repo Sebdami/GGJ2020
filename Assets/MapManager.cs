@@ -122,6 +122,8 @@ public class MapManager : Singleton<MapManager>
 
             callback?.Invoke();
         });
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.goToNextSound);
     }
 
     Chunk.LightingSettings source;
