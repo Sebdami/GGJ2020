@@ -21,8 +21,9 @@ MonoBehaviour:
   choices:
   - choiceDescription: Let's go $[Heros] !
     recapAfterChoice: Manage carefully your teammates and tools to optimize your
-      encounters. Here, have your first tool to begin your journey. But be careful,
-      $[Heros] is mortal, and every action may take time.
+      encounters.\n Be careful though, $[Heros] is a mortal being. Every action he
+      may take will cost him time he shall not get back. Here, have your first tool
+      to begin your journey.\n
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
