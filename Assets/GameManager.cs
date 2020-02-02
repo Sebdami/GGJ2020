@@ -9,15 +9,25 @@ public class GameManager : Singleton<GameManager>
 
     public Transform perso;
 
+    public string cheat = "";
+
     public void Start()
     {
         mapm = MapManager.Instance;
         gbm = FindObjectOfType<GameplayEventManager>();
-        CameraStateMachine.Instance.Init(perso);
-        //gbm.TriggerEvent("L'appel de l'aventure");
-        gbm.TriggerEvent("A Fire in the Night");
+
+        if(cheat != "")
+        {
+            gbm.TriggerEvent(cheat);
+        }
+        else
+        {
+            gbm.TriggerEvent("L'appel de l'aventure");
+        }
         MapManager.Instance.Init(gbm.currentEvent);
         perso.transform.position = mapm.GetPlayerTargetPosition();
+        CameraStateMachine.Instance.Init(perso);
+
         PlayerData.characters.Add(new GameplayRessource("Robert", false));
         UIManager.Instance.RefreshData();
         MakePrefabAppear();
@@ -33,7 +43,8 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.HidePanel<UIEvent>();
 
         if (gbm.currentEvent.eventTitle == "The End")
-        { 
+        {
+            UIManager.Instance.HideAllPanel();
             UIManager.Instance.ShowPanel<UIRecapEnd>(); 
         }
 

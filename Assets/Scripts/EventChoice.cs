@@ -88,7 +88,7 @@ public class EventChoice
 
             if (healCharacter)
             {
-                for (int i = 0; i < charactersGain; i++)
+                for (int i = 0; i < PlayerData.characters.Count; i++)
                     PlayerData.characters[i].damaged = false;
             }
         }
