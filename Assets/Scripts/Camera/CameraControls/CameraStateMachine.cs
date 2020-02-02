@@ -12,7 +12,7 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
     public CameraTransformData OtherSettings;
     public CameraThemeController ctc;
 
-
+    bool init = false;
 
     public void Init(Transform followTarget)
     {
@@ -21,6 +21,8 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
         ctc = new CameraThemeController();
         cm.SetFollowTarget(followTarget);
         cm.SetDesiredSettings(DefaultSettings.targetSettings, DefaultSettings.duration);
+
+        init = true;
     }
 
     public void ZoomIn(Action calback = null)
@@ -37,6 +39,7 @@ public class CameraStateMachine : Singleton<CameraStateMachine>
     // Update is called once per frame
     void LateUpdate()
     {
+        if(init)
          cm.Update(Time.deltaTime, true);
     }
 

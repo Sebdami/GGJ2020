@@ -6,7 +6,7 @@ using DG.Tweening;
 public class UIManager : Singleton<UIManager>
 {
 
-    [SerializeField] Slider slider;
+    [SerializeField] Image slider;
     [SerializeField] Text people;
     [SerializeField] Text tools;
     [SerializeField] Image sablier;
@@ -91,7 +91,7 @@ public class UIManager : Singleton<UIManager>
 
     public void RefreshData()
     {
-        slider.value = 1 - ((float)PlayerData.timeLeft / PlayerData.totalTime);
+        slider.fillAmount = ((float)PlayerData.timeLeft / PlayerData.totalTime);
         people.text = PlayerData.characters.Count.ToString();
         tools.text = PlayerData.tools.Count.ToString();
     }
