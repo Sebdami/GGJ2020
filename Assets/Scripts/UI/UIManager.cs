@@ -107,11 +107,19 @@ public class UIManager : Singleton<UIManager>
         sablier.rectTransform.DOPunchScale(Vector3.one, 0.5f);
     }
 
+    int oldCharactersFeedback;
+    int oldToolsFeedback;
 
-    public void PopFeedbackUI(int nextCharactersFeedback, int nextToolsFeedback)
+    public void SaveOldDataValues()
     {
-        PopFeedback(nextCharactersFeedback, feedbackCharacters);
-        PopFeedback(nextToolsFeedback, feedbackTools);
+        oldCharactersFeedback = PlayerData.characters.Count;
+        oldToolsFeedback = PlayerData.tools.Count;
+    }
+
+    public void PopFeedbackUI()
+    {
+        PopFeedback(PlayerData.characters.Count - oldCharactersFeedback, feedbackCharacters);
+        PopFeedback(PlayerData.tools.Count - oldToolsFeedback, feedbackTools);
     }
 
     void PopFeedback(int _value, GameObject _feedback)
