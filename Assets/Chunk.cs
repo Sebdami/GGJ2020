@@ -13,6 +13,7 @@ public class Chunk : MonoBehaviour
         public Color skyColor;
         public Color equatorColor;
         public Color groundColor;
+        public Color skyboxTint;
     }
     public LightingSettings lightingSettings;
 

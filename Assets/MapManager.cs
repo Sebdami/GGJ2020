@@ -95,5 +95,6 @@ public class MapManager : Singleton<MapManager>
         RenderSettings.ambientSkyColor = chunk.lightingSettings.skyColor;
         RenderSettings.ambientEquatorColor = chunk.lightingSettings.equatorColor;
         RenderSettings.ambientGroundColor = chunk.lightingSettings.groundColor;
+        RenderSettings.skybox.SetColor("_Tint", chunk.lightingSettings.skyboxTint);
     }
 }
