@@ -10,44 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
-  m_Name: A Fire in the Night
+  m_Name: The Nomad
   m_EditorClassIdentifier: 
-  eventTitle: A Fire in The Night
-  eventDescription: You see a fire in the horizon.
+  eventTitle: The Nomad
+  eventDescription: You found a charming person by the fireplace.
   conditionList:
   - ETconditions:
     - invertCondition: 0
-      type: 3
-      checkType: 0
-      intParameter: 100
-      stringParameter: 
+      type: 0
+      checkType: 1
+      intParameter: 0
+      stringParameter: A Fire in the Night
   choices:
-  - choiceDescription: Get closer
-    recapAfterChoice: 
-    possibleChainedEvents:
-    - The Nomad
-    - The Savage Tribe
-    probaChainedEvent: 1
-    alterPrefab: 0
-    conditionsToEnableChoice: []
-    costs:
-      timeCost: 0
-      charactersCost: 0
-      toolsCost: 0
-      isCostRandom: 0
-      lethalForRessources: 0
-      setToDamaged: 0
-      namedCharacters: []
-      namedTools: []
-    rewards:
-      timeGain: 0
-      charactersGain: 0
-      toolsGain: 0
-      isGainRandom: 0
-      namedCharacters: []
-      namedTools: []
-  - choiceDescription: Rest for the Night
-    recapAfterChoice: 
+  - choiceDescription: Share the night with the Nomad.
+    recapAfterChoice: After a good resting night, as you're about to leave, the Nomad
+      joins you, adding a Shovel to the inventory.
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
@@ -63,11 +40,12 @@ MonoBehaviour:
       namedTools: []
     rewards:
       timeGain: 0
-      charactersGain: 0
-      toolsGain: 0
+      charactersGain: 1
+      toolsGain: 1
       isGainRandom: 0
       namedCharacters: []
-      namedTools: []
+      namedTools:
+      - Shovel
   isReutilisable: 1
   lethal: 0
   isEpic: 0

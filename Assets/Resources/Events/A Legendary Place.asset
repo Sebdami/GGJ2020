@@ -22,7 +22,7 @@ MonoBehaviour:
       years rebuilding it, your adventure finally resumes.
     possibleChainedEvents: []
     probaChainedEvent: 0
-    alterPrefab: 0
+    alterPrefab: 1
     conditionsToEnableChoice:
     - ETconditions:
       - invertCondition: 0

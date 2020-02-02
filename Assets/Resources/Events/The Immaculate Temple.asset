@@ -15,14 +15,20 @@ MonoBehaviour:
   eventTitle: The Immaculate Temple
   eventDescription: You reached The Immaculate Temple. This temple was destroyed
     500 years ago but it was very appreciated by the common folks.
-  conditionList: []
+  conditionList:
+  - ETconditions:
+    - invertCondition: 0
+      type: 3
+      checkType: 0
+      intParameter: 150
+      stringParameter: 
   choices:
   - choiceDescription: Repair the Temple
     recapAfterChoice: After the reparation of the temple, a lot of people joined
       your cause. Some also offered you a pickaxe.
     possibleChainedEvents: []
     probaChainedEvent: 0
-    alterPrefab: 0
+    alterPrefab: 1
     conditionsToEnableChoice: []
     costs:
       timeCost: 60
@@ -63,6 +69,7 @@ MonoBehaviour:
       isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  isReutilisable: 0
   lethal: 0
   isEpic: 1
   mapPrefab: {fileID: 0}
