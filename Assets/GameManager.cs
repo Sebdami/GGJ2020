@@ -70,7 +70,8 @@ public class GameManager : Singleton<GameManager>
 
     public void MakePrefabAppear()
     {
-        MapManager.Instance.CurrentChunk.test.gameObject.SetActive(true);
+        if (MapManager.Instance.CurrentChunk.test)
+            MapManager.Instance.CurrentChunk.test.gameObject.SetActive(true);
         MapManager.Instance.CurrentChunk.Appear();
     }
 

@@ -106,6 +106,7 @@ public class MapManager : Singleton<MapManager>
         
         CurrentChunk.transform.position = ChunkPositions[CurrentChunkIndex];
 
+        if(CurrentChunk.test)
         CurrentChunk.test.gameObject.SetActive(false);
         toMove.DOMove(ChunkPositions[CurrentChunkIndex], transistionTime+0.1f).OnComplete(() =>
         {
