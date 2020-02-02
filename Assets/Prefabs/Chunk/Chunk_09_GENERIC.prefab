@@ -57,7 +57,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299992917298689580}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3419,6 +3419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fx_SparksOK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021971882884050156, guid: c16745f01adce0e4091b1161cf100846,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6021971882884050159, guid: c16745f01adce0e4091b1161cf100846,
         type: 3}
