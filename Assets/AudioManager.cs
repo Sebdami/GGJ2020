@@ -12,6 +12,9 @@ public class AudioManager : Singleton<AudioManager>
 
     [SerializeField]
     float musicVolume = 1f;
+
+    [SerializeField]
+    float sfxVolume = 1f;
     
     public AudioClip mainMusic;
     public AudioClip endMusic;
@@ -44,5 +47,14 @@ public class AudioManager : Singleton<AudioManager>
             yield return null;
         }
         musicAudioSource.volume = musicVolume;
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        AudioSource source = gameObject.AddComponent<AudioSource>();
+        source.volume = sfxVolume;
+        source.clip = clip;
+        source.Play();
+        Destroy(source, clip.length + 0.1f);
     }
 }
