@@ -182,7 +182,7 @@ public class EventChoice
             {
                 PlayerData.ShuffleRessources();
                 List<GameplayRessource> gameplayRessourcesNamed = _playerData.FindAll(x => !string.IsNullOrEmpty(x.ressourceName));
-                for (int i = 0; i < diff && i < gameplayRessourcesNamed.Count; i++)
+                for (int i = 0; i < Mathf.Abs(diff) && i < gameplayRessourcesNamed.Count; i++)
                 {
                     if (_isCharacter)
                     {
