@@ -21,6 +21,6 @@ public class UIRecap : UIPanel
 
     public void CloseRecap()
     {
-        GameManager.Instance.NextAction();
+        GameManager.Instance.WaitForAlterPrefab();
     }
 }

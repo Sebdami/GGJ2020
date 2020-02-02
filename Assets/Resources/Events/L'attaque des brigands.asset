@@ -12,14 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222da87353cfc147bfc025059c3092a, type: 3}
   m_Name: L'attaque des brigands
   m_EditorClassIdentifier: 
-  lethal: 1
-  isEpic: 0
   eventTitle: L'attaque des brigands
   eventDescription: Un groupe de brigand attaque Robert
-  mapPrefab: {fileID: 0}
-  timeToResolveEvent: 0
-  specificTools: []
-  specificCharacters: []
   conditionList:
   - ETconditions:
     - invertCondition: 0
@@ -36,6 +30,9 @@ MonoBehaviour:
   choices:
   - choiceDescription: Un gars est mort
     recapAfterChoice: Un personnage est mort
+    possibleChainedEvents: []
+    probaChainedEvent: 0
+    alterPrefab: 0
     conditionsToEnableChoice:
     - ETconditions:
       - invertCondition: 0
@@ -47,30 +44,23 @@ MonoBehaviour:
       timeCost: 0
       charactersCost: 1
       toolsCost: 0
+      isCostRandom: 0
       lethalForRessources: 1
       setToDamaged: 0
       namedCharacters: []
       namedTools: []
-      showTimeCostOnRecap: 0
-      showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 0
-      showSpecificCharactersRecap: 0
-      showSpecificToolsRecap: 0
-      overrideRecapCharacter: 
-      overrideRecapTool: 
-      overrideRecapCharacterDeath: 
-      overrideRecapToolBroken: 
     rewards:
       timeGain: 0
       charactersGain: 0
       toolsGain: 0
+      isGainRandom: 0
       namedCharacters: []
       namedTools: []
+  - choiceDescription: La pioche c'est bien
+    recapAfterChoice: "Peut \xEAtre qu'en lui jetant une pioche \xE7a marchera"
     possibleChainedEvents: []
     probaChainedEvent: 0
     alterPrefab: 0
-  - choiceDescription: La pioche c'est bien
-    recapAfterChoice: "Peut \xEAtre qu'en lui jetant une pioche sa marchera"
     conditionsToEnableChoice:
     - ETconditions:
       - invertCondition: 0
@@ -82,25 +72,22 @@ MonoBehaviour:
       timeCost: 0
       charactersCost: 0
       toolsCost: 1
+      isCostRandom: 0
       lethalForRessources: 1
       setToDamaged: 0
       namedCharacters: []
       namedTools: []
-      showTimeCostOnRecap: 0
-      showCharacterCostOnRecap: 0
-      showToolsCostOnRecap: 0
-      showSpecificCharactersRecap: 0
-      showSpecificToolsRecap: 0
-      overrideRecapCharacter: 
-      overrideRecapTool: 
-      overrideRecapCharacterDeath: 
-      overrideRecapToolBroken: 
     rewards:
       timeGain: 0
       charactersGain: 0
       toolsGain: 0
+      isGainRandom: 0
       namedCharacters: []
       namedTools: []
-    possibleChainedEvents: []
-    probaChainedEvent: 0
-    alterPrefab: 0
+  lethal: 1
+  isEpic: 0
+  mapPrefab: {fileID: 1818894998691016812, guid: 75a8f1ae4255e424c997411cda49041b,
+    type: 3}
+  timeToResolveEvent: 0
+  specificTools: []
+  specificCharacters: []

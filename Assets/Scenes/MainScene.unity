@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 740baf646217741a89e0d9ec12eff76e, type: 2}
   m_HaloStrength: 0.5
@@ -121,6 +121,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &67891951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
+  m_Name: New Aura Base Settings
+  m_EditorClassIdentifier: 
+  useDensity: 1
+  density: 0.25
+  useScattering: 1
+  scattering: 0.5
+  useAmbientLighting: 1
+  ambientLightingStrength: 1
+  useColor: 0
+  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
+  colorStrength: 1
+  useExtinction: 0
+  extinction: 0.75
 --- !u!1001 &389369392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 8201570299336349953, guid: 446a483a53f9ea24db439a4152b8ed34,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8201570299336349953, guid: 446a483a53f9ea24db439a4152b8ed34,
         type: 3}
@@ -291,13 +314,49 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 150715868, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150715869, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 150715869, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Color.g
+      value: 0.44949272
+      objectReference: {fileID: 0}
+    - target: {fileID: 150715869, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Color.b
+      value: 0.44949272
+      objectReference: {fileID: 0}
+    - target: {fileID: 286134493, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 286134493, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 286134493, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468003213, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1502407936, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1704975293, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
-      propertyPath: m_Text
-      value: 1
+    - target: {fileID: 1502407936, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502407936, guid: 7feb5cc80e7a97a43b99af83c85a2c58, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7404715046939126885, guid: 7feb5cc80e7a97a43b99af83c85a2c58,
         type: 3}
@@ -342,7 +401,7 @@ PrefabInstance:
     - target: {fileID: 7404715046939126906, guid: 7feb5cc80e7a97a43b99af83c85a2c58,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7404715046939126906, guid: 7feb5cc80e7a97a43b99af83c85a2c58,
         type: 3}
@@ -455,7 +514,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &818774815
 PrefabInstance:
@@ -507,7 +566,7 @@ PrefabInstance:
     - target: {fileID: 3325944165489966220, guid: 916d1164c734b5b459aba6739fb4407e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3325944165489966220, guid: 916d1164c734b5b459aba6739fb4407e,
         type: 3}
@@ -569,7 +628,7 @@ Transform:
   m_Children:
   - {fileID: 6648640795069854392}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &972329207
 PrefabInstance:
@@ -621,7 +680,7 @@ PrefabInstance:
     - target: {fileID: 1818894998691016813, guid: 75a8f1ae4255e424c997411cda49041b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1818894998691016813, guid: 75a8f1ae4255e424c997411cda49041b,
         type: 3}
@@ -685,7 +744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1261135411
 MonoBehaviour:
@@ -772,7 +831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1975853118
 GameObject:
@@ -818,31 +877,8 @@ Transform:
   m_Children:
   - {fileID: 389369393}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2059003419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
-  m_Name: New Aura Base Settings
-  m_EditorClassIdentifier: 
-  useDensity: 1
-  density: 0.25
-  useScattering: 1
-  scattering: 0.5
-  useAmbientLighting: 1
-  ambientLightingStrength: 1
-  useColor: 0
-  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
-  colorStrength: 1
-  useExtinction: 0
-  extinction: 0.75
 --- !u!1001 &2077366802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,7 +929,7 @@ PrefabInstance:
     - target: {fileID: 3325944165489966220, guid: 916d1164c734b5b459aba6739fb4407e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3325944165489966220, guid: 916d1164c734b5b459aba6739fb4407e,
         type: 3}
@@ -975,7 +1011,7 @@ PrefabInstance:
     - target: {fileID: 3439494544206387419, guid: 4a5641f888dc88e4ba9f222dbf59c5a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3439494544206387419, guid: 4a5641f888dc88e4ba9f222dbf59c5a9,
         type: 3}
@@ -1044,7 +1080,7 @@ PrefabInstance:
     - target: {fileID: 5182122396550238717, guid: bf34deea21f493f42ba09fa7e94a92cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5182122396550238717, guid: bf34deea21f493f42ba09fa7e94a92cc,
         type: 3}

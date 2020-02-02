@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.HidePanel<UIEvent>();
         if (info == string.Empty)
         {
-            NextAction();
+            WaitForAlterPrefab();
         }
         else
         {
@@ -64,28 +64,52 @@ public class GameManager : Singleton<GameManager>
         currentTile.Activate();
     }
 
-    public void NextAction()
+    public void WaitForAlterPrefab()
     {
-        string nextAction = gbm.choiceMade.ChoiceConsequences();
-        if (string.IsNullOrEmpty(nextAction))
-        {
-            // Close UI
-            // UIManager.Instance.
-            UIManager.Instance.HideAllPanel();
-            // Move
-            MapManager.Instance.GoToNextChunk(perso, 
-                () => { Continue(); });
 
-            // Call Trigger event on GEM quand le move est terminé
+        if (gbm.choiceMade.alterPrefab)
+        {
+            ActivatePrefab();
+            StartCoroutine(WaitBeforeNextAction(3f));
         }
         else
         {
-            // Close UI
-            UIManager.Instance.HideAllPanel();
-
-            // Call next event
-            gbm.TriggerEvent(nextAction);
+            NextAction();
         }
 
     }
+    public void NextAction()
+    {
+        string nextAction = gbm.choiceMade.ChoiceConsequences();
+
+
+            if (string.IsNullOrEmpty(nextAction))
+            {
+                // Close UI
+                // UIManager.Instance.
+                UIManager.Instance.HideAllPanel();
+                // Move
+                MapManager.Instance.GoToNextChunk(perso,
+                    () => { Continue(); });
+
+                // Call Trigger event on GEM quand le move est terminé
+            }
+            else
+            {
+                // Close UI
+                UIManager.Instance.HideAllPanel();
+
+                // Call next event
+                gbm.TriggerEvent(nextAction);
+            }
+
+    }
+
+    public IEnumerator WaitBeforeNextAction(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        NextAction();
+
+    }
+
 }

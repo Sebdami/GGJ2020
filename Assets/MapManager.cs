@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapManager : Singleton<MapManager>
 {
@@ -84,7 +85,15 @@ public class MapManager : Singleton<MapManager>
         {
             if(CurrentChunk > 0)
                 Chunks[CurrentChunk - 1].gameObject.SetActive(false);
+            ApplyChunkSettings(Chunks[CurrentChunk]);
             callback?.Invoke();
         });
+    }
+
+    public void ApplyChunkSettings(Chunk chunk)
+    {
+        RenderSettings.ambientSkyColor = chunk.lightingSettings.skyColor;
+        RenderSettings.ambientEquatorColor = chunk.lightingSettings.equatorColor;
+        RenderSettings.ambientGroundColor = chunk.lightingSettings.groundColor;
     }
 }
