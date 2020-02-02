@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 740baf646217741a89e0d9ec12eff76e, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cfb53223f8fb9994aba17439ea9caef4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42413116, g: 0.50226206, b: 0.36909163, a: 1}
+  m_IndirectSpecularColor: {r: 0.19020203, g: 0.29595587, b: 0.21752861, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -429,9 +429,9 @@ MonoBehaviour:
   farClipPlaneDistance: 128
   depthBiasCoefficient: 0.35
   enableVolumes: 1
-  enableVolumesTexture2DMask: 1
-  enableVolumesTexture3DMask: 1
-  enableVolumesNoiseMask: 1
+  enableVolumesTexture2DMask: 0
+  enableVolumesTexture3DMask: 0
+  enableVolumesNoiseMask: 0
   enableAmbientLighting: 1
   enableDirectionalLights: 1
   enableDirectionalLightsShadows: 1
@@ -442,12 +442,12 @@ MonoBehaviour:
   enableLightsCookies: 1
   enableDithering: 1
   texture3DFiltering: 1
-  enableDenoisingFilter: 0
+  enableDenoisingFilter: 1
   denoisingFilterRange: 0
   enableTemporalReprojection: 1
   temporalReprojectionFactor: 0.95
   enableOcclusionCulling: 1
-  occlusionCullingAccuracy: 2
+  occlusionCullingAccuracy: 4
   enableLightProbes: 0
 --- !u!1 &1261135408
 GameObject:
@@ -931,6 +931,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021549479354886072, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021549479354886072, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021549479354886072, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 54.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021549479354886079, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: densityInjection.strength
+      value: 0.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4321137f79c0bb747a167c8b10fc8530, type: 3}

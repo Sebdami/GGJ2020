@@ -155,7 +155,7 @@ MonoBehaviour:
     skyColor: {r: 0.3372549, g: 0.6627451, b: 0.67058825, a: 1}
     equatorColor: {r: 0, g: 0, b: 0, a: 1}
     groundColor: {r: 0.42352945, g: 0.45882356, b: 0.64705884, a: 1}
-    skyboxTint: {r: 0.58431375, g: 0.19607845, b: 0.5686275, a: 0.49019608}
+    skyboxTint: {r: 0.64705884, g: 0.8313726, b: 0.8117648, a: 0.49019608}
   OnAppear:
     m_PersistentCalls:
       m_Calls:
@@ -651,13 +651,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5345072107201500406}
-  m_LocalRotation: {x: 0.8345158, y: 0.03622305, z: -0.21691553, w: 0.505192}
+  m_LocalRotation: {x: 0.806693, y: 0.018018432, z: -0.2230409, w: 0.54696846}
   m_LocalPosition: {x: 1.96, y: 11.74, z: 3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 264541831227440468}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 120.80699, y: 39.451996, z: 18.052994}
+  m_LocalEulerAnglesHint: {x: 117.06299, y: 48.383987, z: 28.189987}
 --- !u!108 &5345072107201500404
 Light:
   m_ObjectHideFlags: 0
@@ -670,10 +670,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.19579923, g: 0.754717, b: 0.74292445, a: 1}
-  m_Intensity: 3.67
+  m_Intensity: 3
   m_Range: 15.09
-  m_SpotAngle: 86
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 100
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

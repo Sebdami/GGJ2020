@@ -269,6 +269,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6021549479354886078, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610066654069916324, guid: 4321137f79c0bb747a167c8b10fc8530,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4321137f79c0bb747a167c8b10fc8530, type: 3}
 --- !u!114 &1562141346
@@ -316,6 +326,11 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 874772387}
+    - target: {fileID: 4643904444288287292, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4643904444327058241, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
         type: 3}
       propertyPath: m_IsActive

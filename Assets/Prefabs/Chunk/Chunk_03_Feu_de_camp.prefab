@@ -36414,7 +36414,7 @@ MonoBehaviour:
     skyColor: {r: 0.9333334, g: 0.9960785, b: 1, a: 1}
     equatorColor: {r: 0, g: 0, b: 0, a: 1}
     groundColor: {r: 0.6117647, g: 0, b: 0.34901962, a: 1}
-    skyboxTint: {r: 0.30588236, g: 0.34901962, b: 0.1254902, a: 0.49019608}
+    skyboxTint: {r: 0.40707502, g: 0.4528302, b: 0.21573514, a: 0.5}
   OnAppear:
     m_PersistentCalls:
       m_Calls:

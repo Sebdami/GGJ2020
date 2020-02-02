@@ -532,7 +532,7 @@ MonoBehaviour:
     skyColor: {r: 0.9215687, g: 0.81568635, b: 0.5019608, a: 1}
     equatorColor: {r: 0.90196085, g: 0.74509805, b: 0.6431373, a: 1}
     groundColor: {r: 0.86274517, g: 0.33333334, b: 0.33333334, a: 1}
-    skyboxTint: {r: 0.8862746, g: 0.76470596, b: 0.3647059, a: 0.49019608}
+    skyboxTint: {r: 0.6431373, g: 0.57254905, b: 0.45098042, a: 1}
   OnAppear:
     m_PersistentCalls:
       m_Calls:
@@ -585,7 +585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4702811034110943172
 Transform:
   m_ObjectHideFlags: 0
@@ -929,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4702811035514270245
 Transform:
   m_ObjectHideFlags: 0
