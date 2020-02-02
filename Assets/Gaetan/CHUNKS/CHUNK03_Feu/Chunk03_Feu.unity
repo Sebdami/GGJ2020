@@ -301,6 +301,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4643904443851339424, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4643904443993032714, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
         type: 3}
       propertyPath: frustumSettings.baseSettings
@@ -311,6 +316,11 @@ PrefabInstance:
       propertyPath: frustumSettings.qualitySettings
       value: 
       objectReference: {fileID: 874772387}
+    - target: {fileID: 4643904444327058241, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8763614544238114497, guid: 52f8b83c63fc5984d9d082c76a1b8dee,
         type: 3}
       propertyPath: m_LocalPosition.x

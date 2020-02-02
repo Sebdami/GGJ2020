@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fee8e9f8bff8c41bed30bcb5a7d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: {fileID: 820675137312965167}
   light1: {r: 1, g: 0.9568628, b: 0.83921576, a: 0}
   light2: {r: 0.58431375, g: 0.19607845, b: 0.5686275, a: 0}
   playerTargetTransform: {fileID: 4442802506481688251}
@@ -534,7 +535,18 @@ MonoBehaviour:
     skyboxTint: {r: 0.58431375, g: 0.19607845, b: 0.5686275, a: 0.49019608}
   OnAppear:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3515137149760739743}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default_Appear_Smooth
+          m_BoolArgument: 0
+        m_CallState: 2
   OnActivate:
     m_PersistentCalls:
       m_Calls: []

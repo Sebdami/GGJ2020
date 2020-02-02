@@ -36405,6 +36405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fee8e9f8bff8c41bed30bcb5a7d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: {fileID: 5716477604468426158}
   light1: {r: 0.9450981, g: 0.8000001, b: 0.52156866, a: 1}
   light2: {r: 0.58431375, g: 0.19607845, b: 0.5686275, a: 1}
   playerTargetTransform: {fileID: 8763614545304852794}
