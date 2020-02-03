@@ -262,11 +262,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk_10_GENERIC (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2449875543819847597, guid: 6ca377ea365a8ef44af3a9c7ab63f939,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ca377ea365a8ef44af3a9c7ab63f939, type: 3}
 --- !u!114 &1965781532
@@ -442,11 +437,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chunk_09_GENERIC
-      objectReference: {fileID: 0}
-    - target: {fileID: 299992917298689580, guid: adf435114ccdd0648bd0f42c5bc9779e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf435114ccdd0648bd0f42c5bc9779e, type: 3}
