@@ -486,8 +486,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4442802507564691776}
   - component: {fileID: 4442802507564691778}
-  - component: {fileID: 3515137149760739743}
   - component: {fileID: -1907466734767433511}
+  - component: {fileID: 608443469337193354}
   m_Layer: 0
   m_Name: Chunk_06_NewTown
   m_TagString: Untagged
@@ -537,39 +537,20 @@ MonoBehaviour:
   OnAppear:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3515137149760739743}
-        m_MethodName: Play
-        m_Mode: 5
+      - m_Target: {fileID: 608443469337193354}
+        m_MethodName: Appear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Default_Appear_Smooth
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnActivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &3515137149760739743
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4442802507564691783}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21c09a0137e4a4a4888343be0c67ddde, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &-1907466734767433511
 AudioSource:
   m_ObjectHideFlags: 0
@@ -693,6 +674,44 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &608443469337193354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442802507564691783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa54722f5859e249b4f72aa6400c557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScale: {fileID: 2860792872838754828}
+  appearAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0
+      outSlope: -0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.10408163
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.017243566
+      outSlope: -0.017243566
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13061225
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 2
 --- !u!1 &4702811034110943174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,6 +1296,25 @@ Transform:
   m_Father: {fileID: 3253672044918842203}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1811058998032234942
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684565445900081178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3027354ff3e3504f9b5212ff056854e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7251086614098137136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,8 +1999,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moulin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3045184297611544025, guid: a97a8f74aaf0bbc47af0c5537eb7ea33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a97a8f74aaf0bbc47af0c5537eb7ea33, type: 3}
+--- !u!1 &5684565445900081178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3045184297611544026, guid: a97a8f74aaf0bbc47af0c5537eb7ea33,
+    type: 3}
+  m_PrefabInstance: {fileID: 7251086614551485888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4450206456785785044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6441070962924555540, guid: a97a8f74aaf0bbc47af0c5537eb7ea33,
