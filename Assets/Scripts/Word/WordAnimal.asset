@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: WordAnimal
   m_EditorClassIdentifier: 
   wordList:
-  - Dog
-  - Bear
-  - Wolf
-  - Bunny
-  - Tiger
-  - Cat
+  - dog
+  - bear
+  - wolf
+  - bunny
+  - tiger
+  - cat
